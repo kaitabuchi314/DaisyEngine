@@ -8,7 +8,7 @@ int main()
     bool resizable = true; // Make the window resizable
     Daisy::Renderer daisy_renderer(WINDOW_WIDTH, WINDOW_HEIGHT, resizable, FPS); // Create a renderer using my Daisy Game Engine
 
-    Daisy::Image image = Daisy::Load_Image("img.png"); // Load an image using my Daisy Game Engine
+    Daisy::Image image = Daisy::Load_Image("img.jpg"); // Load an image using my Daisy Game Engine
     Daisy::Color red(1.0f, 0.0f, 0.0f, 1.0f); // Red: 1.0, Green: 0.0, Blue: 0.0, Alpha: 1.0
     Daisy::Color blue(0.0f, 0.0f, 1.0f, 1.0f); // Red: 0.0, Green: 0.0, Blue: 1.0, Alpha: 1.0
     Daisy::Input_System input_system;
