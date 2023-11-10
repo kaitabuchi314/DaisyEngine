@@ -1,0 +1,17 @@
+#pragma once
+
+namespace Daisy
+{
+	class Vector2
+	{
+	public:
+		int x;
+		int y;
+		Vector2(int x, int y);
+		Vector2 operator*(const Vector2& v);
+		Vector2 operator/(const Vector2& v);
+		Vector2 operator+(const Vector2& v);
+		Vector2 operator-(const Vector2& v);
+
+	};
+}

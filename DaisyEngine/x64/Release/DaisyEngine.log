@@ -1,0 +1,87 @@
+﻿  EditorLayer.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_sdl2.cpp
+  imgui_impl_sdlrenderer2.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  main.cpp
+  Vector2.cpp
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_GetCurrentContext
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetPerformanceCounter
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_RaiseWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetWindowSize
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_SwapWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_free
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetRendererOutputSize
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetDisplayUsableBounds
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowFromID
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_GetDrawableSize
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_DeleteContext
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_MakeCurrent
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetDisplayBounds
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetNumVideoDisplays
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_DestroyWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetHint
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowWMInfo
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_ShowCursor
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowID
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GameControllerOpen
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetClipboardText
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_SetAttribute
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetWindowPosition
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetCurrentVideoDriver
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetClipboardText
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_CreateContext
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_CaptureMouse
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetWindowOpacity
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_ShowWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_WarpMouseInWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetGlobalMouseState
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_Vulkan_CreateSurface
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowPosition
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GL_SetSwapInterval
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowFlags
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetCursor
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetDisplayDPI
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_CreateWindow
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_FreeCursor
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetWindowTitle
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GameControllerGetButton
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_SetTextInputRect
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_CreateSystemCursor
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetPerformanceFrequency
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetKeyboardFocus
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_WarpMouseGlobal
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GetWindowSize
+imgui_impl_sdl2.obj : error LNK2001: unresolved external symbol SDL_GameControllerGetAxis
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_DestroyTexture
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_Log
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_SetTextureScaleMode
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_UpdateTexture
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderGetViewport
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderGeometryRaw
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_CreateTexture
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderSetClipRect
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_SetTextureBlendMode
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderGetScale
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderIsClipEnabled
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderGetClipRect
+imgui_impl_sdlrenderer2.obj : error LNK2001: unresolved external symbol SDL_RenderSetViewport
+main.obj : error LNK2001: unresolved external symbol SDL_RenderCopy
+main.obj : error LNK2001: unresolved external symbol SDL_RenderClear
+main.obj : error LNK2001: unresolved external symbol SDL_DestroyRenderer
+main.obj : error LNK2001: unresolved external symbol SDL_Init
+main.obj : error LNK2001: unresolved external symbol SDL_Quit
+main.obj : error LNK2001: unresolved external symbol SDL_Delay
+main.obj : error LNK2001: unresolved external symbol IMG_Init
+main.obj : error LNK2001: unresolved external symbol SDL_PollEvent
+main.obj : error LNK2001: unresolved external symbol SDL_FreeSurface
+main.obj : error LNK2001: unresolved external symbol IMG_Load
+main.obj : error LNK2001: unresolved external symbol SDL_CreateRenderer
+main.obj : error LNK2001: unresolved external symbol SDL_RenderPresent
+main.obj : error LNK2001: unresolved external symbol IMG_Quit
+main.obj : error LNK2001: unresolved external symbol SDL_CreateTextureFromSurface
+MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol main
+D:\Desktop\DaisyEngine\x64\Release\DaisyEngine.exe : fatal error LNK1120: 76 unresolved externals
