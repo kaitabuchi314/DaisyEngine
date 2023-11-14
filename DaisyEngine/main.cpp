@@ -38,7 +38,6 @@ int main(int argc, char* argv[])
     }
 
     IMG_Init(IMG_INIT_PNG);
-    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
     SDL_Surface* imageSurface = IMG_Load("image.png");
     SDL_Texture* imageTexture = SDL_CreateTextureFromSurface(renderer, imageSurface);
     SDL_Rect imageRect;
