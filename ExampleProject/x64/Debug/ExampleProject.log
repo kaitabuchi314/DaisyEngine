@@ -1,2 +1,0 @@
-﻿  ExampleGameLayer.cpp
-D:\Desktop\DaisyEngine\startup\startup.cpp(1,10): fatal  error C1083: Cannot open include file: '../ExampleProject/Game.cpp': No such file or directory
