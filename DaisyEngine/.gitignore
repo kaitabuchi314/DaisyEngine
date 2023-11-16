@@ -10,3 +10,6 @@ bin-int/
 **.vcxproj.filters
 **.vcxproj.user
 **.xcodeproj
+**.workspace
+**.mk
+**.project
