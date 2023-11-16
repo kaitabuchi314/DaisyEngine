@@ -1,16 +1,16 @@
-[submodule "Hazel/vendor/spdlog"]
-	path = Hazel/vendor/spdlog
+[submodule "Daisy/vendor/spdlog"]
+	path = Daisy/vendor/spdlog
 	url = https://github.com/gabime/spdlog
 	branch = v1.x
-[submodule "Hazel/vendor/GLFW"]
-	path = Hazel/vendor/GLFW
+[submodule "Daisy/vendor/GLFW"]
+	path = Daisy/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
 	branch = master
-[submodule "Hazel/vendor/imgui"]
-	path = Hazel/vendor/imgui
+[submodule "Daisy/vendor/imgui"]
+	path = Daisy/vendor/imgui
 	url = https://github.com/TheCherno/imgui
 	branch = docking
-[submodule "Hazel/vendor/glm"]
-	path = Hazel/vendor/glm
+[submodule "Daisy/vendor/glm"]
+	path = Daisy/vendor/glm
 	url = https://github.com/g-truc/glm
 	branch = master

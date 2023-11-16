@@ -1,4 +1,4 @@
-workspace "Hazel"
+workspace "Daisy"
 	architecture "x86_64"
 	startproject "Sandbox"
 
@@ -18,21 +18,21 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
-IncludeDir["Glad"] = "Hazel/vendor/Glad/include"
-IncludeDir["ImGui"] = "Hazel/vendor/imgui"
-IncludeDir["glm"] = "Hazel/vendor/glm"
-IncludeDir["stb_image"] = "Hazel/vendor/stb_image"
+IncludeDir["GLFW"] = "Daisy/vendor/GLFW/include"
+IncludeDir["Glad"] = "Daisy/vendor/Glad/include"
+IncludeDir["ImGui"] = "Daisy/vendor/imgui"
+IncludeDir["glm"] = "Daisy/vendor/glm"
+IncludeDir["stb_image"] = "Daisy/vendor/stb_image"
 
 group "Dependencies"
-	include "Hazel/vendor/GLFW"
-	include "Hazel/vendor/Glad"
-	include "Hazel/vendor/imgui"
+	include "Daisy/vendor/GLFW"
+	include "Daisy/vendor/Glad"
+	include "Daisy/vendor/imgui"
 
 group ""
 
-project "Hazel"
-	location "Hazel"
+project "Daisy"
+	location "Daisy"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
@@ -42,7 +42,7 @@ project "Hazel"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "hzpch.h"
-	pchsource "Hazel/src/hzpch.cpp"
+	pchsource "Daisy/src/hzpch.cpp"
 
 	files
 	{
@@ -120,15 +120,15 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Hazel/vendor/spdlog/include",
-		"Hazel/src",
-		"Hazel/vendor",
+		"Daisy/vendor/spdlog/include",
+		"Daisy/src",
+		"Daisy/vendor",
 		"%{IncludeDir.glm}"
 	}
 
 	links
 	{
-		"Hazel"
+		"Daisy"
 	}
 
 	filter "system:windows"
