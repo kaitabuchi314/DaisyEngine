@@ -1,0 +1,6 @@
+﻿  main.cpp
+D:\Documents\DaisyEngine\DaisyEngine\src\main.cpp(203,60): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\DaisyEngine\DaisyEngine\src\main.cpp(203,48): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  stb_image.cpp
+  Generating Code...
+  DaisyEngine.vcxproj -> D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\DaisyEngine\DaisyEngine.exe
