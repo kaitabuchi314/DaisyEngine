@@ -19,4 +19,4 @@
 *.vcxproj.user
 *.vcxproj.filters
 
-~/.vs/
+.vs/

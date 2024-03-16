@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\daisyengine\\daisyengine\\window.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "d:\\documents\\daisyengine\\daisyengine\\glfw\\glfw3.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22000.0\\ucrt\\stddef.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22000.0\\ucrt\\corecrt.h",
+            "d:\\program files\\ms visual studio\\visual studio community 2022\\vc\\tools\\msvc\\14.36.32532\\include\\vcruntime.h",
+            "d:\\program files\\ms visual studio\\visual studio community 2022\\vc\\tools\\msvc\\14.36.32532\\include\\sal.h",
+            "d:\\program files\\ms visual studio\\visual studio community 2022\\vc\\tools\\msvc\\14.36.32532\\include\\concurrencysal.h",
+            "d:\\program files\\ms visual studio\\visual studio community 2022\\vc\\tools\\msvc\\14.36.32532\\include\\vadefs.h",
+            "d:\\program files\\ms visual studio\\visual studio community 2022\\vc\\tools\\msvc\\14.36.32532\\include\\stdint.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22000.0\\um\\gl\\gl.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22000.0\\shared\\winapifamily.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22000.0\\shared\\winpackagefamily.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

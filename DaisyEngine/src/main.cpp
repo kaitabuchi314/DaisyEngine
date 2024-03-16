@@ -2,9 +2,11 @@
 #include <glfw3.h>
 #include <stb_image.h>
 #include <iostream>
+#include <Window.h>
 
 // Vertex shader source code
-const char* vertexShaderSource = R"(
+const char* vertexShaderSource =
+R"(
     #version 330 core
     layout (location = 0) in vec3 aPos;
     layout (location = 1) in vec2 aTexCoord;
@@ -19,7 +21,8 @@ const char* vertexShaderSource = R"(
 )";
 
 // Fragment shader source code
-const char* fragmentShaderSource = R"(
+const char* fragmentShaderSource =
+R"(
     #version 330 core
     out vec4 FragColor;
     in vec2 TexCoord;
@@ -30,29 +33,13 @@ const char* fragmentShaderSource = R"(
     }
 )";
 
-int main() {
-    // Initialize GLFW
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW" << std::endl;
-        return -1;
-    }
-
-    // Set GLFW window hints
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-    // Create a GLFW window
-    GLFWwindow* window = glfwCreateWindow(1350, 900, "OpenGL Texture", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(window);
+int main()
+{
+    Daisy::Window window(1000, 800, "My Window");
 
     // Initialize GLEW
-    if (glewInit() != GLEW_OK) {
+    if (glewInit() != GLEW_OK)
+    {
         std::cerr << "Failed to initialize GLEW" << std::endl;
         return -1;
     }
@@ -68,7 +55,8 @@ int main() {
     GLint success;
     GLchar infoLog[512];
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
+    if (!success)
+    {
         glGetShaderInfoLog(vertexShader, 512, nullptr, infoLog);
         std::cerr << "Vertex shader compilation failed: " << infoLog << std::endl;
     }
@@ -80,7 +68,8 @@ int main() {
 
     // Check fragment shader compilation errors
     glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
+    if (!success)
+    {
         glGetShaderInfoLog(fragmentShader, 512, nullptr, infoLog);
         std::cerr << "Fragment shader compilation failed: " << infoLog << std::endl;
     }
@@ -93,7 +82,8 @@ int main() {
 
     // Check shader program linking errors
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if (!success) {
+    if (!success)
+    {
         glGetProgramInfoLog(shaderProgram, 512, nullptr, infoLog);
         std::cerr << "Shader program linking failed: " << infoLog << std::endl;
     }
@@ -104,7 +94,8 @@ int main() {
 
     // Define the vertices and texture coordinates of the quad
     // Define the vertices and texture coordinates of the square
-    float vertices[] = {
+    float vertices[] =
+    {
         // positions       // texture coords
         -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, // bottom left
          0.5f, -0.5f, 0.0f,  1.0f, 0.0f, // bottom right
@@ -112,7 +103,8 @@ int main() {
         -0.5f,  0.5f, 0.0f,  0.0f, 1.0f  // top left
     };
 
-    unsigned int indices[] = {
+    unsigned int indices[] =
+    {
         0, 1, 2, // first triangle
         2, 3, 0  // second triangle
     };
@@ -184,11 +176,8 @@ int main() {
     double x = 0;
     double y = 0;
     // Rendering loop
-    while (!glfwWindowShouldClose(window)) {
-
-
-        int w, h;
-        glfwGetWindowSize(window, &w, &h);
+    while (!window.WindowClosed())
+    {
 
         x = x + 1;
         y = y + 1;
@@ -213,9 +202,7 @@ int main() {
         // Unbind VAO
         glBindVertexArray(0);
 
-        // Swap buffers and poll IO events
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        window.EndFrame();
     }
 
     // Delete resources
@@ -225,7 +212,6 @@ int main() {
     glDeleteTextures(1, &texture);
     glDeleteProgram(shaderProgram);
 
-    // Terminate GLFW
-    glfwTerminate();
+    window.Flush();
     return 0;
 }
