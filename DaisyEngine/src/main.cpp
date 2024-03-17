@@ -4,6 +4,15 @@
 #include <iostream>
 #include <Window.h>
 
+
+struct Image
+{
+    GLuint id;
+};
+void FlushImage(Image img)
+{
+    glDeleteTextures(1, &img.id);
+}
 // Vertex shader source code
 const char* vertexShaderSource =
 R"(
@@ -32,22 +41,40 @@ R"(
         FragColor = texture(texture1, TexCoord);
     }
 )";
-
-int main()
+float vertices[] =
 {
-    Daisy::Window window(1000, 800, "My Window");
+    // positions       // texture coords
+    -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, // bottom left
+     0.5f, -0.5f, 0.0f,  1.0f, 0.0f, // bottom right
+     0.5f,  0.5f, 0.0f,  1.0f, 1.0f, // top right
+    -0.5f,  0.5f, 0.0f,  0.0f, 1.0f  // top left
+};
 
-    // Initialize GLEW
+unsigned int indices[] =
+{
+    0, 1, 2, // first triangle
+    2, 3, 0  // second triangle
+};
+
+GLuint VBO, VAO, EBO;
+GLuint fragmentShader;
+GLuint vertexShader;
+GLuint shaderProgram;
+
+void InitOpenGL()
+{
     if (glewInit() != GLEW_OK)
     {
         std::cerr << "Failed to initialize GLEW" << std::endl;
-        return -1;
     }
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    // Compile vertex shader
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+}
+
+void GenShaders()
+{
+    vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
     glCompileShader(vertexShader);
 
@@ -62,7 +89,7 @@ int main()
     }
 
     // Compile fragment shader
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
     glCompileShader(fragmentShader);
 
@@ -75,7 +102,7 @@ int main()
     }
 
     // Create shader program
-    GLuint shaderProgram = glCreateProgram();
+    shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
@@ -91,30 +118,10 @@ int main()
     // Delete shaders as they are linked into our program now and no longer necessary
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
+}
 
-    // Define the vertices and texture coordinates of the quad
-    // Define the vertices and texture coordinates of the square
-    float vertices[] =
-    {
-        // positions       // texture coords
-        -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, // bottom left
-         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, // bottom right
-         0.5f,  0.5f, 0.0f,  1.0f, 1.0f, // top right
-        -0.5f,  0.5f, 0.0f,  0.0f, 1.0f  // top left
-    };
-
-    unsigned int indices[] =
-    {
-        0, 1, 2, // first triangle
-        2, 3, 0  // second triangle
-    };
-
-
-    // Create Vertex Buffer Object (VBO) to store the vertices
-    // Define the vertices and texture coordinates of the square
-    
-    // Create Vertex Buffer Object (VBO) to store the vertices
-    GLuint VBO, VAO, EBO;
+void GenBuffers()
+{
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
@@ -139,20 +146,23 @@ int main()
     // Unbind VBO and VAO
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+}
 
-
+Image LoadImage(std::string path)
+{
     // Load image using stb_image
     stbi_set_flip_vertically_on_load(true);
 
     int width, height, nrChannels;
-    unsigned char* data = stbi_load("guy.png", &width, &height, &nrChannels, 0);
-    if (!data) {
+    unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
+    if (!data)
+    {
         std::cerr << "Failed to load texture" << std::endl;
-        return -1;
     }
 
     // Generate and bind texture
     GLuint texture;
+
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
 
@@ -173,34 +183,57 @@ int main()
 
     // Free image data
     stbi_image_free(data);
-    double x = 0;
-    double y = 0;
-    // Rendering loop
+    return Image(texture);
+}
+
+void DrawImage(Image tex, float x, float y)
+{
+    // Use shader program
+    glUseProgram(shaderProgram);
+    int constantPositionLocation = glGetUniformLocation(shaderProgram, "position");
+    glUniform2f(constantPositionLocation, x * 0.00001, y * 0.00001);
+    // Bind texture
+    glBindTexture(GL_TEXTURE_2D, tex.id);
+
+    // Bind VAO
+    glBindVertexArray(VAO);
+
+    // Draw quad
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+    // Unbind VAO
+    glBindVertexArray(0);
+}
+
+void Clear(float r, float g, float b)
+{
+    glClearColor(r,g,b, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+}
+
+int main()
+{
+    Daisy::Window window(1000, 800, "My Window");
+
+    InitOpenGL();
+    
+    GenShaders();
+    GenBuffers();
+
+    Image img = LoadImage("guy.png");
+
+    float x = 0;
+    float y = 0;
+
     while (!window.WindowClosed())
     {
 
         x = x + 1;
         y = y + 1;
 
-        // Render
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        Clear(0.3f, 0.6f, 0.2f);
 
-        // Use shader program
-        glUseProgram(shaderProgram);
-        int constantPositionLocation = glGetUniformLocation(shaderProgram, "position");
-        glUniform2f(constantPositionLocation, x* 0.00001, y* 0.00001);
-        // Bind texture
-        glBindTexture(GL_TEXTURE_2D, texture);
-
-        // Bind VAO
-        glBindVertexArray(VAO);
-
-        // Draw quad
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-        // Unbind VAO
-        glBindVertexArray(0);
+        DrawImage(img, x, y);
 
         window.EndFrame();
     }
@@ -209,8 +242,8 @@ int main()
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
-    glDeleteTextures(1, &texture);
     glDeleteProgram(shaderProgram);
+    FlushImage(img);
 
     window.Flush();
     return 0;
