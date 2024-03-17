@@ -9,9 +9,10 @@ namespace Daisy
     layout (location = 1) in vec2 aTexCoord;
     out vec2 TexCoord;
     uniform vec2 position;
+    uniform vec2 scale;
     void main()
     {
-        vec3 ps = vec3(aPos.x+position.x, aPos.y+position.y, 0);
+        vec3 ps = vec3(aPos.x+position.x, aPos.y+position.y, 0) * vec3(scale,1);
         gl_Position = vec4(ps, 1);
         TexCoord = aTexCoord;
     }
@@ -158,12 +159,14 @@ namespace Daisy
         return Image(texture);
     }
 
-    void Renderer2D::DrawImage(Image tex, float x, float y)
+    void Renderer2D::DrawImage(Image tex, float x, float y, float scaleX, float scaleY)
     {
 
         glUseProgram(shaderProgram);
         int constantPositionLocation = glGetUniformLocation(shaderProgram, "position");
-        glUniform2f(constantPositionLocation, x * 0.00001, y * 0.00001);
+        glUniform2f(constantPositionLocation, x, y);
+        int constantScaleLocation = glGetUniformLocation(shaderProgram, "scale");
+        glUniform2f(constantScaleLocation, scaleX, scaleY);
 
         glBindTexture(GL_TEXTURE_2D, tex.id);
 

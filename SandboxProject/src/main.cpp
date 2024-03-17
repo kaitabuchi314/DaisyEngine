@@ -14,18 +14,25 @@ int main()
     renderer.GenBuffers();
 
     Daisy::Image img = renderer.LoadImage("guy.png");
+    Daisy::Image img2 = renderer.LoadImage("kitten.png");
 
     float x = 0;
     float y = 0;
 
+    float x2 = 0;
+    float y2 = 0;
+
     while (!window.WindowClosed())
     {
-        x = x + 1;
-        y = y + 1;
-
+        x = x + 0.0001f;
+        y = y + 0.0001f;
+        x2 = x2 + -0.0001f;
+        y2 = y2 + -0.0001f;
+        
         renderer.ClearScreen(0.3f, 0.6f, 0.2f);
 
-        renderer.DrawImage(img, x, y);
+        renderer.DrawImage(img, x, y, 0.2f, 0.2f);
+        renderer.DrawImage(img2, x2, y2, 0.5f, 0.5f);
 
         window.EndFrame();
     }

@@ -28,7 +28,7 @@ namespace Daisy
 
         Image LoadImage(std::string path);
 
-        void DrawImage(Image tex, float x, float y);
+        void DrawImage(Image tex, float x, float y, float scaleX, float scaleY);
 
         void ClearScreen(float r, float g, float b);
 
