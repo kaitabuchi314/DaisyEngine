@@ -13,7 +13,7 @@ namespace Daisy
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        window = glfwCreateWindow(1350, 900, "OpenGL Texture", nullptr, nullptr);
+        window = glfwCreateWindow(1350, 900, title.c_str(), nullptr, nullptr);
         if (!window) {
             std::cerr << "Failed to create GLFW window" << std::endl;
             glfwTerminate();
