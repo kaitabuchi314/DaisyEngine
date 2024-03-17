@@ -1,5 +1,2 @@
 ﻿  main.cpp
-D:\Documents\DaisyEngine\DaisyEngine\src\main.cpp(194,58): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\DaisyEngine\DaisyEngine\src\main.cpp(194,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   DaisyEngine.vcxproj -> D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\DaisyEngine\DaisyEngine.exe
