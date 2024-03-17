@@ -125,7 +125,13 @@ namespace Daisy
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindVertexArray(0);
     }
+    void Renderer2D::InitRenderer()
+    {
+        InitOpenGL();
 
+        GenShaders();
+        GenBuffers();
+    }
     Image Renderer2D::LoadImage(std::string path)
     {
         stbi_set_flip_vertically_on_load(true);

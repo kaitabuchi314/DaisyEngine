@@ -22,6 +22,7 @@ namespace Daisy
         GLuint vertexShader;
         GLuint shaderProgram;
 
+        void InitRenderer();
         void InitOpenGL();
         void GenShaders();
         void GenBuffers();
