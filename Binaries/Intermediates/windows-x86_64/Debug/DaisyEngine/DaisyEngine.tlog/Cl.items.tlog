@@ -1,11 +1,4 @@
 D:\Documents\DaisyEngine\DaisyEngine\src\Renderer2D.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\Renderer2D.obj
 D:\Documents\DaisyEngine\DaisyEngine\src\Window.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\Window.obj
 D:\Documents\DaisyEngine\DaisyEngine\src\main.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\main.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_demo.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_demo.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_draw.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_draw.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_impl_glfw.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_impl_glfw.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_impl_opengl3.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_impl_opengl3.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_tables.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_tables.obj
-D:\Documents\DaisyEngine\DaisyEngine\vendor\ImGui\imgui_widgets.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\imgui_widgets.obj
 D:\Documents\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.cpp;D:\Documents\DaisyEngine\Binaries\Intermediates\windows-x86_64\Debug\DaisyEngine\stb_image.obj
