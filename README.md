@@ -1,2 +1,4 @@
-#DaisyEngine
-DaisyEngine is a c++ game engine written in C++.
+# DaisyEngine
+
+
+DaisyEngine is a c++ game engine using OpenGL, glfw, glew, and stb_image.
