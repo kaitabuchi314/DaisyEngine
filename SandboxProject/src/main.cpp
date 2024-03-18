@@ -25,7 +25,8 @@ namespace SandboxLayer
 
         renderer.InitRenderer();
 
-        img = renderer.LoadImage("guy.png");
+        Daisy::ActivateRenderer(&renderer);
+        img = Daisy::LoadImage("guy.png");
     }
 
     void SandboxLayer::Run()
@@ -34,7 +35,7 @@ namespace SandboxLayer
         {
             renderer.ClearScreen(0.3f, 0.6f, 0.2f);
 
-            renderer.DrawImage(img, 0, 0, 0.2f, 0.2f);
+            Daisy::DrawImage(img, 0, 0, 0.2f, 0.2f);
 
             window.EndFrame();
         }

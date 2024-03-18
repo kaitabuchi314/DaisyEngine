@@ -27,9 +27,9 @@ namespace Daisy
         void GenShaders();
         void GenBuffers();
 
-        Image LoadImage(std::string path);
+        //Image LoadImage(std::string path);
 
-        void DrawImage(Image tex, float x, float y, float scaleX, float scaleY);
+        //void DrawImage(Image tex, float x, float y, float scaleX, float scaleY);
 
         void ClearScreen(float r, float g, float b);
 

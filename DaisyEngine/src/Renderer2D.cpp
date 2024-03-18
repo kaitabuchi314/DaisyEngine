@@ -48,8 +48,8 @@ namespace Daisy
     {
         glDeleteTextures(1, &img.id);
     }
-
-
+    Renderer2D* activeRenderer;
+    void ActivateRenderer(Renderer2D* renderer) { activeRenderer = renderer; }
     void Renderer2D::InitOpenGL()
     {
         if (glewInit() != GLEW_OK)
@@ -132,7 +132,7 @@ namespace Daisy
         GenShaders();
         GenBuffers();
     }
-    Image Renderer2D::LoadImage(std::string path)
+    Image LoadImage(std::string path)
     {
         stbi_set_flip_vertically_on_load(true);
 
@@ -165,18 +165,18 @@ namespace Daisy
         return Image(texture);
     }
 
-    void Renderer2D::DrawImage(Image tex, float x, float y, float scaleX, float scaleY)
+    void DrawImage(Image tex, float x, float y, float scaleX, float scaleY)
     {
 
-        glUseProgram(shaderProgram);
-        int constantPositionLocation = glGetUniformLocation(shaderProgram, "position");
+        glUseProgram(activeRenderer->shaderProgram);
+        int constantPositionLocation = glGetUniformLocation(activeRenderer->shaderProgram, "position");
         glUniform2f(constantPositionLocation, x, y);
-        int constantScaleLocation = glGetUniformLocation(shaderProgram, "scale");
+        int constantScaleLocation = glGetUniformLocation(activeRenderer->shaderProgram, "scale");
         glUniform2f(constantScaleLocation, scaleX, scaleY);
 
         glBindTexture(GL_TEXTURE_2D, tex.id);
 
-        glBindVertexArray(VAO);
+        glBindVertexArray(activeRenderer->VAO);
 
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
