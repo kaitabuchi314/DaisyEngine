@@ -1,4 +1,2 @@
 ﻿  main.cpp
-D:\Documents\DaisyEngine\SandboxProject\src\main.cpp(39,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documents\DaisyEngine\SandboxProject\src\main.cpp(40,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   SandboxProject.vcxproj -> D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\SandboxProject\SandboxProject.exe

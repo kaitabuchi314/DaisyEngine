@@ -42,7 +42,6 @@ namespace Daisy
 
     void DrawImage(Image tex, float x, float y, float scaleX, float scaleY)
     {
-
         glUseProgram(activeRenderer->shaderProgram);
         int constantPositionLocation = glGetUniformLocation(activeRenderer->shaderProgram, "position");
         glUniform2f(constantPositionLocation, x, y);
