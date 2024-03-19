@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "..\\Binaries\\Intermediates\\windows-x86_64\\Debug\\DaisyEngine\\Verts.h.obj",
+            "outputs": [
+                "D:\\Documents\\DaisyEngine\\Binaries\\windows-x86_64\\Debug\\DaisyEngine\\DaisyEngine.pdb",
+                "..\\Binaries\\Intermediates\\windows-x86_64\\Debug\\DaisyEngine\\",
+                "D:\\Documents\\DaisyEngine\\Binaries\\Intermediates\\windows-x86_64\\Debug\\DaisyEngine\\Verts.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "src\\Verts.h",
+                    "source-path": "d:\\documents\\daisyengine\\daisyengine\\src\\verts.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -6,6 +6,7 @@
 
 namespace Daisy
 {
+    
 
     struct Image
     {

@@ -2,54 +2,13 @@
 
 namespace Daisy
 {
-    const char* Renderer2DvertexShaderSource =
-        R"(
-    #version 330 core
-    layout (location = 0) in vec3 aPos;
-    layout (location = 1) in vec2 aTexCoord;
-    out vec2 TexCoord;
-    uniform vec2 position;
-    uniform vec2 scale;
-    void main()
-    {
-        vec3 ps = vec3(aPos.x+position.x, aPos.y+position.y, 0) * vec3(scale,1);
-        gl_Position = vec4(ps, 1);
-        TexCoord = aTexCoord;
-    }
-)";
-
-    const char* Renderer2DfragmentShaderSource =
-        R"(
-    #version 330 core
-    out vec4 FragColor;
-    in vec2 TexCoord;
-    uniform sampler2D texture1;
-    void main()
-    {
-        FragColor = texture(texture1, TexCoord);
-    }
-)";
-    float quadvertices[] =
-    {
-
-        -0.5f, -0.5f, 0.0f,  0.0f, 0.0f,
-         0.5f, -0.5f, 0.0f,  1.0f, 0.0f,
-         0.5f,  0.5f, 0.0f,  1.0f, 1.0f,
-        -0.5f,  0.5f, 0.0f,  0.0f, 1.0f
-    };
-
-    unsigned int quadindices[] =
-    {
-        0, 1, 2,
-        2, 3, 0
-    };
+    
 
     void FlushImage(Image img)
     {
         glDeleteTextures(1, &img.id);
     }
-    Renderer2D* activeRenderer;
-    void ActivateRenderer(Renderer2D* renderer) { activeRenderer = renderer; }
+
     void Renderer2D::InitOpenGL()
     {
         if (glewInit() != GLEW_OK)
@@ -63,6 +22,33 @@ namespace Daisy
 
     void Renderer2D::GenShaders()
     {
+        const char* Renderer2DvertexShaderSource =
+            R"(
+        #version 330 core
+        layout (location = 0) in vec3 aPos;
+        layout (location = 1) in vec2 aTexCoord;
+        out vec2 TexCoord;
+        uniform vec2 position;
+        uniform vec2 scale;
+        void main()
+        {
+            vec3 ps = vec3(aPos.x+position.x, aPos.y+position.y, 0) * vec3(scale,1);
+            gl_Position = vec4(ps, 1);
+            TexCoord = aTexCoord;
+        }
+    )";
+
+        const char* Renderer2DfragmentShaderSource =
+            R"(
+        #version 330 core
+        out vec4 FragColor;
+        in vec2 TexCoord;
+        uniform sampler2D texture1;
+        void main()
+        {
+            FragColor = texture(texture1, TexCoord);
+        }
+    )";
         vertexShader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertexShader, 1, &Renderer2DvertexShaderSource, nullptr);
         glCompileShader(vertexShader);
@@ -105,6 +91,20 @@ namespace Daisy
 
     void Renderer2D::GenBuffers()
     {
+        float quadvertices[] =
+        {
+
+            -0.5f, -0.5f, 0.0f,  0.0f, 0.0f,
+             0.5f, -0.5f, 0.0f,  1.0f, 0.0f,
+             0.5f,  0.5f, 0.0f,  1.0f, 1.0f,
+            -0.5f,  0.5f, 0.0f,  0.0f, 1.0f
+        };
+
+        unsigned int quadindices[] =
+        {
+            0, 1, 2,
+            2, 3, 0
+        };
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
         glGenBuffers(1, &EBO);
@@ -132,56 +132,7 @@ namespace Daisy
         GenShaders();
         GenBuffers();
     }
-    Image LoadImage(std::string path)
-    {
-        stbi_set_flip_vertically_on_load(true);
-
-        int width, height, nrChannels;
-        unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
-        if (!data)
-        {
-            std::cerr << "Failed to load texture" << std::endl;
-        }
-
-        GLuint texture;
-
-        glGenTextures(1, &texture);
-        glBindTexture(GL_TEXTURE_2D, texture);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-        if (nrChannels == 3) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        }
-        else if (nrChannels == 4) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-        }
-        glGenerateMipmap(GL_TEXTURE_2D);
-
-        stbi_image_free(data);
-        return Image(texture);
-    }
-
-    void DrawImage(Image tex, float x, float y, float scaleX, float scaleY)
-    {
-
-        glUseProgram(activeRenderer->shaderProgram);
-        int constantPositionLocation = glGetUniformLocation(activeRenderer->shaderProgram, "position");
-        glUniform2f(constantPositionLocation, x, y);
-        int constantScaleLocation = glGetUniformLocation(activeRenderer->shaderProgram, "scale");
-        glUniform2f(constantScaleLocation, scaleX, scaleY);
-
-        glBindTexture(GL_TEXTURE_2D, tex.id);
-
-        glBindVertexArray(activeRenderer->VAO);
-
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-        glBindVertexArray(0);
-    }
+    
 
     void Renderer2D::ClearScreen(float r, float g, float b)
     {
