@@ -9,5 +9,6 @@ namespace Daisy
 		virtual void Init() {};
 		virtual void Run() {};
 		virtual void Quit() {};
+		virtual ~Layer() {};
 	};
 }

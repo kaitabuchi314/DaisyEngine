@@ -1,6 +1,4 @@
-﻿  ImageHandler.cpp
-  Renderer2D.cpp
-  Generating Code...
+﻿  main.cpp
 glew32s.lib(glew.obj) : warning LNK4006: glewInit already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewIsSupported already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewGetExtension already defined in glew32.lib(glew32.dll); second definition ignored
@@ -512,4 +510,12 @@ glfw3dll.lib(glfw3.dll) : warning LNK4006: glfwCreateStandardCursor already defi
 glfw3dll.lib(glfw3.dll) : warning LNK4006: glfwCreateCursor already defined in glfw3.lib(input.obj); second definition ignored
 glfw3dll.lib(glfw3.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in glew32.lib(glew32.dll); second definition ignored
 opengl32.lib(OPENGL32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in glew32.lib(glew32.dll); second definition ignored
+LayerManager.obj : warning LNK4006: "class Daisy::Layer * Daisy::LayerManager::activeLayer" (?activeLayer@LayerManager@Daisy@@3PEAVLayer@2@EA) already defined in main.obj; second definition ignored
+LayerManager.obj : warning LNK4006: "void __cdecl Daisy::LayerManager::PushLayer(class Daisy::Layer *)" (?PushLayer@LayerManager@Daisy@@YAXPEAVLayer@2@@Z) already defined in main.obj; second definition ignored
+LayerManager.obj : warning LNK4006: "void __cdecl Daisy::LayerManager::Run(void)" (?Run@LayerManager@Daisy@@YAXXZ) already defined in main.obj; second definition ignored
+LayerManager.obj : warning LNK4006: "class std::vector<class Daisy::Layer *,class std::allocator<class Daisy::Layer *> > Daisy::LayerManager::layers" (?layers@LayerManager@Daisy@@3V?$vector@PEAVLayer@Daisy@@V?$allocator@PEAVLayer@Daisy@@@std@@@std@@A) already defined in main.obj; second definition ignored
+ImageHandler.obj : warning LNK4006: "class Daisy::Renderer2D * Daisy::activeRenderer" (?activeRenderer@Daisy@@3PEAVRenderer2D@1@EA) already defined in main.obj; second definition ignored
+ImageHandler.obj : warning LNK4006: "void __cdecl Daisy::ActivateRenderer(class Daisy::Renderer2D *)" (?ActivateRenderer@Daisy@@YAXPEAVRenderer2D@1@@Z) already defined in main.obj; second definition ignored
+ImageHandler.obj : warning LNK4006: "struct Daisy::Image __cdecl Daisy::LoadImage(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?LoadImage@Daisy@@YA?AUImage@1@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in main.obj; second definition ignored
+ImageHandler.obj : warning LNK4006: "void __cdecl Daisy::DrawImage(struct Daisy::Image,float,float,float,float)" (?DrawImage@Daisy@@YAXUImage@1@MMMM@Z) already defined in main.obj; second definition ignored
   DaisyEngine.vcxproj -> D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\DaisyEngine\DaisyEngine.lib

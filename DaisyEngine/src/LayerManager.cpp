@@ -8,7 +8,7 @@ namespace Daisy
 	namespace LayerManager
 	{
 		std::vector<Layer*> layers;
-		int activeLayer = -1;
+		Layer* activeLayer;
 
 		void PushLayer(Layer* layer)
 		{
@@ -17,20 +17,11 @@ namespace Daisy
 
 		void Run()
 		{
-			Layer* layer = nullptr;
-			for (Layer* l : layers)
+			if (activeLayer != nullptr)
 			{
-				if (l->id == activeLayer)
-				{
-					layer = l;
-				}
-			}
-
-			if (layer != nullptr)
-			{
-				layer->Init();
-				layer->Run();
-				layer->Quit();
+				activeLayer->Init();
+				activeLayer->Run();
+				activeLayer->Quit();
 			}
 			
 		}
