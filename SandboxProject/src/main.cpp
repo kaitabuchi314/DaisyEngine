@@ -1,5 +1,3 @@
-// This is a personal academic project. Dear PVS-Studio, please check it.
-// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 
 #include <Daisy.h>
 #include <random>
@@ -20,7 +18,7 @@ namespace SandboxLayer
             {
                 self->position.x += 0.001f;
             }
-            else if (Daisy::Input::GetKeyPressed(DAISY_KEY_LEFT))
+            if (Daisy::Input::GetKeyPressed(DAISY_KEY_LEFT))
             {
                 self->position.x -= 0.001f;
             }
@@ -29,7 +27,7 @@ namespace SandboxLayer
             {
                 self->position.y += 0.001f;
             }
-            else if (Daisy::Input::GetKeyPressed(DAISY_KEY_DOWN))
+            if (Daisy::Input::GetKeyPressed(DAISY_KEY_DOWN))
             {
                 self->position.y -= 0.001f;
             }

@@ -3,7 +3,7 @@
     <cppcheck version="2.13.0"/>
     <errors>
         <error id="functionStatic" severity="performance" msg="Technically the member function &amp;#039;Daisy::Window::Flush&amp;#039; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &amp;#039;Daisy::Window::Flush&amp;#039; can be made a static function. Making a function static can bring a performance benefit since no &amp;#039;this&amp;#039; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." inconclusive="true" cwe="398" file0="DaisyEngine/src/Window.cpp" sinceDate="M/d/yyyy">
-            <location file="DaisyEngine\src\Window.h" line="18" info=""/>
+            <location file="DaisyEngine\src\Window.h" line="19" info=""/>
             <location file="DaisyEngine\src\Window.cpp" line="32" info=""/>
         </error>
         <error id="redundantCondition" severity="style" msg="Redundant condition: The condition &amp;#039;req_comp&amp;#039; is redundant since &amp;#039;req_comp &amp;gt;= 3&amp;#039; is sufficient." verbose="Redundant condition: The condition &amp;#039;req_comp&amp;#039; is redundant since &amp;#039;req_comp &amp;gt;= 3&amp;#039; is sufficient." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
@@ -569,25 +569,28 @@
             <location file="DaisyEngine\src\Component.h" line="12" info="Virtual function in base class"/>
         </error>
         <error id="noConstructor" severity="style" msg="The class &amp;#039;AppleScript&amp;#039; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &amp;#039;AppleScript&amp;#039; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="6"/>
+            <location file="SandboxProject\src\main.cpp" line="9"/>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="50"/>
+            <location file="SandboxProject\src\main.cpp" line="53"/>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="50"/>
+            <location file="SandboxProject\src\main.cpp" line="53"/>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="50"/>
+            <location file="SandboxProject\src\main.cpp" line="53"/>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::lastTime&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::lastTime&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="50"/>
+            <location file="SandboxProject\src\main.cpp" line="53"/>
         </error>
         <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
-            <location file="SandboxProject\src\main.cpp" line="50"/>
+            <location file="SandboxProject\src\main.cpp" line="53"/>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;path&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;path&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
             <location file="DaisyEngine\src\ImageHandler.cpp" line="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;GetKeyUp&amp;#039; is never used." verbose="The function &amp;#039;GetKeyUp&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Input.cpp" line="12"/>
         </error>
         <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/src/Renderer2D.cpp" sinceDate="M/d/yyyy">
             <location file="DaisyEngine\src\Renderer2D.cpp" line="122"/>
@@ -606,6 +609,12 @@
         </error>
         <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="DaisyEngine/src/main.cpp" sinceDate="M/d/yyyy">
             <location file="DaisyEngine\src\main.cpp" line="22"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;RandomFloat&amp;#039; is never used." verbose="The function &amp;#039;RandomFloat&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Random.cpp" line="16"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;RandomInt&amp;#039; is never used." verbose="The function &amp;#039;RandomInt&amp;#039; is never used." cwe="561" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Random.cpp" line="7"/>
         </error>
     </errors>
 </results>

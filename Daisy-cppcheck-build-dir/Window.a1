@@ -10,13 +10,13 @@
             <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="108" column="0"/>
         </error>
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
-            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="5" column="0"/>
-        </error>
-        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="6" column="0"/>
         </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="7" column="0"/>
+        </error>
         <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Daisy::Window::Flush&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Daisy::Window::Flush&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp">
-            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="18" column="8"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="19" column="8"/>
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="32" column="18"/>
             <symbol>Daisy::Window::Flush</symbol>
         </error>
