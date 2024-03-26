@@ -1,0 +1,23 @@
+ActivateRenderer
+LoadImage global:[__glewGenerateMipmap] call:[Image,__glewGenerateMipmap,c_str,glBindTexture,glGenTextures,glTexImage2D,glTexParameteri,stbi_image_free,stbi_load,stbi_set_flip_vertically_on_load] noreturn:[Image,glTexImage2D]
+DrawImage global:[__glewBindVertexArray,__glewGetUniformLocation,__glewUniform2f,__glewUseProgram] call:[__glewBindVertexArray,__glewGetUniformLocation,__glewUniform2f,__glewUseProgram,glBindTexture,glDrawElements] noreturn:[__glewBindVertexArray]
+Init
+Run
+Quit
+Layer
+PushLayer call:[push_back] noreturn:[push_back]
+Run call:[Init,Quit,Run] noreturn:[Quit]
+Component
+onStart
+onStart
+LoadScript
+onStart call:[LoadScript,onStart] noreturn:[onStart]
+ScriptComponent
+LoadScript call:[LoadScript]
+onStart
+CreateAppleScript call:[AppleScript] noreturn:[AppleScript]
+SandboxLayer
+Init call:[ActivateRenderer,GameObject,InitRenderer,LoadImage,ScriptComponent,addComponent,onStart] noreturn:[onStart]
+Run call:[ClearScreen,DrawImage,EndFrame,WindowClosed] noreturn:[EndFrame]
+Quit call:[Flush,FlushImage]
+main call:[PushLayer,Run,SandboxLayer]

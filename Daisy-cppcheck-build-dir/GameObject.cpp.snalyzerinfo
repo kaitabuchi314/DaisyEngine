@@ -1,0 +1,4 @@
+Component
+onStart
+onStart call:[onStart] noreturn:[onStart]
+addComponent call:[push_back] noreturn:[push_back]

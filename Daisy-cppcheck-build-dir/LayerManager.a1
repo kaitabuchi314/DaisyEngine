@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="14287812045217372399">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\LayerManager.cpp" line="2" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Init" lineNumber="9"/>
+    <functiondecl functionName="Run" lineNumber="10"/>
+    <functiondecl functionName="Quit" lineNumber="11"/>
+    <functiondecl functionName="PushLayer" lineNumber="13"/>
+    <functiondecl functionName="Run" lineNumber="18"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="Layer"/>
+    <functioncall functionName="Quit"/>
+    <functioncall functionName="Run"/>
+    <functioncall functionName="push_back"/>
+  </FileInfo>
+</analyzerinfo>

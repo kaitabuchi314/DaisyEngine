@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="13244213658495566555">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\GameObject.h" line="2" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="onStart" lineNumber="11"/>
+    <functiondecl functionName="onStart" lineNumber="5"/>
+    <functiondecl functionName="addComponent" lineNumber="13"/>
+    <functioncall functionName="Component"/>
+    <functioncall functionName="onStart"/>
+    <functioncall functionName="push_back"/>
+  </FileInfo>
+</analyzerinfo>

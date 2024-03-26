@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;GL/glu.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;GL/glu.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\glew\include\GL\glew.h" line="1205"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stddef.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stddef.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\GLFW\glfw3.h" line="103"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdint.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdint.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\GLFW\glfw3.h" line="108"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Window.h" line="5"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Window.h" line="6"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="307"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdarg.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdarg.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="509"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stddef.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stddef.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="510"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdlib.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdlib.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="511"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;string.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;string.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="512"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;limits.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;limits.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="513"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;math.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;math.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="516"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="520"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;assert.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;assert.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="524"/>
+        </error>
+        <error id="redundantCondition" severity="style" msg="Redundant condition: The condition &amp;#039;req_comp&amp;#039; is redundant since &amp;#039;req_comp &amp;gt;= 3&amp;#039; is sufficient." verbose="Redundant condition: The condition &amp;#039;req_comp&amp;#039; is redundant since &amp;#039;req_comp &amp;gt;= 3&amp;#039; is sufficient." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5175"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;!stbi__compute_transparency16(z,tc16,s-&amp;gt;img_out_n)&amp;#039; is always false" verbose="Condition &amp;#039;!stbi__compute_transparency16(z,tc16,s-&amp;gt;img_out_n)&amp;#039; is always false" cwe="570" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4859" info="Condition &amp;#039;!stbi__compute_transparency16(z,tc16,s-&amp;gt;img_out_n)&amp;#039; is always false"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4859" info="Calling function &amp;#039;stbi__compute_transparency16&amp;#039; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;!stbi__compute_transparency(z,tc,s-&amp;gt;img_out_n)&amp;#039; is always false" verbose="Condition &amp;#039;!stbi__compute_transparency(z,tc,s-&amp;gt;img_out_n)&amp;#039; is always false" cwe="570" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4861" info="Condition &amp;#039;!stbi__compute_transparency(z,tc,s-&amp;gt;img_out_n)&amp;#039; is always false"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4861" info="Calling function &amp;#039;stbi__compute_transparency&amp;#039; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;!easy&amp;#039; is always true" verbose="Condition &amp;#039;!easy&amp;#039; is always true" cwe="571" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5254" info="Condition &amp;#039;!easy&amp;#039; is always true"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5242" info="Assignment &amp;#039;easy=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;len&amp;gt;128&amp;#039; is always true" verbose="Condition &amp;#039;len&amp;gt;128&amp;#039; is always true" cwe="571" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5680" info="Condition &amp;#039;len&amp;gt;128&amp;#039; is always true"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5668" info="Assuming that condition &amp;#039;len==128&amp;#039; is not redundant"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;g-&amp;gt;transparent&amp;gt;=0&amp;#039; is always true" verbose="Condition &amp;#039;g-&amp;gt;transparent&amp;gt;=0&amp;#039; is always true" cwe="571" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6473" info="Condition &amp;#039;g-&amp;gt;transparent&amp;gt;=0&amp;#039; is always true"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6472" info="Assignment &amp;#039;g-&amp;gt;transparent=stbi__get8(s)&amp;#039;, assigned value is greater than -1"/>
+        </error>
+        <error id="memleakOnRealloc" severity="error" msg="Common realloc mistake: &amp;#039;out&amp;#039; nulled but not freed upon failure" verbose="Common realloc mistake: &amp;#039;out&amp;#039; nulled but not freed upon failure" cwe="401" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6526"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="715"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="716"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="735"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="740"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="745"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="757"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1023"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1039"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1054"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1078"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1095"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1119"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1218"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1232"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1243"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1281"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1356"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1392"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1455"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1527"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1576"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1618"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1640"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3608"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3626"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3735"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3747"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3771"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3955"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4009"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4181"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4183"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4184"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4202"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4204"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4205"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4218"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4219"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4229"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4231"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4232"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4245"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4246"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4344"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4532"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4552"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4615"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4641"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4833"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4849"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4916"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4918"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5184"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5506"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5525"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5771"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5774"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5823"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5835"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5856"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5884"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6091"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6203"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6350"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6351"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6352"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6433"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6435"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6517"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6526"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6528"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6531"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6533"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6570"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6718"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6760"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="7014"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="7024"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="7219"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="7233"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &amp;#039;tga_x_origin&amp;#039;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &amp;#039;tga_x_origin&amp;#039;. The initialized value is overwritten before it is read." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5644" info="tga_x_origin is overwritten"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5465" info="tga_x_origin is initialized"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &amp;#039;tga_y_origin&amp;#039;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &amp;#039;tga_y_origin&amp;#039;. The initialized value is overwritten before it is read." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5644" info="tga_y_origin is overwritten"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5466" info="tga_y_origin is initialized"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &amp;#039;c&amp;#039;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &amp;#039;c&amp;#039;. The initialized value is overwritten before it is read." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6625" info="c is overwritten"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6623" info="c is initialized"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;diff&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;diff&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="2008"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;dc&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;dc&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="2008"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;t&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;t&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="2009"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;q&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;q&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3003"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;t0&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;t0&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3216"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;s&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;s&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3933"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;type&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;type&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4142"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;i&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;i&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4558"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;j&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;j&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4558"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;sz&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;sz&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5342"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;j&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;j&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5476"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;RLE_count&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;RLE_count&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5478"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;RLE_repeating&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;RLE_repeating&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5479"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;read_next_pixel&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;read_next_pixel&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5480"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;len&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;len&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5663"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;dispose&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;dispose&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6341"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;c&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;c&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="720"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;x&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;x&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1135"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;y&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;y&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1135"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;count&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;count&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1754"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;dequant&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;dequant&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1954"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;fac&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;fac&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1954"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;fac&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;fac&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="2033"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;dequant&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;dequant&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="2810"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_v_2&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_v_2&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3173" info="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3619" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_v_2&amp;#039; is a callback function, if &amp;#039;in_far&amp;#039; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_v_2&amp;#039; is a callback function, if &amp;#039;in_far&amp;#039; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3173" info="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3619" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;input&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;input&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3187"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_hv_2&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_hv_2&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3213" info="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3533" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_hv_2&amp;#039; is a callback function, if &amp;#039;in_far&amp;#039; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_hv_2&amp;#039; is a callback function, if &amp;#039;in_far&amp;#039; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3213" info="Parameter &amp;#039;in_far&amp;#039; can be declared as pointer to const"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3533" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_generic&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const. However it seems that &amp;#039;stbi__resample_row_generic&amp;#039; is a callback function, if &amp;#039;in_near&amp;#039; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3354" info="Parameter &amp;#039;in_near&amp;#039; can be declared as pointer to const"/>
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3622" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;y&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;y&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3716"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;p&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;p&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="3991"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4333"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;xorig&amp;#039; can be declared as const array" verbose="Variable &amp;#039;xorig&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4554"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;xspc&amp;#039; can be declared as const array" verbose="Variable &amp;#039;xspc&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4556"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;yorig&amp;#039; can be declared as const array" verbose="Variable &amp;#039;yorig&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4555"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;yspc&amp;#039; can be declared as const array" verbose="Variable &amp;#039;yspc&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4557"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4588"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4613"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;orig&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;orig&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4639"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;palette&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;palette&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4636"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;s&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="4688"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;mul_table&amp;#039; can be declared as const array" verbose="Variable &amp;#039;mul_table&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5035"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &amp;#039;shift_table&amp;#039; can be declared as const array" verbose="Variable &amp;#039;shift_table&amp;#039; can be declared as const array" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5040"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;packet&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;packet&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5992"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;c&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;c&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6217"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;u&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;u&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6505"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;input&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;input&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6642"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;p&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;p&amp;#039; can be declared as pointer to const" cwe="398" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="6845"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="1905"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;tga_palette_start&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;tga_palette_start&amp;#039; is assigned a value that is never used." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5643"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;tga_palette_len&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;tga_palette_len&amp;#039; is assigned a value that is never used." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5643"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;tga_palette_bits&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;tga_palette_bits&amp;#039; is assigned a value that is never used." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5643"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;tga_x_origin&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;tga_x_origin&amp;#039; is assigned a value that is never used." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5644"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;tga_y_origin&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;tga_y_origin&amp;#039; is assigned a value that is never used." cwe="563" file0="DaisyEngine/vendor/stb_image/stb_image.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\vendor\stb_image\stb_image.h" line="5644"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Renderer2D.h" line="5"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;vector&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;vector&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\LayerManager.cpp" line="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;vector&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;vector&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\GameObject.h" line="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;functional&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;functional&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Script.h" line="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Script.h" line="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;map&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;map&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Script.h" line="4"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;name&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;name&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Script.h" line="16"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;string&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\ScriptComponent.h" line="4"/>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &amp;#039;ScriptComponent&amp;#039; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &amp;#039;ScriptComponent&amp;#039; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\ScriptComponent.h" line="8"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;random&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;random&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="2"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::lastTime&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::lastTime&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="SandboxProject\src\main.cpp" line="22"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;path&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;path&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SandboxProject/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\ImageHandler.cpp" line="10"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="DaisyEngine/src/Renderer2D.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Renderer2D.cpp" line="122"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &amp;#039;title&amp;#039; should be passed by const reference." verbose="Parameter &amp;#039;title&amp;#039; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="DaisyEngine/src/Window.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\Window.cpp" line="6"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;iostream&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\main.cpp" line="2"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::renderer&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="DaisyEngine/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::img&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="DaisyEngine/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;SandboxLayer::sc&amp;#039; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="DaisyEngine/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\main.cpp" line="22"/>
+        </error>
+        <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &amp;#039;Layer::id&amp;#039; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="DaisyEngine/src/main.cpp" sinceDate="M/d/yyyy">
+            <location file="DaisyEngine\src\main.cpp" line="22"/>
+        </error>
+    </errors>
+</results>

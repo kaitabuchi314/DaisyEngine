@@ -1,0 +1,4 @@
+Window call:[c_str,glfwCreateWindow,glfwInit,glfwMakeContextCurrent,glfwTerminate,glfwWindowHint] noreturn:[glfwMakeContextCurrent,glfwTerminate]
+EndFrame call:[glfwPollEvents,glfwSwapBuffers] noreturn:[glfwPollEvents]
+Flush call:[glfwTerminate] noreturn:[glfwTerminate]
+WindowClosed call:[glfwWindowShouldClose] noreturn:[glfwWindowShouldClose]

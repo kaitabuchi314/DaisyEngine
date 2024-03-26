@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="14072017339906375079">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="103" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="108" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="307" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\LayerManager.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\GameObject.h" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;functional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;functional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;map&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;map&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="2" column="0"/>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;ScriptComponent&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;ScriptComponent&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="8" column="2"/>
+            <symbol>ScriptComponent</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::renderer&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::renderer&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="22" column="9"/>
+            <symbol>SandboxLayer::renderer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::img&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::img&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="22" column="9"/>
+            <symbol>SandboxLayer::img</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::sc&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::sc&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="22" column="9"/>
+            <symbol>SandboxLayer::sc</symbol>
+        </error>
+        <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &apos;Layer::id&apos; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &apos;Layer::id&apos; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="22" column="9"/>
+            <symbol>Layer::id</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;path&apos; should be passed by const reference." verbose="Parameter &apos;path&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\ImageHandler.cpp" line="10" column="33" info="Function parameter &apos;path&apos; should be passed by const reference."/>
+            <symbol>path</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;name&apos; should be passed by const reference." verbose="Parameter &apos;name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="16" column="52" info="Function parameter &apos;name&apos; should be passed by const reference."/>
+            <symbol>name</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="2" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="&amp;width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="2" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="3" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="&amp;height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="3" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="4" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="&amp;nrChannels" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="4" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="nrChannels" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h:364:18" call-funcname="stbi_load" call-argnr="5" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="15" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:946:23" call-funcname="glGenTextures" call-argnr="2" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="23" col="22" call-argexpr="&amp;texture" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:1149:23" call-funcname="glTexImage2D" call-argnr="2" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="32" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:1149:23" call-funcname="glTexImage2D" call-argnr="6" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="32" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:1149:23" call-funcname="glTexImage2D" call-argnr="2" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="35" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:1149:23" call-funcname="glTexImage2D" call-argnr="6" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="35" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/glew/include/GL/glew.h:915:23" call-funcname="glDrawElements" call-argnr="4" file="D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp" line="55" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Class">
+<class name="GLFWvidmode" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2026" col="9" hash="5014978948604091791"/>
+<class name="GLFWgammaramp" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2060" col="9" hash="15759332869564605894"/>
+<class name="GLFWimage" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2089" col="9" hash="18229993221891273149"/>
+<class name="GLFWgamepadstate" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2113" col="9" hash="15865163930354674965"/>
+<class name="GLFWallocator" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2137" col="9" hash="1200025269306264198"/>
+<class name="stbi_io_callbacks" file="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h" line="344" col="9" hash="1736050583514839103"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ActivateRenderer" lineNumber="8"/>
+    <functiondecl functionName="LoadImage" lineNumber="10"/>
+    <functiondecl functionName="DrawImage" lineNumber="43"/>
+    <functiondecl functionName="Init" lineNumber="9"/>
+    <functiondecl functionName="Run" lineNumber="10"/>
+    <functiondecl functionName="Quit" lineNumber="11"/>
+    <functiondecl functionName="PushLayer" lineNumber="13"/>
+    <functiondecl functionName="Run" lineNumber="18"/>
+    <functiondecl functionName="onStart" lineNumber="11"/>
+    <functiondecl functionName="onStart" lineNumber="11"/>
+    <functiondecl functionName="LoadScript" lineNumber="16"/>
+    <functiondecl functionName="onStart" lineNumber="12"/>
+    <functiondecl functionName="LoadScript" lineNumber="24"/>
+    <functiondecl functionName="onStart" lineNumber="9"/>
+    <functiondecl functionName="CreateAppleScript" lineNumber="15"/>
+    <functiondecl functionName="Init" lineNumber="37"/>
+    <functiondecl functionName="Run" lineNumber="56"/>
+    <functiondecl functionName="Quit" lineNumber="68"/>
+    <functiondecl functionName="main" lineNumber="77"/>
+    <functioncall functionName="ActivateRenderer"/>
+    <functioncall functionName="AppleScript"/>
+    <functioncall functionName="ClearScreen"/>
+    <functioncall functionName="Component"/>
+    <functioncall functionName="CreateAppleScript"/>
+    <functioncall functionName="DrawImage"/>
+    <functioncall functionName="EndFrame"/>
+    <functioncall functionName="Flush"/>
+    <functioncall functionName="FlushImage"/>
+    <functioncall functionName="GameObject"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="InitRenderer"/>
+    <functioncall functionName="Layer"/>
+    <functioncall functionName="LoadImage"/>
+    <functioncall functionName="LoadScript"/>
+    <functioncall functionName="PushLayer"/>
+    <functioncall functionName="Quit"/>
+    <functioncall functionName="Run"/>
+    <functioncall functionName="SandboxLayer"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="ScriptComponent"/>
+    <functioncall functionName="WindowClosed"/>
+    <functioncall functionName="__glewBindVertexArray"/>
+    <functioncall functionName="__glewGenerateMipmap"/>
+    <functioncall functionName="__glewGetUniformLocation"/>
+    <functioncall functionName="__glewUniform2f"/>
+    <functioncall functionName="__glewUseProgram"/>
+    <functioncall functionName="__int64"/>
+    <functioncall functionName="addComponent"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="glBindTexture"/>
+    <functioncall functionName="glDrawElements"/>
+    <functioncall functionName="glGenTextures"/>
+    <functioncall functionName="glTexImage2D"/>
+    <functioncall functionName="glTexParameteri"/>
+    <functioncall functionName="onStart"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="stbi_image_free"/>
+    <functioncall functionName="stbi_load"/>
+    <functioncall functionName="stbi_set_flip_vertically_on_load"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

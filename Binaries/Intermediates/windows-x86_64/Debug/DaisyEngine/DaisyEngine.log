@@ -1,4 +1,11 @@
-﻿  main.cpp
+﻿  GameObject.cpp
+  ImageHandler.cpp
+  LayerManager.cpp
+  Renderer2D.cpp
+  Window.cpp
+  main.cpp
+  stb_image.cpp
+  Generating Code...
 glew32s.lib(glew.obj) : warning LNK4006: glewInit already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewIsSupported already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewGetExtension already defined in glew32.lib(glew32.dll); second definition ignored
@@ -518,4 +525,4 @@ ImageHandler.obj : warning LNK4006: "class Daisy::Renderer2D * Daisy::activeRend
 ImageHandler.obj : warning LNK4006: "void __cdecl Daisy::ActivateRenderer(class Daisy::Renderer2D *)" (?ActivateRenderer@Daisy@@YAXPEAVRenderer2D@1@@Z) already defined in main.obj; second definition ignored
 ImageHandler.obj : warning LNK4006: "struct Daisy::Image __cdecl Daisy::LoadImage(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?LoadImage@Daisy@@YA?AUImage@1@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in main.obj; second definition ignored
 ImageHandler.obj : warning LNK4006: "void __cdecl Daisy::DrawImage(struct Daisy::Image,float,float,float,float)" (?DrawImage@Daisy@@YAXUImage@1@MMMM@Z) already defined in main.obj; second definition ignored
-  DaisyEngine.vcxproj -> D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\DaisyEngine\DaisyEngine.lib
+  DaisyEngine.vcxproj -> D:\dev\DaisyEngine\Binaries\windows-x86_64\Debug\DaisyEngine\DaisyEngine.lib

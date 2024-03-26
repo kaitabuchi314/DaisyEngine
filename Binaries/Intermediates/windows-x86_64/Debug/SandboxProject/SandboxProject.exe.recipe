@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Documents\DaisyEngine\Binaries\windows-x86_64\Debug\SandboxProject\SandboxProject.exe</FullPath>
+      <FullPath>D:\dev\DaisyEngine\Binaries\windows-x86_64\Debug\SandboxProject\SandboxProject.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

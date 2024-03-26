@@ -1,0 +1,3 @@
+ActivateRenderer
+LoadImage global:[__glewGenerateMipmap] call:[Image,__glewGenerateMipmap,c_str,glBindTexture,glGenTextures,glTexImage2D,glTexParameteri,stbi_image_free,stbi_load,stbi_set_flip_vertically_on_load] noreturn:[Image,glTexImage2D]
+DrawImage global:[__glewBindVertexArray,__glewGetUniformLocation,__glewUniform2f,__glewUseProgram] call:[__glewBindVertexArray,__glewGetUniformLocation,__glewUniform2f,__glewUseProgram,glBindTexture,glDrawElements] noreturn:[__glewBindVertexArray]

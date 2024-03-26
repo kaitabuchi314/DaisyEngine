@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="10995634862377553078">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="103" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="108" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="307" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.h" line="5" column="0"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.cpp" line="122" column="76"/>
+        </error>
+  <FileInfo check="Class">
+<class name="GLFWvidmode" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2026" col="9" hash="5014978948604091791"/>
+<class name="GLFWgammaramp" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2060" col="9" hash="15759332869564605894"/>
+<class name="GLFWimage" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2089" col="9" hash="18229993221891273149"/>
+<class name="GLFWgamepadstate" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2113" col="9" hash="15865163930354674965"/>
+<class name="GLFWallocator" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2137" col="9" hash="1200025269306264198"/>
+<class name="stbi_io_callbacks" file="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h" line="344" col="9" hash="1736050583514839103"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="FlushImage" lineNumber="7"/>
+    <functiondecl functionName="InitOpenGL" lineNumber="12"/>
+    <functiondecl functionName="GenShaders" lineNumber="23"/>
+    <functiondecl functionName="GenBuffers" lineNumber="92"/>
+    <functiondecl functionName="InitRenderer" lineNumber="128"/>
+    <functiondecl functionName="ClearScreen" lineNumber="137"/>
+    <functiondecl functionName="Flush" lineNumber="143"/>
+    <functioncall functionName="GenBuffers"/>
+    <functioncall functionName="GenShaders"/>
+    <functioncall functionName="InitOpenGL"/>
+    <functioncall functionName="__glewAttachShader"/>
+    <functioncall functionName="__glewBindBuffer"/>
+    <functioncall functionName="__glewBindVertexArray"/>
+    <functioncall functionName="__glewBufferData"/>
+    <functioncall functionName="__glewCompileShader"/>
+    <functioncall functionName="__glewCreateProgram"/>
+    <functioncall functionName="__glewCreateShader"/>
+    <functioncall functionName="__glewDeleteBuffers"/>
+    <functioncall functionName="__glewDeleteProgram"/>
+    <functioncall functionName="__glewDeleteShader"/>
+    <functioncall functionName="__glewDeleteVertexArrays"/>
+    <functioncall functionName="__glewEnableVertexAttribArray"/>
+    <functioncall functionName="__glewGenBuffers"/>
+    <functioncall functionName="__glewGenVertexArrays"/>
+    <functioncall functionName="__glewGetProgramInfoLog"/>
+    <functioncall functionName="__glewGetProgramiv"/>
+    <functioncall functionName="__glewGetShaderInfoLog"/>
+    <functioncall functionName="__glewGetShaderiv"/>
+    <functioncall functionName="__glewLinkProgram"/>
+    <functioncall functionName="__glewShaderSource"/>
+    <functioncall functionName="__glewVertexAttribPointer"/>
+    <functioncall functionName="__int64"/>
+    <functioncall functionName="glBlendFunc"/>
+    <functioncall functionName="glClear"/>
+    <functioncall functionName="glClearColor"/>
+    <functioncall functionName="glDeleteTextures"/>
+    <functioncall functionName="glEnable"/>
+    <functioncall functionName="glewInit"/>
+  </FileInfo>
+</analyzerinfo>

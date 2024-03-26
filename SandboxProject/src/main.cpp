@@ -1,4 +1,5 @@
 #include <Daisy.h>
+#include <random>
 
 namespace SandboxLayer
 {
@@ -7,7 +8,7 @@ namespace SandboxLayer
     public:
         virtual void onStart(Daisy::GameObject* self) override
         {
-            std::cout << "apple";
+            std::cout << "apple\n";
         }
     };
 
@@ -32,10 +33,13 @@ namespace SandboxLayer
         Daisy::Renderer2D renderer;
         Daisy::Image img;
         Daisy::ScriptComponent* sc;
+        double lastTime;
+        int nbFrames = 0;
     };
 
     void SandboxLayer::Init()
     {
+        lastTime = glfwGetTime();
         id = 0;
 
         renderer.InitRenderer();
@@ -56,12 +60,31 @@ namespace SandboxLayer
 
     void SandboxLayer::Run()
     {
+
         while (!window.WindowClosed())
         {
             renderer.ClearScreen(0.3f, 0.6f, 0.2f);
 
-            Daisy::DrawImage(img, 0, 0, 0.2f, 0.2f);
-
+            for (int i = 0; i < 1500; i++)
+            {
+                std::random_device random_device;
+                std::mt19937 engine{random_device()};
+                std::uniform_int_distribution<> dist(-20.0f, 20.0f); 
+                auto X = dist(engine); 
+                std::random_device random_device2;
+                std::mt19937 engine2{random_device2()};
+                std::uniform_int_distribution<> dist2(-18.0f, 18.0f);
+                auto Y = dist(engine2);
+                Daisy::DrawImage(img, X, Y, 0.03f, 0.03f);
+            }
+            double currentTime = glfwGetTime();
+            nbFrames++;
+            if (currentTime - lastTime >= 1.0)
+            {
+                printf("%f ms/frame\n", 1000.0 / double(nbFrames));
+                nbFrames = 0;
+                lastTime += 1.0;
+            }
             window.EndFrame();
         }
     }

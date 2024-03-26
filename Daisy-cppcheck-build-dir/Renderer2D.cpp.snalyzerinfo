@@ -1,0 +1,7 @@
+FlushImage call:[glDeleteTextures] noreturn:[glDeleteTextures]
+InitOpenGL call:[glBlendFunc,glEnable,glewInit] noreturn:[glBlendFunc]
+GenShaders global:[__glewAttachShader,__glewCompileShader,__glewCreateProgram,__glewCreateShader,__glewDeleteShader,__glewGetProgramInfoLog,__glewGetProgramiv,__glewGetShaderInfoLog,__glewGetShaderiv,__glewLinkProgram,__glewShaderSource] call:[__glewAttachShader,__glewCompileShader,__glewCreateProgram,__glewCreateShader,__glewDeleteShader,__glewGetProgramInfoLog,__glewGetProgramiv,__glewGetShaderInfoLog,__glewGetShaderiv,__glewLinkProgram,__glewShaderSource] noreturn:[__glewDeleteShader]
+GenBuffers global:[__glewBindBuffer,__glewBindVertexArray,__glewBufferData,__glewEnableVertexAttribArray,__glewGenBuffers,__glewGenVertexArrays,__glewVertexAttribPointer] call:[__glewBindBuffer,__glewBindVertexArray,__glewBufferData,__glewEnableVertexAttribArray,__glewGenBuffers,__glewGenVertexArrays,__glewVertexAttribPointer,sizeof] noreturn:[__glewBindVertexArray]
+InitRenderer call:[GenBuffers,GenShaders,InitOpenGL] noreturn:[GenBuffers]
+ClearScreen call:[glClear,glClearColor] noreturn:[glClear]
+Flush global:[__glewDeleteBuffers,__glewDeleteProgram,__glewDeleteVertexArrays] call:[__glewDeleteBuffers,__glewDeleteProgram,__glewDeleteVertexArrays] noreturn:[__glewDeleteProgram]
