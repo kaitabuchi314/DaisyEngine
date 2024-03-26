@@ -1,0 +1,2 @@
+RandomInt call:[dist,random_device]
+RandomFloat call:[dist,random_device]

@@ -9,5 +9,7 @@ namespace Daisy
 	public:
 		virtual ~Component() {};
 		virtual void onStart(GameObject* self) {};
+		virtual void onUpdate(GameObject* self) {};
+		virtual void onRender(GameObject* self) {};
 	};
 }

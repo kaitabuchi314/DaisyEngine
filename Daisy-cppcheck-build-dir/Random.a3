@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="12220829030805086962">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Random.h" line="2" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="RandomInt" lineNumber="7"/>
+    <functiondecl functionName="RandomFloat" lineNumber="16"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="random_device"/>
+  </FileInfo>
+</analyzerinfo>

@@ -7,9 +7,15 @@ GameObject.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/GameObject.cpp
 ImageHandler.a1:Debug|x64:D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp
 ImageHandler.a2:Release|x64:D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp
 ImageHandler.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/ImageHandler.cpp
+Input.a1:Debug|x64:D:/dev/DaisyEngine/DaisyEngine/src/Input.cpp
+Input.a2:Release|x64:D:/dev/DaisyEngine/DaisyEngine/src/Input.cpp
+Input.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/Input.cpp
 LayerManager.a1:Debug|x64:D:/dev/DaisyEngine/DaisyEngine/src/LayerManager.cpp
 LayerManager.a2:Release|x64:D:/dev/DaisyEngine/DaisyEngine/src/LayerManager.cpp
 LayerManager.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/LayerManager.cpp
+Random.a1:Debug|x64:D:/dev/DaisyEngine/DaisyEngine/src/Random.cpp
+Random.a2:Release|x64:D:/dev/DaisyEngine/DaisyEngine/src/Random.cpp
+Random.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/Random.cpp
 Renderer2D.a1:Debug|x64:D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp
 Renderer2D.a2:Release|x64:D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp
 Renderer2D.a3:Dist|x64:D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp

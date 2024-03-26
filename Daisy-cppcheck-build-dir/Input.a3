@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="4917432319210587573">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="103" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="108" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/gl.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/gl.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\GLFW\glfw3.h" line="241" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Input.cpp" line="2" column="0"/>
+        </error>
+  <FileInfo check="Class">
+<class name="GLFWvidmode" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2026" col="9" hash="5014978948604091791"/>
+<class name="GLFWgammaramp" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2060" col="9" hash="15759332869564605894"/>
+<class name="GLFWimage" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2089" col="9" hash="18229993221891273149"/>
+<class name="GLFWgamepadstate" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2113" col="9" hash="15865163930354674965"/>
+<class name="GLFWallocator" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2137" col="9" hash="1200025269306264198"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="GetKeyPressed" lineNumber="8"/>
+    <functiondecl functionName="GetKeyUp" lineNumber="12"/>
+    <functiondecl functionName="key_callback" lineNumber="16"/>
+  </FileInfo>
+</analyzerinfo>

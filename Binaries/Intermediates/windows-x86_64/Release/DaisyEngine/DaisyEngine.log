@@ -1,4 +1,24 @@
-﻿  main.cpp
+﻿  GameObject.cpp
+  ImageHandler.cpp
+  Input.cpp
+  LayerManager.cpp
+  Random.cpp
+D:\dev\DaisyEngine\DaisyEngine\src\Random.cpp(22,58): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\dev\DaisyEngine\DaisyEngine\src\Random.cpp(22,48): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\dev\DaisyEngine\DaisyEngine\src\Random.cpp(24,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  Renderer2D.cpp
+  Window.cpp
+  main.cpp
+  stb_image.cpp
+  Generating Code...
 glew32s.lib(glew.obj) : warning LNK4006: glewInit already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewIsSupported already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewGetExtension already defined in glew32.lib(glew32.dll); second definition ignored

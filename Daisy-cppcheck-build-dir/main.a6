@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="4731443719415825322">
+<analyzerinfo hash="15219251187194800245">
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
         </error>
@@ -39,6 +39,9 @@
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="4" column="0"/>
         </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Random.h" line="2" column="0"/>
+        </error>
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="2" column="0"/>
         </error>
@@ -62,12 +65,17 @@
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\main.cpp" line="22" column="9"/>
             <symbol>Layer::id</symbol>
         </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;onUpdate&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;onUpdate&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="17" column="16" info="Function in derived class"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Component.h" line="12" column="16" info="Virtual function in base class"/>
+            <symbol>onUpdate</symbol>
+        </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;path&apos; should be passed by const reference." verbose="Parameter &apos;path&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\ImageHandler.cpp" line="10" column="33" info="Function parameter &apos;path&apos; should be passed by const reference."/>
             <symbol>path</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;name&apos; should be passed by const reference." verbose="Parameter &apos;name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="16" column="52" info="Function parameter &apos;name&apos; should be passed by const reference."/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="19" column="52" info="Function parameter &apos;name&apos; should be passed by const reference."/>
             <symbol>name</symbol>
         </error>
   <FileInfo check="ctu">
@@ -90,10 +98,16 @@
     <functiondecl functionName="PushLayer" lineNumber="13"/>
     <functiondecl functionName="Run" lineNumber="18"/>
     <functiondecl functionName="onStart" lineNumber="11"/>
-    <functiondecl functionName="onStart" lineNumber="11"/>
-    <functiondecl functionName="LoadScript" lineNumber="16"/>
+    <functiondecl functionName="onUpdate" lineNumber="12"/>
+    <functiondecl functionName="onRender" lineNumber="13"/>
     <functiondecl functionName="onStart" lineNumber="12"/>
-    <functiondecl functionName="LoadScript" lineNumber="24"/>
+    <functiondecl functionName="onUpdate" lineNumber="13"/>
+    <functiondecl functionName="onRender" lineNumber="14"/>
+    <functiondecl functionName="LoadScript" lineNumber="19"/>
+    <functiondecl functionName="onStart" lineNumber="12"/>
+    <functiondecl functionName="onUpdate" lineNumber="17"/>
+    <functiondecl functionName="onRender" lineNumber="21"/>
+    <functiondecl functionName="LoadScript" lineNumber="32"/>
     <functiondecl functionName="onStart" lineNumber="9"/>
     <functiondecl functionName="CreateAppleScript" lineNumber="15"/>
     <functiondecl functionName="Init" lineNumber="37"/>
@@ -136,7 +150,9 @@
     <functioncall functionName="glGenTextures"/>
     <functioncall functionName="glTexImage2D"/>
     <functioncall functionName="glTexParameteri"/>
+    <functioncall functionName="onRender"/>
     <functioncall functionName="onStart"/>
+    <functioncall functionName="onUpdate"/>
     <functioncall functionName="override"/>
     <functioncall functionName="push_back"/>
     <functioncall functionName="stbi_image_free"/>
@@ -144,5 +160,6 @@
     <functioncall functionName="stbi_set_flip_vertically_on_load"/>
     <functioncall functionName="string"/>
     <functioncall functionName="true"/>
+    <functioncall functionName="vec2"/>
   </FileInfo>
 </analyzerinfo>

@@ -2,6 +2,7 @@
 #include <functional>
 #include <string>
 #include <map>
+#include "Input.h"
 
 namespace Daisy
 {
@@ -9,6 +10,8 @@ namespace Daisy
 	{
 	public:
 		virtual void onStart(GameObject* self) {};
+		virtual void onUpdate(GameObject* self) {};
+		virtual void onRender(GameObject* self) {};
 	};
 	namespace Scripts
 	{

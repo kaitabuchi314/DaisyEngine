@@ -14,6 +14,14 @@ namespace Daisy
 			LoadScript();
 			script->onStart(self);
 		}
+		virtual void onUpdate(GameObject* self)
+		{
+			script->onUpdate(self);
+		};
+		virtual void onRender(Daisy::GameObject* self) override
+		{
+			script->onRender(self);
+		};
 		virtual ~ScriptComponent() override
 		{
 			delete script;

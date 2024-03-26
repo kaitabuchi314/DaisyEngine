@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="13424764228621825892">
+<analyzerinfo hash="4904637990577728433">
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
         </error>
@@ -40,38 +40,50 @@
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="4" column="0"/>
         </error>
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Random.h" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;random&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="2" column="0"/>
         </error>
         <error id="noConstructor" severity="style" msg="The class &apos;ScriptComponent&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;ScriptComponent&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="8" column="2"/>
             <symbol>ScriptComponent</symbol>
         </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;AppleScript&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;AppleScript&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="6" column="5"/>
+            <symbol>AppleScript</symbol>
+        </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::renderer&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::renderer&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="22" column="9"/>
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="50" column="9"/>
             <symbol>SandboxLayer::renderer</symbol>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::img&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::img&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="22" column="9"/>
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="50" column="9"/>
             <symbol>SandboxLayer::img</symbol>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::sc&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::sc&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="22" column="9"/>
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="50" column="9"/>
             <symbol>SandboxLayer::sc</symbol>
         </error>
         <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SandboxLayer::lastTime&apos; is not initialized in the constructor." verbose="Member variable &apos;SandboxLayer::lastTime&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="22" column="9"/>
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="50" column="9"/>
             <symbol>SandboxLayer::lastTime</symbol>
         </error>
         <error id="uninitDerivedMemberVar" severity="warning" msg="Member variable &apos;Layer::id&apos; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer?" verbose="Member variable &apos;Layer::id&apos; is not initialized in the constructor. Maybe it should be initialized directly in the class Layer? Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="22" column="9"/>
+            <location file="D:\dev\DaisyEngine\SandboxProject\src\main.cpp" line="50" column="9"/>
             <symbol>Layer::id</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;onUpdate&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;onUpdate&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\ScriptComponent.h" line="17" column="16" info="Function in derived class"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Component.h" line="12" column="16" info="Virtual function in base class"/>
+            <symbol>onUpdate</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;path&apos; should be passed by const reference." verbose="Parameter &apos;path&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\ImageHandler.cpp" line="10" column="33" info="Function parameter &apos;path&apos; should be passed by const reference."/>
             <symbol>path</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;name&apos; should be passed by const reference." verbose="Parameter &apos;name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/SandboxProject/src/main.cpp">
-            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="16" column="52" info="Function parameter &apos;name&apos; should be passed by const reference."/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Script.h" line="19" column="52" info="Function parameter &apos;name&apos; should be passed by const reference."/>
             <symbol>name</symbol>
         </error>
   <FileInfo check="ctu">
@@ -84,6 +96,12 @@
 <class name="GLFWallocator" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2137" col="9" hash="1200025269306264198"/>
 <class name="stbi_io_callbacks" file="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.h" line="344" col="9" hash="1736050583514839103"/>
   </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="D:/dev/DaisyEngine/SandboxProject/src/main.cpp:35:22" my-argnr="1" my-argname="self" file="D:/dev/DaisyEngine/SandboxProject/src/main.cpp" line="37" col="37" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="D:/dev/DaisyEngine/SandboxProject/src/main.cpp:35:22" my-argnr="1" my-argname="self" file="D:/dev/DaisyEngine/SandboxProject/src/main.cpp" line="37" col="37" value="0"/>
+  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="ActivateRenderer" lineNumber="8"/>
     <functiondecl functionName="LoadImage" lineNumber="10"/>
@@ -94,16 +112,24 @@
     <functiondecl functionName="PushLayer" lineNumber="13"/>
     <functiondecl functionName="Run" lineNumber="18"/>
     <functiondecl functionName="onStart" lineNumber="11"/>
-    <functiondecl functionName="onStart" lineNumber="11"/>
-    <functiondecl functionName="LoadScript" lineNumber="16"/>
+    <functiondecl functionName="onUpdate" lineNumber="12"/>
+    <functiondecl functionName="onRender" lineNumber="13"/>
     <functiondecl functionName="onStart" lineNumber="12"/>
-    <functiondecl functionName="LoadScript" lineNumber="24"/>
+    <functiondecl functionName="onUpdate" lineNumber="13"/>
+    <functiondecl functionName="onRender" lineNumber="14"/>
+    <functiondecl functionName="LoadScript" lineNumber="19"/>
+    <functiondecl functionName="onStart" lineNumber="12"/>
+    <functiondecl functionName="onUpdate" lineNumber="17"/>
+    <functiondecl functionName="onRender" lineNumber="21"/>
+    <functiondecl functionName="LoadScript" lineNumber="32"/>
     <functiondecl functionName="onStart" lineNumber="9"/>
-    <functiondecl functionName="CreateAppleScript" lineNumber="15"/>
-    <functiondecl functionName="Init" lineNumber="40"/>
-    <functiondecl functionName="Run" lineNumber="61"/>
-    <functiondecl functionName="Quit" lineNumber="92"/>
-    <functiondecl functionName="main" lineNumber="101"/>
+    <functiondecl functionName="onUpdate" lineNumber="14"/>
+    <functiondecl functionName="onRender" lineNumber="35"/>
+    <functiondecl functionName="CreateAppleScript" lineNumber="43"/>
+    <functiondecl functionName="Init" lineNumber="68"/>
+    <functiondecl functionName="Run" lineNumber="92"/>
+    <functiondecl functionName="Quit" lineNumber="119"/>
+    <functiondecl functionName="main" lineNumber="128"/>
     <functioncall functionName="ActivateRenderer"/>
     <functioncall functionName="AppleScript"/>
     <functioncall functionName="ClearScreen"/>
@@ -114,6 +140,7 @@
     <functioncall functionName="Flush"/>
     <functioncall functionName="FlushImage"/>
     <functioncall functionName="GameObject"/>
+    <functioncall functionName="GetKeyPressed"/>
     <functioncall functionName="Image"/>
     <functioncall functionName="Init"/>
     <functioncall functionName="InitRenderer"/>
@@ -135,24 +162,23 @@
     <functioncall functionName="__int64"/>
     <functioncall functionName="addComponent"/>
     <functioncall functionName="c_str"/>
-    <functioncall functionName="dist"/>
-    <functioncall functionName="dist2"/>
     <functioncall functionName="glBindTexture"/>
     <functioncall functionName="glDrawElements"/>
     <functioncall functionName="glGenTextures"/>
     <functioncall functionName="glTexImage2D"/>
     <functioncall functionName="glTexParameteri"/>
     <functioncall functionName="glfwGetTime"/>
+    <functioncall functionName="onRender"/>
     <functioncall functionName="onStart"/>
+    <functioncall functionName="onUpdate"/>
     <functioncall functionName="override"/>
     <functioncall functionName="printf"/>
     <functioncall functionName="push_back"/>
-    <functioncall functionName="random_device"/>
-    <functioncall functionName="random_device2"/>
     <functioncall functionName="stbi_image_free"/>
     <functioncall functionName="stbi_load"/>
     <functioncall functionName="stbi_set_flip_vertically_on_load"/>
     <functioncall functionName="string"/>
     <functioncall functionName="true"/>
+    <functioncall functionName="vec2"/>
   </FileInfo>
 </analyzerinfo>

@@ -1,3 +1,6 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
 #include <Daisy.h>
 #include <random>
 
@@ -8,8 +11,36 @@ namespace SandboxLayer
     public:
         virtual void onStart(Daisy::GameObject* self) override
         {
-            std::cout << "apple\n";
+            image = Daisy::LoadImage("guy.png");
         }
+
+        virtual void onUpdate(Daisy::GameObject* self) override
+        {
+            if (Daisy::Input::GetKeyPressed(DAISY_KEY_RIGHT))
+            {
+                self->position.x += 0.001f;
+            }
+            else if (Daisy::Input::GetKeyPressed(DAISY_KEY_LEFT))
+            {
+                self->position.x -= 0.001f;
+            }
+
+            if (Daisy::Input::GetKeyPressed(DAISY_KEY_UP))
+            {
+                self->position.y += 0.001f;
+            }
+            else if (Daisy::Input::GetKeyPressed(DAISY_KEY_DOWN))
+            {
+                self->position.y -= 0.001f;
+            }
+        }
+
+        virtual void onRender(Daisy::GameObject* self) override
+        {
+            Daisy::DrawImage(image, self->position.x, self->position.y, self->scale.x, self->scale.y);
+        }
+    private:
+        Daisy::Image image;
     };
 
     Daisy::Script* CreateAppleScript()
@@ -51,6 +82,9 @@ namespace SandboxLayer
         sc = new Daisy::ScriptComponent();
         sc->scriptName = "Apple";
         object = Daisy::GameObject();
+        object.scale.x = 0.3f;
+        object.scale.y = 0.3f;
+
         object.addComponent(sc);
         //object.components.push_back(sc);
         
@@ -63,13 +97,10 @@ namespace SandboxLayer
 
         while (!window.WindowClosed())
         {
-            renderer.ClearScreen(0.3f, 0.6f, 0.2f);
-            
-            for (int i = 0; i < 1500; i++)
-            {
-                Daisy::DrawImage(img, Daisy::Random::RandomFloat(-500.0f,500.0f), Daisy::Random::RandomFloat(-400.0f, 400.0f), 0.03f, 0.03f);
-            }
+            // Game Loop
+            object.onUpdate();
 
+            // Calculate ms/f
             double currentTime = glfwGetTime();
             nbFrames++;
             if (currentTime - lastTime >= 1.0)
@@ -78,6 +109,12 @@ namespace SandboxLayer
                 nbFrames = 0;
                 lastTime += 1.0;
             }
+
+            // Render
+            renderer.ClearScreen(0.3f, 0.6f, 0.2f);
+            
+            object.onRender();
+
             window.EndFrame();
         }
     }

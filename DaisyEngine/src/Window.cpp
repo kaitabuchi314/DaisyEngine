@@ -1,6 +1,5 @@
 #include "Window.h"
 
-
 namespace Daisy
 {
 	Window::Window(int width, int height, std::string title)
@@ -21,7 +20,7 @@ namespace Daisy
 
         glfwMakeContextCurrent(window);
 
-        
+        glfwSetKeyCallback(window, Input::key_callback);
 	}
 
     void Window::EndFrame()

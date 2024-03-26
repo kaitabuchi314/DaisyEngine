@@ -1,12 +1,15 @@
+
 #pragma once
 
 #include <include/GL/glew.h>
 #include <glfw3.h>
 #include <string>
 #include <iostream>
+#include "Input.h"
 
 namespace Daisy
 {
+
 	class Window
 	{
 	public:

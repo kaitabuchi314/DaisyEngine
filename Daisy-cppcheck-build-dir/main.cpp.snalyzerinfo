@@ -9,9 +9,17 @@ PushLayer call:[push_back] noreturn:[push_back]
 Run call:[Init,Quit,Run] noreturn:[Quit]
 Component
 onStart
+onUpdate
+onRender
+vec2
+GameObject
 onStart
+onUpdate
+onRender
 LoadScript
 onStart call:[LoadScript,onStart] noreturn:[onStart]
+onUpdate call:[onUpdate] noreturn:[onUpdate]
+onRender call:[onRender] noreturn:[onRender]
 ScriptComponent
 LoadScript call:[LoadScript]
 onStart

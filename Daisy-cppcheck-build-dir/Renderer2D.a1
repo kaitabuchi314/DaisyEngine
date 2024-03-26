@@ -15,6 +15,16 @@
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.h" line="5" column="0"/>
         </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Daisy::Renderer2D::InitOpenGL&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Daisy::Renderer2D::InitOpenGL&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.h" line="27" column="14"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.cpp" line="12" column="22"/>
+            <symbol>Daisy::Renderer2D::InitOpenGL</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Daisy::Renderer2D::ClearScreen&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Daisy::Renderer2D::ClearScreen&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.h" line="35" column="14"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.cpp" line="137" column="22"/>
+            <symbol>Daisy::Renderer2D::ClearScreen</symbol>
+        </error>
         <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/Renderer2D.cpp">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.cpp" line="122" column="76"/>
         </error>

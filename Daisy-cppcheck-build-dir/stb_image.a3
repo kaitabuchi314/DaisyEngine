@@ -373,6 +373,126 @@
             <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="6341" column="8"/>
             <symbol>dispose</symbol>
         </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1159" column="71"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="364" column="83"/>
+            <symbol>stbi_load</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1159" column="81"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="364" column="105"/>
+            <symbol>stbi_load</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_file&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load_from_file&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1169" column="68"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="365" column="70"/>
+            <symbol>stbi_load_from_file</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_file&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load_from_file&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1169" column="78"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="365" column="92"/>
+            <symbol>stbi_load_from_file</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_file_16&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load_from_file_16&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1182" column="76"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="379" column="71"/>
+            <symbol>stbi_load_from_file_16</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_file_16&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load_from_file_16&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1182" column="86"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="379" column="93"/>
+            <symbol>stbi_load_from_file_16</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_16&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load_16&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1195" column="74"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="378" column="84"/>
+            <symbol>stbi_load_16</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_16&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load_16&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1195" column="84"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="378" column="106"/>
+            <symbol>stbi_load_16</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_memory&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load_from_memory&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1222" column="93"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="356" column="109"/>
+            <symbol>stbi_load_from_memory</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_memory&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load_from_memory&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1222" column="103"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="356" column="131"/>
+            <symbol>stbi_load_from_memory</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_callbacks&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_load_from_callbacks&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1229" column="107"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="357" column="109"/>
+            <symbol>stbi_load_from_callbacks</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_load_from_callbacks&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_load_from_callbacks&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1229" column="117"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="357" column="131"/>
+            <symbol>stbi_load_from_callbacks</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_memory&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_loadf_from_memory&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1271" column="92"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="387" column="100"/>
+            <symbol>stbi_loadf_from_memory</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_memory&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_loadf_from_memory&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1271" column="102"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="387" column="122"/>
+            <symbol>stbi_loadf_from_memory</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_callbacks&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_loadf_from_callbacks&apos; argument 5 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1278" column="106"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="388" column="112"/>
+            <symbol>stbi_loadf_from_callbacks</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_callbacks&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_loadf_from_callbacks&apos; argument 6 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1278" column="116"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="388" column="134"/>
+            <symbol>stbi_loadf_from_callbacks</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_loadf&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1286" column="70"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="391" column="85"/>
+            <symbol>stbi_loadf</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_loadf&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1286" column="80"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="391" column="107"/>
+            <symbol>stbi_loadf</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_file&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." verbose="Function &apos;stbi_loadf_from_file&apos; argument 4 names different: declaration &apos;channels_in_file&apos; definition &apos;comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1296" column="67"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="392" column="72"/>
+            <symbol>stbi_loadf_from_file</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_loadf_from_file&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." verbose="Function &apos;stbi_loadf_from_file&apos; argument 5 names different: declaration &apos;desired_channels&apos; definition &apos;req_comp&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="1296" column="77"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="392" column="94"/>
+            <symbol>stbi_loadf_from_file</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi__pic_load&apos; argument 2 names different: declaration &apos;x&apos; definition &apos;px&apos;." verbose="Function &apos;stbi__pic_load&apos; argument 2 names different: declaration &apos;x&apos; definition &apos;px&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="6070" column="51"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="826" column="55"/>
+            <symbol>stbi__pic_load</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi__pic_load&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;py&apos;." verbose="Function &apos;stbi__pic_load&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;py&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="6070" column="59"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="826" column="63"/>
+            <symbol>stbi__pic_load</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_info_from_callbacks&apos; argument 1 names different: declaration &apos;clbk&apos; definition &apos;c&apos;." verbose="Function &apos;stbi_info_from_callbacks&apos; argument 1 names different: declaration &apos;clbk&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="7216" column="63"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="424" column="68"/>
+            <symbol>stbi_info_from_callbacks</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;stbi_is_16_bit_from_callbacks&apos; argument 1 names different: declaration &apos;clbk&apos; definition &apos;c&apos;." verbose="Function &apos;stbi_is_16_bit_from_callbacks&apos; argument 1 names different: declaration &apos;clbk&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="7230" column="68"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="426" column="73"/>
+            <symbol>stbi_is_16_bit_from_callbacks</symbol>
+        </error>
         <error id="constParameterPointer" severity="style" msg="Parameter &apos;c&apos; can be declared as pointer to const" verbose="Parameter &apos;c&apos; can be declared as pointer to const" cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/vendor/stb_image/stb_image.cpp">
             <location file="D:\dev\DaisyEngine\DaisyEngine\vendor\stb_image\stb_image.h" line="720" column="72" info="Parameter &apos;c&apos; can be declared as pointer to const"/>
             <symbol>c</symbol>

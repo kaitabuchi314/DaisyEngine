@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="7510168050202058337">
+<analyzerinfo hash="10655202760351280052">
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
         </error>
@@ -15,13 +15,20 @@
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="6" column="0"/>
         </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Daisy::Window::Flush&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Daisy::Window::Flush&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp">
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.h" line="18" column="8"/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="32" column="18"/>
+            <symbol>Daisy::Window::Flush</symbol>
+        </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;title&apos; should be passed by const reference." verbose="Parameter &apos;title&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp">
-            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="6" column="52" info="Function parameter &apos;title&apos; should be passed by const reference."/>
+            <location file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="5" column="52" info="Function parameter &apos;title&apos; should be passed by const reference."/>
             <symbol>title</symbol>
         </error>
   <FileInfo check="ctu">
-<function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:3235:21" call-funcname="glfwCreateWindow" call-argnr="4" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="16" col="34" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:3235:21" call-funcname="glfwCreateWindow" call-argnr="5" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="16" col="34" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:6109:14" call-funcname="glfwMakeContextCurrent" call-argnr="1" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="22" col="31" call-argexpr="window" call-argvaluetype="0" call-argvalue="0" warning="true">
-  <path file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="17" col="13" info="Assuming that condition &apos;!window&apos; is not redundant"/>
+<function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:3235:21" call-funcname="glfwCreateWindow" call-argnr="4" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="15" col="34" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:3235:21" call-funcname="glfwCreateWindow" call-argnr="5" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="15" col="34" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:6109:14" call-funcname="glfwMakeContextCurrent" call-argnr="1" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="21" col="31" call-argexpr="window" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="16" col="13" info="Assuming that condition &apos;!window&apos; is not redundant"/>
+</function-call><function-call call-id="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h:5198:20" call-funcname="glfwSetKeyCallback" call-argnr="1" file="D:/dev/DaisyEngine/DaisyEngine/src/Window.cpp" line="23" col="27" call-argexpr="window" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp" line="16" col="13" info="Assuming that condition &apos;!window&apos; is not redundant"/>
 </function-call>  </FileInfo>
   <FileInfo check="Class">
 <class name="GLFWvidmode" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2026" col="9" hash="5014978948604091791"/>
@@ -31,9 +38,9 @@
 <class name="GLFWallocator" file="D:/dev/DaisyEngine/DaisyEngine/GLFW/glfw3.h" line="2137" col="9" hash="1200025269306264198"/>
   </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="EndFrame" lineNumber="27"/>
-    <functiondecl functionName="Flush" lineNumber="33"/>
-    <functiondecl functionName="WindowClosed" lineNumber="38"/>
+    <functiondecl functionName="EndFrame" lineNumber="26"/>
+    <functiondecl functionName="Flush" lineNumber="32"/>
+    <functiondecl functionName="WindowClosed" lineNumber="37"/>
     <functioncall functionName="Window"/>
     <functioncall functionName="__int64"/>
     <functioncall functionName="c_str"/>
@@ -41,9 +48,11 @@
     <functioncall functionName="glfwInit"/>
     <functioncall functionName="glfwMakeContextCurrent"/>
     <functioncall functionName="glfwPollEvents"/>
+    <functioncall functionName="glfwSetKeyCallback"/>
     <functioncall functionName="glfwSwapBuffers"/>
     <functioncall functionName="glfwTerminate"/>
     <functioncall functionName="glfwWindowHint"/>
     <functioncall functionName="glfwWindowShouldClose"/>
+    <functioncall functionName="key_callback"/>
   </FileInfo>
 </analyzerinfo>

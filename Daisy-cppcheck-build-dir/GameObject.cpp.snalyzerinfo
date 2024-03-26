@@ -1,4 +1,10 @@
 Component
 onStart
+onUpdate
+onRender
+vec2
+GameObject
 onStart call:[onStart] noreturn:[onStart]
+onUpdate call:[onUpdate] noreturn:[onUpdate]
+onRender call:[onRender] noreturn:[onRender]
 addComponent call:[push_back] noreturn:[push_back]
