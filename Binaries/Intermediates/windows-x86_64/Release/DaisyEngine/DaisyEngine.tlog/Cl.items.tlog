@@ -1,6 +1,7 @@
 D:\dev\DaisyEngine\DaisyEngine\src\GameObject.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\GameObject.obj
 D:\dev\DaisyEngine\DaisyEngine\src\ImageHandler.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\ImageHandler.obj
 D:\dev\DaisyEngine\DaisyEngine\src\LayerManager.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\LayerManager.obj
+D:\dev\DaisyEngine\DaisyEngine\src\Random.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\Random.obj
 D:\dev\DaisyEngine\DaisyEngine\src\Renderer2D.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\Renderer2D.obj
 D:\dev\DaisyEngine\DaisyEngine\src\Window.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\Window.obj
 D:\dev\DaisyEngine\DaisyEngine\src\main.cpp;D:\dev\DaisyEngine\Binaries\Intermediates\windows-x86_64\Release\DaisyEngine\main.obj

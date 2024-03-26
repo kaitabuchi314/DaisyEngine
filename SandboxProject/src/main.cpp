@@ -64,19 +64,12 @@ namespace SandboxLayer
         while (!window.WindowClosed())
         {
             renderer.ClearScreen(0.3f, 0.6f, 0.2f);
-
+            
             for (int i = 0; i < 1500; i++)
             {
-                std::random_device random_device;
-                std::mt19937 engine{random_device()};
-                std::uniform_int_distribution<> dist(-20.0f, 20.0f); 
-                auto X = dist(engine); 
-                std::random_device random_device2;
-                std::mt19937 engine2{random_device2()};
-                std::uniform_int_distribution<> dist2(-18.0f, 18.0f);
-                auto Y = dist(engine2);
-                Daisy::DrawImage(img, X, Y, 0.03f, 0.03f);
+                Daisy::DrawImage(img, Daisy::Random::RandomFloat(-500.0f,500.0f), Daisy::Random::RandomFloat(-400.0f, 400.0f), 0.03f, 0.03f);
             }
+
             double currentTime = glfwGetTime();
             nbFrames++;
             if (currentTime - lastTime >= 1.0)

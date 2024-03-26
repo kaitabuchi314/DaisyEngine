@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="8786626482352366332">
+<analyzerinfo hash="8944045160933230113">
         <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;GL/glu.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
             <location file="D:\dev\DaisyEngine\DaisyEngine\glew\include\GL\glew.h" line="1205" column="0"/>
         </error>
@@ -102,8 +102,8 @@
     <functiondecl functionName="CreateAppleScript" lineNumber="15"/>
     <functiondecl functionName="Init" lineNumber="40"/>
     <functiondecl functionName="Run" lineNumber="61"/>
-    <functiondecl functionName="Quit" lineNumber="93"/>
-    <functiondecl functionName="main" lineNumber="102"/>
+    <functiondecl functionName="Quit" lineNumber="92"/>
+    <functiondecl functionName="main" lineNumber="101"/>
     <functioncall functionName="ActivateRenderer"/>
     <functioncall functionName="AppleScript"/>
     <functioncall functionName="ClearScreen"/>
@@ -120,7 +120,6 @@
     <functioncall functionName="Layer"/>
     <functioncall functionName="LoadImage"/>
     <functioncall functionName="LoadScript"/>
-    <functioncall functionName="NULL"/>
     <functioncall functionName="PushLayer"/>
     <functioncall functionName="Quit"/>
     <functioncall functionName="Run"/>
@@ -150,12 +149,10 @@
     <functioncall functionName="push_back"/>
     <functioncall functionName="random_device"/>
     <functioncall functionName="random_device2"/>
-    <functioncall functionName="srand"/>
     <functioncall functionName="stbi_image_free"/>
     <functioncall functionName="stbi_load"/>
     <functioncall functionName="stbi_set_flip_vertically_on_load"/>
     <functioncall functionName="string"/>
-    <functioncall functionName="time"/>
     <functioncall functionName="true"/>
   </FileInfo>
 </analyzerinfo>

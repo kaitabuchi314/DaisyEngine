@@ -11,3 +11,4 @@
 #include "GameObject.h"
 #include "Script.h"
 #include "ScriptComponent.h"
+#include "Random.h"

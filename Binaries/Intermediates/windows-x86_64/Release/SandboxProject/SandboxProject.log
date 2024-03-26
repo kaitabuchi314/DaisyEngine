@@ -1,24 +1,2 @@
 ﻿  main.cpp
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(73,62): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(73,55): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(77,63): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(77,56): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(79,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\dev\DaisyEngine\SandboxProject\src\main.cpp(79,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   SandboxProject.vcxproj -> D:\dev\DaisyEngine\Binaries\windows-x86_64\Release\SandboxProject\SandboxProject.exe

@@ -1,11 +1,4 @@
-﻿  GameObject.cpp
-  ImageHandler.cpp
-  LayerManager.cpp
-  Renderer2D.cpp
-  Window.cpp
-  main.cpp
-  stb_image.cpp
-  Generating Code...
+﻿  main.cpp
 glew32s.lib(glew.obj) : warning LNK4006: glewInit already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewIsSupported already defined in glew32.lib(glew32.dll); second definition ignored
 glew32s.lib(glew.obj) : warning LNK4006: glewGetExtension already defined in glew32.lib(glew32.dll); second definition ignored
