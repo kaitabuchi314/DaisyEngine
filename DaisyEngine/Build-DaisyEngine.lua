@@ -5,7 +5,7 @@ project "DaisyEngine"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "src/**.h", "src/**.cpp", "vendor/stb_image/**.h", "vendor/stb_image/**.cpp" }
+   files { "src/**.h", "src/**.cpp", "vendor/stb_image/**.h", "vendor/stb_image/**.cpp", "vendor/glm/**.hpp", "vendor/glm/detail/**.hpp", "vendor/glm/detail/**.hpp", "vendor/glm/ext/**.hpp", "vendor/glm/gtc/**.hpp", "vendor/glm/gtx/**.hpp", "vendor/glm/simd/**.hpp" }
 
    includedirs
    {
@@ -14,8 +14,8 @@ project "DaisyEngine"
 	"GLFW",
 	"glew",
 	"vendor/glm",
-	"vendor/stb_image"
-	
+	"vendor/stb_image",
+	"vendor/glm"
 
    }
 
