@@ -6,7 +6,7 @@
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 
-void DrawBox(glm::vec3 position, glm::vec3 scale, float angle, GLuint VBO, GLuint VAO, GLuint EBO, GLuint shaderProgram, GLuint texture, glm::mat4 projection, glm::mat4 view)
+void DrawBox(glm::vec3 position, glm::vec3 scale, float angle, unsigned int VBO, unsigned int VAO, unsigned int EBO, unsigned int shaderProgram, unsigned int texture, glm::mat4 projection, glm::mat4 view)
 {
     glBindVertexArray(VAO);
     glBindBuffer(GL_VERTEX_ARRAY, VBO);
@@ -92,7 +92,7 @@ int main()
     glEnable(GL_DEPTH_TEST);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
     glCompileShader(vertexShader);
 
@@ -105,7 +105,7 @@ int main()
         std::cerr << "Vertex shader compilation failed: " << infoLog << std::endl;
     }
 
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
     glCompileShader(fragmentShader);
 
@@ -116,7 +116,7 @@ int main()
         std::cerr << "Fragment shader compilation failed: " << infoLog << std::endl;
     }
 
-    GLuint shaderProgram = glCreateProgram();
+    unsigned int shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
@@ -131,7 +131,8 @@ int main()
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
-    float vertices[] = {
+    float vertices[] =
+    {
 
         -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
          0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
@@ -164,7 +165,8 @@ int main()
          -0.5f, -0.5f, -0.5f,   1.0f, 0.0f
     };
 
-    unsigned int indices[] = {
+    unsigned int indices[] =
+    {
         0,  1,  2,  2,  3,  0,
         4,  5,  6,  6,  7,  4,
         8,  9, 10, 10, 11,  8,
@@ -173,7 +175,7 @@ int main()
         20, 21, 22, 22, 23, 20
     };
 
-    GLuint VBO, VAO, EBO;
+    unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
@@ -204,7 +206,7 @@ int main()
         return -1;
     }
 
-    GLuint texture;
+    unsigned int texture;
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
 
@@ -233,6 +235,7 @@ int main()
     glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
     float cameraSpeed = 0.0008f;
+    float cameraRotSpeed = 0.025f;
 
     while (!glfwWindowShouldClose(window))
     {
@@ -249,7 +252,6 @@ int main()
         if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
             cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 
-        float cameraRotSpeed = 0.03f;
         if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
             cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(cameraRotSpeed), cameraUp)) * cameraFront;
         if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
