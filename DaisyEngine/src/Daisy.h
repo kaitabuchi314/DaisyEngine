@@ -19,3 +19,4 @@
 #include <SampleCamera.h>
 #include <TextureFragmentShader.h>
 #include <DfVertexShader.h>
+#include <GameLayer.h>

@@ -11,11 +11,19 @@ namespace Daisy
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
 
-        void DrawMesh(glm::vec3 position, glm::vec3 scale, float angle, Daisy::Model* mesh, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera)
+        void DrawMesh(glm::vec3 position, glm::vec3 scale, glm::vec3 rotation, Daisy::Model* mesh, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera)
         {
             mesh->Bind();
+            glm::mat4 model = glm::mat4(1.0f);
+            glm::vec3 rr = glm::radians(rotation);
+            //glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(1.0f, 0.5f, 0.0f));
+            //glm::mat4 rotationMatrix = glm::yawPitchRoll(rr.x, rr.y, rr.z);
 
-            glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(1.0f, 0.5f, 0.0f));
+            model = glm::rotate(model, rr.z, glm::vec3(0.0f, 0.0f, 1.0f));
+            // Pitch (around the X-axis)
+            model = glm::rotate(model, rr.y, glm::vec3(1.0f, 0.0f, 0.0f));
+            // Yaw (around the Y-axis)
+            model = glm::rotate(model, rr.x, glm::vec3(0.0f, 1.0f, 0.0f));
 
             model = glm::translate(model, position);
             model = glm::scale(model, scale);
