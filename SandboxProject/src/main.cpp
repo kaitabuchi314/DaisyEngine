@@ -1,6 +1,5 @@
 #include <SandboxLayer.h>
 
-
 int main()
 {
     SandboxLayer* sandboxLayer = new SandboxLayer();
@@ -8,4 +7,5 @@ int main()
 
     delete sandboxLayer;
     return 0;
-}
+};
+

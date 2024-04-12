@@ -5,6 +5,11 @@ namespace Daisy
 
 	namespace Renderer
 	{
+        void SetViewport(float x, float y, float w, float h)
+        {
+            glViewport(x, y, w, h);
+        }
+
 		void ClearScreen(float r, float g, float b)
 		{
 			glClearColor(r/255,g/255,b/255, 1.0f);

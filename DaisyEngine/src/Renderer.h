@@ -12,6 +12,8 @@ namespace Daisy
 {
 	namespace Renderer
 	{
+		void SetViewport(float x, float y, float w, float h);
+
 		void ClearScreen(float r, float g, float b);
 
 		void DrawMesh(glm::vec3 position, glm::vec3 scale, glm::vec3 rotation, Daisy::Model* mesh, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera);
