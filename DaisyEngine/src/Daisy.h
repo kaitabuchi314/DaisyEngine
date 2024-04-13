@@ -1,6 +1,7 @@
 #pragma once
-#define GLEW_STATIC
 
+#define GLEW_STATIC
+#include <include/GL/glew.h>
 #include <Window.h>
 
 //#include <include/GL/glew.h>
@@ -20,3 +21,5 @@
 #include <TextureFragmentShader.h>
 #include <DfVertexShader.h>
 #include <GameLayer.h>
+
+#include <Defines.h>

@@ -31,9 +31,8 @@ void DaisyEditorLayer::Run()
 
     while (!window.ShouldClose())
     {
-        Daisy::SampleMoveCamera(&camera, window);
-
         camera.CalcView();
+        Daisy::Renderer::SetViewport(0, 0, ws.x, ws.y);
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -47,12 +46,13 @@ void DaisyEditorLayer::Run()
 
         ImGui::Begin("Settings");
 
-        ImGui::Text("Test");
 
         ImGui::End();
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        ws = window.GetSize();
 
         window.EndFrame();
     }

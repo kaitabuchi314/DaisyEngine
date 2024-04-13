@@ -18,4 +18,11 @@ namespace Daisy
 
 		GLFWwindow* window;
 	};
+
+	namespace KeyInput
+	{
+		bool GetKeyDown(Daisy::Window window, int key);
+
+		bool GetKeyUp(Daisy::Window window, int key);
+	}
 }

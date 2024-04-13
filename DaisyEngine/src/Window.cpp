@@ -54,4 +54,17 @@ namespace Daisy
     {
         glfwTerminate();
     }
+
+    namespace KeyInput
+    {
+        bool GetKeyDown(Daisy::Window window, int key)
+        {
+            return glfwGetKey(window.window, key) == GLFW_PRESS;
+        }
+
+        bool GetKeyUp(Daisy::Window window, int key)
+        {
+            return glfwGetKey(window.window, key) == GLFW_RELEASE;
+        }
+    }
 }
