@@ -6,6 +6,9 @@
 
 namespace Daisy
 {
+	inline bool windowResized = true;
+	inline int windowWidth = 0;
+	inline int windowHeight = 0;
 	class Window
 	{
 	public:
@@ -14,10 +17,13 @@ namespace Daisy
 		bool ShouldClose();
 		void EndFrame();
 		void Terminate();
+
 		glm::vec2 GetSize();
 
 		GLFWwindow* window;
+
 	};
+	void ResizeCallback(GLFWwindow* window, int width, int height);
 
 	namespace KeyInput
 	{

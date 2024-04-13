@@ -11,6 +11,10 @@ public:
 
 	virtual void Run() override;
 
+    void SetDarkThemeColors();
+
+    void DrawImGui();
+    void DrawSkybox(Daisy::Camera camera);
 	virtual ~DaisyEditorLayer() override;
 private:
     Daisy::Window window;
@@ -19,9 +23,19 @@ private:
 
     Daisy::Texture texture;
 
+    Daisy::Texture skybox;
+    Daisy::Texture top;
+    Daisy::Texture concrete;
+
     Daisy::Model model;
 
     glm::vec2 ws;
+
+    glm::vec3 scale;
+    glm::vec3 position;
+    ImFont* roboto;
+    ImFont* robotoBold;
+    bool objOneEn;
 };
 
 inline float vertices[] =

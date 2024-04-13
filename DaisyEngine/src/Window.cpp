@@ -2,13 +2,15 @@
 
 namespace Daisy
 {
+
 	Window::Window(const char* windowName, int w, int h)
 	{
         if (!glfwInit())
         {
             std::cerr << "Failed to initialize GLFW" << std::endl;
         }
-
+        windowWidth = w;
+        windowHeight = h;
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -19,6 +21,9 @@ namespace Daisy
             std::cerr << "Failed to create GLFW window" << std::endl;
             glfwTerminate();
         }
+
+        glfwSetWindowSizeCallback(window, ResizeCallback);
+
         glfwMakeContextCurrent(window);
 
         if (glewInit() != GLEW_OK)
@@ -66,5 +71,12 @@ namespace Daisy
         {
             return glfwGetKey(window.window, key) == GLFW_RELEASE;
         }
+    }
+
+    void ResizeCallback(GLFWwindow* window, int width, int height)
+    {
+        windowResized = true;
+        windowWidth = width;
+        windowHeight = height;
     }
 }
