@@ -21,12 +21,8 @@ DaisyEditorLayer::DaisyEditorLayer() :
     roboto = io.Fonts->AddFontFromFileTTF("Fonts/Roboto-Regular.ttf", 15);
     robotoBold = io.Fonts->AddFontFromFileTTF("Fonts/Roboto-Bold.ttf", 18);
 
-    // Setup Dear ImGui style
     SetDarkThemeColors();
-    //ImGui::StyleColorsDark();
-    //ImGui::StyleColorsLight();
 
-    // Setup Platform/Renderer backends
     ImGui_ImplGlfw_InitForOpenGL(window.window, true);
 
     ImGui_ImplOpenGL3_Init("#version 130");
@@ -84,7 +80,6 @@ void DaisyEditorLayer::DrawSkybox(Daisy::Camera camera)
 
 void DaisyEditorLayer::DrawImGui()
 {
-
     ImGui::Begin("Settings");
 
 
@@ -134,7 +129,8 @@ void DaisyEditorLayer::DrawImGui()
 
 void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to StudioCherno and Hazel 2D
 {
-    auto& colors = ImGui::GetStyle().Colors;
+    auto& style = ImGui::GetStyle();
+    auto& colors = style.Colors;
     colors[ImGuiCol_WindowBg] = ImVec4{ 0.1f * 0.55f, 0.105f * 0.55f, 0.11f * 0.55f, 1.0f };
 
     // Headers
@@ -163,8 +159,12 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
     colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    style.TabRounding = 8.f;
+    style.FrameRounding = 8.f;
+    style.GrabRounding = 8.f;
+    style.WindowRounding = 8.f;
+    style.PopupRounding = 8.f;
 }
-
 
 DaisyEditorLayer::~DaisyEditorLayer()
 {

@@ -1,4 +1,5 @@
 #include "SampleCamera.h"
+#include <Defines.h>
 
 namespace Daisy
 {
@@ -7,26 +8,26 @@ namespace Daisy
         float cameraSpeed = 0.0008f;
         float cameraRotSpeed = 0.025f;
 
-        if (glfwGetKey(window.window, GLFW_KEY_W) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_W))
             camera->cameraPos += cameraSpeed * camera->cameraFront;
-        if (glfwGetKey(window.window, GLFW_KEY_S) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_S))
             camera->cameraPos -= cameraSpeed * camera->cameraFront;
-        if (glfwGetKey(window.window, GLFW_KEY_Q) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_Q))
             camera->cameraPos += cameraSpeed * camera->cameraUp;
-        if (glfwGetKey(window.window, GLFW_KEY_E) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_E))
             camera->cameraPos -= cameraSpeed * camera->cameraUp;
-        if (glfwGetKey(window.window, GLFW_KEY_A) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_A))
             camera->cameraPos -= glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)) * cameraSpeed;
-        if (glfwGetKey(window.window, GLFW_KEY_D) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_D))
             camera->cameraPos += glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)) * cameraSpeed;
 
-        if (glfwGetKey(window.window, GLFW_KEY_LEFT) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_LEFT))
             camera->cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(cameraRotSpeed), camera->cameraUp)) * camera->cameraFront;
-        if (glfwGetKey(window.window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_RIGHT))
             camera->cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(-cameraRotSpeed), camera->cameraUp)) * camera->cameraFront;
-        if (glfwGetKey(window.window, GLFW_KEY_UP) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_UP))
             camera->cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(cameraRotSpeed), glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)))) * camera->cameraFront;
-        if (glfwGetKey(window.window, GLFW_KEY_DOWN) == GLFW_PRESS)
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_DOWN))
             camera->cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(-cameraRotSpeed), glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)))) * camera->cameraFront;
     }
 }

@@ -10,4 +10,3 @@ int main()
     delete editorLayer;
     return 0;
 };
-
