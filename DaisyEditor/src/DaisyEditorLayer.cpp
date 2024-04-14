@@ -1,7 +1,7 @@
 #include <DaisyEditorLayer.h>
 
 DaisyEditorLayer::DaisyEditorLayer() :
-    window("Daisy Editor v0.1", 1350, 900),
+    window("Daisy Editor v0.1", 800, 800),
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
     texture("../SandboxProject/box.png"),
     top("../SandboxProject/top.png"),
@@ -26,29 +26,30 @@ DaisyEditorLayer::DaisyEditorLayer() :
     ImGui_ImplGlfw_InitForOpenGL(window.window, true);
 
     ImGui_ImplOpenGL3_Init("#version 130");
+    
 }
 
 void DaisyEditorLayer::Run()
 {
     Daisy::Camera camera = Daisy::Camera(ws);
+    float w = 500;
+    float vx = 800;
+    float vy = 800;
+
+    Daisy::Renderer::SetViewport(w, 100, vx, vx);
+    std::cout << ws.x;
 
     while (!window.ShouldClose())
     {
         Daisy::SampleMoveCamera(&camera, window);
         camera.CalcView();
 
-        if (Daisy::windowResized)
-        {
-            Daisy::Renderer::SetViewport(0, 0, ws.x, ws.y);
-        }
 
-        Daisy::Renderer::ClearScreen(0.0f, 82.0f, 109.0f);
+        Daisy::Renderer::ClearScreen(0.0f, 0.0f, 0.0f);
 
         Daisy::Renderer::DrawMesh(position, scale, glm::vec3(0.0f, 0.0f, 0.0f), &model, &texture, &shaderProgram, &camera);
         Daisy::Renderer::DrawMesh(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(10,1,10), glm::vec3(0.0f, 0.0f, 0.0f), &model, &concrete, &shaderProgram, &camera);
 
-
-        
         DrawSkybox(camera);
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -75,7 +76,6 @@ void DaisyEditorLayer::DrawSkybox(Daisy::Camera camera)
 {
     Daisy::Renderer::DrawMesh(glm::vec3(), glm::vec3(100,100,100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &skybox, &shaderProgram, &camera);
     Daisy::Renderer::DrawMesh(glm::vec3(0, 99, 0), glm::vec3(100, 100, 100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &top, &shaderProgram, &camera);
-
 }
 
 void DaisyEditorLayer::DrawImGui()
@@ -121,6 +121,29 @@ void DaisyEditorLayer::DrawImGui()
         scale.z = sac[2];
 
         ImGui::PopFont();
+    }
+
+    ImGui::End();
+
+    ImGui::Begin("Test stats");
+
+    glm::vec2 mp = window.GetMousePosition();
+
+    ImGui::Text("Mouse X: ");
+
+    ImGui::SameLine();
+    
+    ImGui::Text(std::to_string(mp.x).c_str());
+
+    ImGui::Text("Mouse Y: ");
+
+    ImGui::SameLine();
+
+    ImGui::Text(std::to_string(mp.y).c_str());
+
+    if (window.GetMouseDown(DAISY_MOUSE_BUTTON_1))
+    {
+        ImGui::Text("Mouse Button 1 Pressed");
     }
 
     ImGui::End();

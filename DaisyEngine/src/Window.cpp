@@ -30,7 +30,7 @@ namespace Daisy
         {
             std::cerr << "Failed to initialize GLEW" << std::endl;
         }
-
+        
         glEnable(GL_BLEND);
         glEnable(GL_DEPTH_TEST);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -40,6 +40,14 @@ namespace Daisy
 	{
 		return glfwWindowShouldClose(window);
 	}
+
+    glm::vec2 Window::GetMousePosition()
+    {
+        double x;
+        double y;
+        glfwGetCursorPos(window, &x, &y);
+        return glm::vec2(x,y);
+    }
 
     glm::vec2 Window::GetSize()
     {
@@ -58,6 +66,16 @@ namespace Daisy
     void Window::Terminate()
     {
         glfwTerminate();
+    }
+
+    bool Window::GetMouseDown(int button)
+    {
+        return glfwGetMouseButton(window, button) == GLFW_PRESS;
+    }
+
+    bool Window::GetMouseUp(int button)
+    {
+        return glfwGetMouseButton(window, button) == GLFW_RELEASE;
     }
 
     namespace KeyInput

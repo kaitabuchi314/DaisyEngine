@@ -30,4 +30,6 @@ namespace Daisy
         if (KeyInput::GetKeyDown(window, DAISY_KEY_DOWN))
             camera->cameraFront = glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(-cameraRotSpeed), glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)))) * camera->cameraFront;
     }
+
+    
 }

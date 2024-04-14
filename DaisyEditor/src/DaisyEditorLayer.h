@@ -12,12 +12,14 @@ public:
 
 	virtual void Run() override;
 
-    void SetDarkThemeColors();
 
-    void DrawImGui();
-    void DrawSkybox(Daisy::Camera camera);
 	virtual ~DaisyEditorLayer() override;
 private:
+    void SetDarkThemeColors();
+    void DrawImGui();
+    void DrawSkybox(Daisy::Camera camera);
+    
+
     Daisy::Window window;
 
     Daisy::ShaderProgram shaderProgram;

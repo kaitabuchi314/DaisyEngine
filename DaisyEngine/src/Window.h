@@ -17,11 +17,16 @@ namespace Daisy
 		bool ShouldClose();
 		void EndFrame();
 		void Terminate();
-
+		bool GetMouseDown(int button);
+		bool GetMouseUp(int button);
+		glm::vec2 GetMousePosition();
 		glm::vec2 GetSize();
 
 		GLFWwindow* window;
 
+
+	private:
+		glm::vec2 mousePosition;
 	};
 	void ResizeCallback(GLFWwindow* window, int width, int height);
 

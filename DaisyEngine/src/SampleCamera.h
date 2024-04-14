@@ -8,4 +8,5 @@
 namespace Daisy
 {
     void SampleMoveCamera(Daisy::Camera* camera, Daisy::Window window);
+
 }
