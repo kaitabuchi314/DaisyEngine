@@ -9,6 +9,8 @@ workspace "DaisyEngine"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
+include "DaisyEditor/Build-DaisyEditor.lua"
+
 include "DaisyEngine/Build-DaisyEngine.lua"
 
 include "SandboxProject/Build-SandboxProject.lua"
