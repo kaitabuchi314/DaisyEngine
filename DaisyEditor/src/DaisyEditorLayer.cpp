@@ -1,7 +1,11 @@
 #include <DaisyEditorLayer.h>
 
 DaisyEditorLayer::DaisyEditorLayer() :
+#ifndef DIST
     window("Daisy Editor v0.1", 800, 800),
+#else
+    window("Daisy Editor v0.1", 1260, 900),
+#endif
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
     texture("../SandboxProject/box.png"),
     top("../SandboxProject/top.png"),
@@ -35,8 +39,12 @@ void DaisyEditorLayer::Run()
     float w = 500;
     float vx = 800;
     float vy = 800;
-
+#ifndef DIST
     Daisy::Renderer::SetViewport(w, 100, vx, vx);
+#else
+    Daisy::Renderer::SetViewport(0, 0, ws.x, ws.y);
+#endif
+
     std::cout << ws.x;
     double o_t = window.GetTime();
     double t = o_t;
@@ -60,19 +68,20 @@ void DaisyEditorLayer::Run()
         Daisy::Renderer::DrawMesh(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(10,1,10), glm::vec3(0.0f, 0.0f, 0.0f), &model, &concrete, &shaderProgram, &camera);
 
         DrawSkybox(camera);
+
+#ifndef DIST
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
 
         ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
-
         DrawImGui();
 
         ImGui::Render();
 
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
+#endif
         rms = (rt - o_rt) * 1000;
 
         o_rt = rt;

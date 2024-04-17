@@ -14,9 +14,15 @@
 # Executables
 *.exe
 *.out
-
+*.log
+*.tlog
+*.ipch
 *.vcxproj
 *.vcxproj.user
 *.vcxproj.filters
+*.lib
+*.pdb
+*.db
+~/.vs/**
+~/Binaries/**
 
-~/.vs/
