@@ -38,14 +38,23 @@ void DaisyEditorLayer::Run()
 
     Daisy::Renderer::SetViewport(w, 100, vx, vx);
     std::cout << ws.x;
-
+    double o_t = window.GetTime();
+    double t = o_t;
+    double o_rt = window.GetTime();
+    double rt = o_rt;
     while (!window.ShouldClose())
     {
+        t = window.GetTime();
+        msf = (t - o_t) * 1000;
+
+        o_t = t;
+
         Daisy::SampleMoveCamera(&camera, window);
         camera.CalcView();
 
+        rt = window.GetTime();
 
-        Daisy::Renderer::ClearScreen(0.0f, 0.0f, 0.0f);
+        Daisy::Renderer::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
 
         Daisy::Renderer::DrawMesh(position, scale, glm::vec3(0.0f, 0.0f, 0.0f), &model, &texture, &shaderProgram, &camera);
         Daisy::Renderer::DrawMesh(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(10,1,10), glm::vec3(0.0f, 0.0f, 0.0f), &model, &concrete, &shaderProgram, &camera);
@@ -64,8 +73,13 @@ void DaisyEditorLayer::Run()
 
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
+        rms = (rt - o_rt) * 1000;
+
+        o_rt = rt;
+
         ws = window.GetSize();
         window.EndFrame();
+
     }
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
@@ -125,7 +139,7 @@ void DaisyEditorLayer::DrawImGui()
 
     ImGui::End();
 
-    ImGui::Begin("Test stats");
+    ImGui::Begin("Stats");
 
     glm::vec2 mp = window.GetMousePosition();
 
@@ -141,10 +155,25 @@ void DaisyEditorLayer::DrawImGui()
 
     ImGui::Text(std::to_string(mp.y).c_str());
 
+    ImGui::Separator();
+
     if (window.GetMouseDown(DAISY_MOUSE_BUTTON_1))
     {
         ImGui::Text("Mouse Button 1 Pressed");
+    } else if (window.GetMouseDown(DAISY_MOUSE_BUTTON_2))
+    {
+        ImGui::Text("Mouse Button 2 Pressed");
+    } else if (window.GetMouseDown(DAISY_MOUSE_BUTTON_3))
+    {
+        ImGui::Text("Mouse Button 3 Pressed");
     }
+
+    ImGui::Separator();
+
+    ImGui::Text((std::string("Ms/f: ") + std::to_string(msf)).c_str());
+    ImGui::Text((std::string("Render Time: ") + std::to_string(rms)).c_str());
+    ImGui::Text((std::string("Compute Time: ") + std::to_string(msf-rms)).c_str());
+    
 
     ImGui::End();
 

@@ -97,4 +97,9 @@ namespace Daisy
         windowWidth = width;
         windowHeight = height;
     }
+
+    double Window::GetTime()
+    {
+        return glfwGetTime();
+    }
 }

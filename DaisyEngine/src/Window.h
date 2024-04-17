@@ -21,7 +21,7 @@ namespace Daisy
 		bool GetMouseUp(int button);
 		glm::vec2 GetMousePosition();
 		glm::vec2 GetSize();
-
+		double GetTime();
 		GLFWwindow* window;
 
 

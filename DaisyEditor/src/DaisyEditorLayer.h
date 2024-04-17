@@ -39,6 +39,9 @@ private:
     ImFont* roboto;
     ImFont* robotoBold;
     bool objOneEn;
+    double msf;
+    double rms;
+
 };
 
 inline float vertices[] =
