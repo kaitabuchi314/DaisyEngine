@@ -30,7 +30,7 @@ private:
     Daisy::Texture top;
     Daisy::Texture concrete;
 
-    Daisy::Model model;
+    //Daisy::Model model;
 
     glm::vec2 ws;
 

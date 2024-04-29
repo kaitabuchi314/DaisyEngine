@@ -10,7 +10,7 @@ namespace Daisy
 	class Camera
 	{
 	public:
-		Camera(glm::vec2 ws);
+		Camera(glm::vec2 ws, bool perspective, Window window);
 
 		void CalcView();
 
