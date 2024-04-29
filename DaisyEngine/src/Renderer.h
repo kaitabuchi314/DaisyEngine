@@ -17,18 +17,6 @@ namespace Daisy
 		void ClearScreen(float r, float g, float b);
 
 		void DrawMesh(glm::vec3 position, glm::vec3 scale, glm::vec3 rotation, Daisy::Model* mesh, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera);
-	}
 
-	namespace Renderer2D
-	{
-
-		inline Model* plane = nullptr;
-		void Init2D();
-		void SetViewport(float x, float y, float w, float h);
-
-		void ClearScreen(float r, float g, float b);
-
-		void DrawImage(glm::vec3 position, glm::vec3 scale, float angle, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera);
-		void Flush();
 	}
 }

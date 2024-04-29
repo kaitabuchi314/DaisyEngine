@@ -1,17 +1,19 @@
 #include <DaisyEditorLayer.h>
 
 DaisyEditorLayer::DaisyEditorLayer() :
-
+#ifndef DIST
+    window("Daisy Editor v0.1", 800, 800),
+#else
     window("Daisy Editor v0.1", 1260, 900),
-
+#endif
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
     texture("../SandboxProject/box.png"),
     top("../SandboxProject/top.png"),
     skybox("../SandboxProject/skybox.png"),
     concrete("../SandboxProject/concrete.jpg"),
-    //model(vertices, indices, sizeof(vertices), sizeof(indices)),
+    model(vertices, indices, sizeof(vertices), sizeof(indices)),
     position(0,0,0),
-    scale(1,1,0)
+    scale(1,1,1)
 {
     ws = window.GetSize();
 
@@ -28,18 +30,20 @@ DaisyEditorLayer::DaisyEditorLayer() :
     ImGui_ImplGlfw_InitForOpenGL(window.window, true);
 
     ImGui_ImplOpenGL3_Init("#version 130");
-    Daisy::Renderer2D::Init2D();
     
 }
 
 void DaisyEditorLayer::Run()
 {
-    Daisy::Camera camera = Daisy::Camera(ws, true, window);
+    Daisy::Camera camera = Daisy::Camera(ws);
     float w = 500;
     float vx = 800;
     float vy = 800;
-
-    Daisy::Renderer2D::SetViewport(0, 0, ws.x, ws.y);
+#ifndef DIST
+    Daisy::Renderer::SetViewport(w, 100, vx, vx);
+#else
+    Daisy::Renderer::SetViewport(0, 0, ws.x, ws.y);
+#endif
 
     std::cout << ws.x;
     double o_t = window.GetTime();
@@ -53,15 +57,15 @@ void DaisyEditorLayer::Run()
 
         o_t = t;
 
-        Daisy::SampleMoveCamera2D(&camera, window);
+        Daisy::SampleMoveCamera(&camera, window);
         camera.CalcView();
 
         rt = window.GetTime();
 
-        Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
+        Daisy::Renderer::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
 
-        Daisy::Renderer2D::DrawImage(position, scale, 0.0f, &texture, &shaderProgram, &camera);
-        Daisy::Renderer2D::DrawImage(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(2,1,1), 100.0f, &concrete, &shaderProgram, &camera);
+        Daisy::Renderer::DrawMesh(position, scale, glm::vec3(0.0f, 0.0f, 0.0f), &model, &texture, &shaderProgram, &camera);
+        Daisy::Renderer::DrawMesh(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(10,1,10), glm::vec3(0.0f, 0.0f, 0.0f), &model, &concrete, &shaderProgram, &camera);
 
         DrawSkybox(camera);
 
@@ -93,11 +97,8 @@ void DaisyEditorLayer::Run()
 
 void DaisyEditorLayer::DrawSkybox(Daisy::Camera camera)
 {
-    Daisy::Renderer2D::DrawImage(glm::vec3(), glm::vec3(100, 100, 0), 0, &skybox, &shaderProgram, &camera);
-
-    //3D code
-    //Daisy::Renderer::DrawMesh(glm::vec3(), glm::vec3(100,100,100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &skybox, &shaderProgram, &camera);
-    //Daisy::Renderer::DrawMesh(glm::vec3(0, 99, 0), glm::vec3(100, 100, 100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &top, &shaderProgram, &camera);
+    Daisy::Renderer::DrawMesh(glm::vec3(), glm::vec3(100,100,100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &skybox, &shaderProgram, &camera);
+    Daisy::Renderer::DrawMesh(glm::vec3(0, 99, 0), glm::vec3(100, 100, 100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &top, &shaderProgram, &camera);
 }
 
 void DaisyEditorLayer::DrawImGui()
@@ -219,19 +220,18 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
     colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
-    style.TabRounding = 5.5f;
-    style.FrameRounding = 5.5f;
-    style.GrabRounding = 5.5f;
-    style.WindowRounding = 5.5f;
-    style.PopupRounding = 5.5f;
+    style.TabRounding = 8.f;
+    style.FrameRounding = 8.f;
+    style.GrabRounding = 8.f;
+    style.WindowRounding = 8.f;
+    style.PopupRounding = 8.f;
 }
 
 DaisyEditorLayer::~DaisyEditorLayer()
 {
-    //model.Flush();
+    model.Flush();
     texture.Flush();
     shaderProgram.Flush();
 
     window.Terminate();
-    Daisy::Renderer2D::Flush();
 }

@@ -3,15 +3,15 @@
 SandboxLayer::SandboxLayer() :
     window("My Window", 800, 700),
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
-    texture("box.png")//,
-    //model(vertices, indices, sizeof(vertices), sizeof(indices))
+    texture("box.png"),
+    model(vertices, indices, sizeof(vertices), sizeof(indices))
 {
     ws = window.GetSize();
 }
 
 void SandboxLayer::Run()
 {
-    Daisy::Camera camera = Daisy::Camera(ws, true);
+    Daisy::Camera camera = Daisy::Camera(ws);
 
     while (!window.ShouldClose())
     {
