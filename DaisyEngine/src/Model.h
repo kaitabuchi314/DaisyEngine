@@ -13,6 +13,8 @@ namespace Daisy
 		void Unbind();
 		void Flush();
 
+		int vertCount;
+		int indicesCount;
 	private:
 		unsigned int VBO;
 		unsigned int VAO;

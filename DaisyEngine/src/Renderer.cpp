@@ -41,7 +41,7 @@ namespace Daisy
 
             texture->Bind();
 
-            glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, mesh->vertCount, GL_UNSIGNED_INT, 0);
 
             texture->Unbind();
 
@@ -109,7 +109,7 @@ namespace Daisy
 
             texture->Bind();
 
-            glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, plane->vertCount, GL_UNSIGNED_INT, 0);
 
             texture->Unbind();
 

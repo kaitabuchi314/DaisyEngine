@@ -4,6 +4,8 @@ namespace Daisy
 {
 	Model::Model(float vertices[], unsigned int indices[], unsigned int vertCount, unsigned int indicesCount)
 	{
+		this->vertCount = vertCount;
+		this->indicesCount = indicesCount;
 		glGenVertexArrays(1, &VAO);
 		glGenBuffers(1, &VBO);
 		glGenBuffers(1, &EBO);
