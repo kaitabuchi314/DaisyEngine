@@ -11,8 +11,16 @@ inline const char* textureFragmentShaderSource = // fragment shader
 
     void main()
     {
-        FragColor = texture(texture1, TexCoord);
-        //FragColor = vec4(255,0,0,255);
+        vec4 tex = texture(texture1, TexCoord);
+        //if (tex.a > 0.5) {
+        //    FragColor = tex;
+        //} else {
+            //FragColor = vec4(0,0,0,0);
+        //}
+        if(tex.a < 1)
+            discard;
+        FragColor = tex;
+        //FragColor = vec4(255,0,0,tex.a);
     }
 )";
 

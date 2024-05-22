@@ -2,10 +2,10 @@
 
 DaisyEditorLayer::DaisyEditorLayer() :
 
-    window("Daisy Editor v0.1", 1260, 900),
+    window(DAISY_EDITOR_VERSION, 1260, 900),
 
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
-    texture("../SandboxProject/box.png"),
+    texture("../SandboxProject/guy.png"),
     top("../SandboxProject/top.png"),
     skybox("../SandboxProject/skybox.png"),
     concrete("../SandboxProject/concrete.jpg"),
@@ -21,7 +21,7 @@ DaisyEditorLayer::DaisyEditorLayer() :
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
     roboto = io.Fonts->AddFontFromFileTTF("Fonts/Roboto-Regular.ttf", 15);
-    robotoBold = io.Fonts->AddFontFromFileTTF("Fonts/Roboto-Bold.ttf", 18);
+    robotoBold = io.Fonts->AddFontFromFileTTF("Fonts/Roboto-Bold.ttf", 16);
 
     SetDarkThemeColors();
 
@@ -219,11 +219,11 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
     colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
-    style.TabRounding = 5.5f;
-    style.FrameRounding = 5.5f;
-    style.GrabRounding = 5.5f;
-    style.WindowRounding = 5.5f;
-    style.PopupRounding = 5.5f;
+    style.TabRounding = 3.5f;
+    style.FrameRounding = 3.5f;
+    style.GrabRounding = 3.5f;
+    style.WindowRounding = 3.5f;
+    style.PopupRounding = 3.5f;
 }
 
 DaisyEditorLayer::~DaisyEditorLayer()

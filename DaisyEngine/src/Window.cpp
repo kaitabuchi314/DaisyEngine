@@ -13,6 +13,7 @@ namespace Daisy
         windowHeight = h;
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+        glfwWindowHint(GLFW_RESIZABLE, 0);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
         window = glfwCreateWindow(w, h, windowName, nullptr, nullptr);
@@ -21,7 +22,7 @@ namespace Daisy
             std::cerr << "Failed to create GLFW window" << std::endl;
             glfwTerminate();
         }
-
+        
         glfwSetWindowSizeCallback(window, ResizeCallback);
 
         glfwMakeContextCurrent(window);
@@ -33,6 +34,8 @@ namespace Daisy
         
         glEnable(GL_BLEND);
         glEnable(GL_DEPTH_TEST);
+        //glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+        //glBlendFunc(GL_ONE, GL_ONE);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 

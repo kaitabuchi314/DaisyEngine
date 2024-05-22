@@ -36,13 +36,13 @@ namespace Daisy
         float cameraSpeed = 0.0008f;
         float cameraRotSpeed = 0.025f;
 
-        if (KeyInput::GetKeyDown(window, DAISY_KEY_W))
-            camera->cameraPos += cameraSpeed * camera->cameraFront;
-        if (KeyInput::GetKeyDown(window, DAISY_KEY_S))
-            camera->cameraPos -= cameraSpeed * camera->cameraFront;
         if (KeyInput::GetKeyDown(window, DAISY_KEY_Q))
-            camera->cameraPos += cameraSpeed * camera->cameraUp;
+            camera->cameraPos += cameraSpeed * camera->cameraFront;
         if (KeyInput::GetKeyDown(window, DAISY_KEY_E))
+            camera->cameraPos -= cameraSpeed * camera->cameraFront;
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_W))
+            camera->cameraPos += cameraSpeed * camera->cameraUp;
+        if (KeyInput::GetKeyDown(window, DAISY_KEY_S))
             camera->cameraPos -= cameraSpeed * camera->cameraUp;
         if (KeyInput::GetKeyDown(window, DAISY_KEY_A))
             camera->cameraPos -= glm::normalize(glm::cross(camera->cameraFront, camera->cameraUp)) * cameraSpeed;

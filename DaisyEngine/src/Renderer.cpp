@@ -7,11 +7,14 @@ namespace Daisy
 	{
         void SetViewport(float x, float y, float w, float h)
         {
+
             glViewport(x, y, w, h);
         }
 
 		void ClearScreen(float r, float g, float b)
 		{
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            glEnable(GL_BLEND);
 			glClearColor(r/255,g/255,b/255, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
@@ -34,12 +37,12 @@ namespace Daisy
             model = glm::scale(model, scale);
 
             shaderProgram->Bind();
+            texture->Bind();
 
             glUniformMatrix4fv(glGetUniformLocation(shaderProgram->id, "model"), 1, GL_FALSE, glm::value_ptr(model));
             glUniformMatrix4fv(glGetUniformLocation(shaderProgram->id, "view"), 1, GL_FALSE, glm::value_ptr(camera->view));
             glUniformMatrix4fv(glGetUniformLocation(shaderProgram->id, "projection"), 1, GL_FALSE, glm::value_ptr(camera->projection));
 
-            texture->Bind();
 
             glDrawElements(GL_TRIANGLES, mesh->vertCount, GL_UNSIGNED_INT, 0);
 
@@ -71,6 +74,9 @@ namespace Daisy
             };
 
             plane = new Model(vertices, indices, sizeof(vertices), sizeof(indices));
+            glEnable(GL_BLEND);
+
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         }
 
         void SetViewport(float x, float y, float w, float h)
