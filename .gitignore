@@ -23,6 +23,8 @@
 *.lib
 *.pdb
 *.db
+*.sln
 ~/.vs/**
 ~/Binaries/**
-
+.vs/**
+Binaries/**
