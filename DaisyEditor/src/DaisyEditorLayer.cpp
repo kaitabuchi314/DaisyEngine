@@ -5,11 +5,10 @@ DaisyEditorLayer::DaisyEditorLayer() :
     window(DAISY_EDITOR_VERSION, 1260, 900),
 
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
-    texture("../SandboxProject/guy.png"),
-    top("../SandboxProject/top.png"),
-    skybox("../SandboxProject/skybox.png"),
-    concrete("../SandboxProject/concrete.jpg"),
-    //model(vertices, indices, sizeof(vertices), sizeof(indices)),
+    texture("../TestAssets/guy.png"),
+    top("../TestAssets/top.png"),
+    skybox("../TestAssets/skybox.png"),
+    concrete("../TestAssets/concrete.jpg"),
     position(0,0,0),
     scale(1,1,0)
 {
@@ -59,12 +58,11 @@ void DaisyEditorLayer::Run()
         rt = window.GetTime();
 
         Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
+ 
 
-        Daisy::Renderer2D::DrawImage(position, scale, 0.0f, &texture, &shaderProgram, &camera);
-        Daisy::Renderer2D::DrawImage(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(2,1,1), 100.0f, &concrete, &shaderProgram, &camera);
+        Daisy::Renderer2D::DrawImage(position, scale, rotation, &texture, &shaderProgram, &camera);
 
-        DrawSkybox(camera);
-
+        // Dist builds do not include ImGui
 #ifndef DIST
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -84,26 +82,15 @@ void DaisyEditorLayer::Run()
 
         ws = window.GetSize();
         window.EndFrame();
-
     }
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 }
 
-void DaisyEditorLayer::DrawSkybox(Daisy::Camera camera)
-{
-    Daisy::Renderer2D::DrawImage(glm::vec3(), glm::vec3(100, 100, 0), 0, &skybox, &shaderProgram, &camera);
-
-    //3D code
-    //Daisy::Renderer::DrawMesh(glm::vec3(), glm::vec3(100,100,100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &skybox, &shaderProgram, &camera);
-    //Daisy::Renderer::DrawMesh(glm::vec3(0, 99, 0), glm::vec3(100, 100, 100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &top, &shaderProgram, &camera);
-}
-
 void DaisyEditorLayer::DrawImGui()
 {
     ImGui::Begin("Settings");
-
 
     ImGui::PushFont(robotoBold);
 
@@ -141,6 +128,10 @@ void DaisyEditorLayer::DrawImGui()
         scale.x = sac[0];
         scale.y = sac[1];
         scale.z = sac[2];
+
+        ImGui::Text("Rotation: ");
+        ImGui::SameLine();
+        ImGui::SliderFloat("###rotationinput", &rotation, -360, 360);
 
         ImGui::PopFont();
     }
@@ -228,7 +219,6 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
 
 DaisyEditorLayer::~DaisyEditorLayer()
 {
-    //model.Flush();
     texture.Flush();
     shaderProgram.Flush();
 

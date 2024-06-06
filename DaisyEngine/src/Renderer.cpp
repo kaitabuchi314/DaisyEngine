@@ -7,7 +7,6 @@ namespace Daisy
 	{
         void SetViewport(float x, float y, float w, float h)
         {
-
             glViewport(x, y, w, h);
         }
 
@@ -24,8 +23,6 @@ namespace Daisy
             mesh->Bind();
             glm::mat4 model = glm::mat4(1.0f);
             glm::vec3 rr = glm::radians(rotation);
-            //glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(1.0f, 0.5f, 0.0f));
-            //glm::mat4 rotationMatrix = glm::yawPitchRoll(rr.x, rr.y, rr.z);
 
             model = glm::rotate(model, rr.z, glm::vec3(0.0f, 0.0f, 1.0f));
             // Pitch (around the X-axis)
@@ -77,6 +74,7 @@ namespace Daisy
             glEnable(GL_BLEND);
 
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            plane->Bind();
         }
 
         void SetViewport(float x, float y, float w, float h)
@@ -92,20 +90,13 @@ namespace Daisy
 
         void DrawImage(glm::vec3 position, glm::vec3 scale, float angle, Daisy::Texture* texture, Daisy::ShaderProgram* shaderProgram, Daisy::Camera* camera)
         {
-            plane->Bind();
             glm::mat4 model = glm::mat4(1.0f);
             float rr = glm::radians(angle);
-            //glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(1.0f, 0.5f, 0.0f));
-            //glm::mat4 rotationMatrix = glm::yawPitchRoll(rr.x, rr.y, rr.z);
-
-            model = glm::rotate(model, rr, glm::vec3(0.0f, 0.0f, 1.0f));
-            // Pitch (around the X-axis)
-            //model = glm::rotate(model, rr.y, glm::vec3(1.0f, 0.0f, 0.0f));
-            // Yaw (around the Y-axis)
-            //model = glm::rotate(model, rr.x, glm::vec3(0.0f, 1.0f, 0.0f));
 
             model = glm::translate(model, position);
             model = glm::scale(model, scale);
+
+            model = glm::rotate(model, rr, glm::vec3(0.0f, 0.0f, 1.0f));
 
             shaderProgram->Bind();
 
@@ -119,13 +110,12 @@ namespace Daisy
 
             texture->Unbind();
 
-            plane->Unbind();
-
             shaderProgram->Unbind();
         }
 
         void Flush()
         {
+            plane->Unbind();
             delete plane;
         }
     }
