@@ -62,8 +62,8 @@ void DaisyEditorLayer::Run()
  
 
         Daisy::Renderer2D::DrawImage(position, scale, rotation, &texture, &shaderProgram, &camera);
-        //Daisy::Renderer2D::DrawImage(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(2,1,1), 100.0f, &concrete, &shaderProgram, &camera);
 
+        // Dist builds do not include ImGui
 #ifndef DIST
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -83,7 +83,6 @@ void DaisyEditorLayer::Run()
 
         ws = window.GetSize();
         window.EndFrame();
-
     }
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
