@@ -59,11 +59,10 @@ void DaisyEditorLayer::Run()
         rt = window.GetTime();
 
         Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
+ 
 
-        Daisy::Renderer2D::DrawImage(position, scale, 0.0f, &texture, &shaderProgram, &camera);
-        Daisy::Renderer2D::DrawImage(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(2,1,1), 100.0f, &concrete, &shaderProgram, &camera);
-
-        DrawSkybox(camera);
+        Daisy::Renderer2D::DrawImage(position, scale, rotation, &texture, &shaderProgram, &camera);
+        //Daisy::Renderer2D::DrawImage(glm::vec3(0.0f,-1.0f,0.0f), glm::vec3(2,1,1), 100.0f, &concrete, &shaderProgram, &camera);
 
 #ifndef DIST
         ImGui_ImplOpenGL3_NewFrame();
@@ -89,15 +88,6 @@ void DaisyEditorLayer::Run()
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
-}
-
-void DaisyEditorLayer::DrawSkybox(Daisy::Camera camera)
-{
-    Daisy::Renderer2D::DrawImage(glm::vec3(), glm::vec3(100, 100, 0), 0, &skybox, &shaderProgram, &camera);
-
-    //3D code
-    //Daisy::Renderer::DrawMesh(glm::vec3(), glm::vec3(100,100,100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &skybox, &shaderProgram, &camera);
-    //Daisy::Renderer::DrawMesh(glm::vec3(0, 99, 0), glm::vec3(100, 100, 100), glm::vec3(0.0f, 0.0f, 0.0f), &model, &top, &shaderProgram, &camera);
 }
 
 void DaisyEditorLayer::DrawImGui()
@@ -141,6 +131,10 @@ void DaisyEditorLayer::DrawImGui()
         scale.x = sac[0];
         scale.y = sac[1];
         scale.z = sac[2];
+
+        ImGui::Text("Rotation: ");
+        ImGui::SameLine();
+        ImGui::SliderFloat("###rotationinput", &rotation, -360, 360);
 
         ImGui::PopFont();
     }
