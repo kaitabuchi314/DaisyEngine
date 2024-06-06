@@ -29,8 +29,6 @@ private:
     Daisy::Texture top;
     Daisy::Texture concrete;
 
-    //Daisy::Model model;
-
     glm::vec2 ws;
 
     glm::vec3 scale;

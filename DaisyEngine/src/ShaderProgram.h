@@ -12,7 +12,7 @@ namespace Daisy
 		void Bind();
 		void Unbind();
 		void Flush();
-
+	public:
 		unsigned int id;
 	};
 }

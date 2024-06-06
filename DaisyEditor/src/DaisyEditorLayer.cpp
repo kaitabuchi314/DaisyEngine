@@ -5,11 +5,10 @@ DaisyEditorLayer::DaisyEditorLayer() :
     window(DAISY_EDITOR_VERSION, 1260, 900),
 
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
-    texture("../SandboxProject/guy.png"),
-    top("../SandboxProject/top.png"),
-    skybox("../SandboxProject/skybox.png"),
-    concrete("../SandboxProject/concrete.jpg"),
-    //model(vertices, indices, sizeof(vertices), sizeof(indices)),
+    texture("../TestAssets/guy.png"),
+    top("../TestAssets/top.png"),
+    skybox("../TestAssets/skybox.png"),
+    concrete("../TestAssets/concrete.jpg"),
     position(0,0,0),
     scale(1,1,0)
 {
@@ -92,7 +91,6 @@ void DaisyEditorLayer::Run()
 void DaisyEditorLayer::DrawImGui()
 {
     ImGui::Begin("Settings");
-
 
     ImGui::PushFont(robotoBold);
 
@@ -221,7 +219,6 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
 
 DaisyEditorLayer::~DaisyEditorLayer()
 {
-    //model.Flush();
     texture.Flush();
     shaderProgram.Flush();
 

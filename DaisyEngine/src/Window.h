@@ -22,12 +22,12 @@ namespace Daisy
 		glm::vec2 GetMousePosition();
 		glm::vec2 GetSize();
 		double GetTime();
+	public:
 		GLFWwindow* window;
-
-
 	private:
 		glm::vec2 mousePosition;
 	};
+
 	void ResizeCallback(GLFWwindow* window, int width, int height);
 
 	namespace KeyInput
