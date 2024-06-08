@@ -4,6 +4,9 @@
 
 int main()
 {
+#ifdef DIST
+    Daisy::Debug::SetLogsEnabled(false);
+#endif
     DaisyEditorLayer editorLayer = DaisyEditorLayer();
     editorLayer.Run();
 

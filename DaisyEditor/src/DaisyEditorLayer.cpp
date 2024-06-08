@@ -1,7 +1,6 @@
 #include <DaisyEditorLayer.h>
 
 DaisyEditorLayer::DaisyEditorLayer() :
-
     window(DAISY_EDITOR_VERSION, 1260, 900),
 
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
@@ -40,11 +39,13 @@ void DaisyEditorLayer::Run()
 
     Daisy::Renderer2D::SetViewport(0, 0, ws.x, ws.y);
 
-    std::cout << ws.x;
     double o_t = window.GetTime();
     double t = o_t;
     double o_rt = window.GetTime();
     double rt = o_rt;
+
+    Daisy::Debug::Log("Starting Application.");
+
     while (!window.ShouldClose())
     {
         t = window.GetTime();

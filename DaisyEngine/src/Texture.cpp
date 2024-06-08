@@ -1,4 +1,5 @@
 #include "Texture.h"
+#include <Log.h>
 
 namespace Daisy
 {
@@ -6,15 +7,17 @@ namespace Daisy
 	{
         stbi_set_flip_vertically_on_load(true);
 
+        Debug::Log((std::string("Loading Texture: ") + path).c_str());
         unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
         if (!data)
         {
             std::cerr << "Failed to load texture" << std::endl;
         }
 
+        Debug::Log((std::string("Loaded Texture: ") + path + std::string(", Width: ") + std::to_string(width) + std::string(", Height: ") + std::to_string(height) + ", Channels: " + std::to_string(nrChannels)).c_str());
+
         glGenTextures(1, &id);
         glBindTexture(GL_TEXTURE_2D, id);
-
 
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -31,7 +34,6 @@ namespace Daisy
         {
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         }
-        std::cout << nrChannels << std::endl;
 
         glGenerateMipmap(GL_TEXTURE_2D);
 

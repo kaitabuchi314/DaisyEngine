@@ -1,4 +1,5 @@
 #include "Window.h"
+#include <Log.h>
 
 namespace Daisy
 {
@@ -16,6 +17,7 @@ namespace Daisy
         glfwWindowHint(GLFW_RESIZABLE, 0);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+        Debug::Log("Creating Window");
         window = glfwCreateWindow(w, h, windowName, nullptr, nullptr);
         if (!window)
         {
@@ -29,7 +31,7 @@ namespace Daisy
 
         if (glewInit() != GLEW_OK)
         {
-            std::cerr << "Failed to initialize GLEW" << std::endl;
+            Debug::LogError("Failed to initialize GLEW");
         }
         
         glEnable(GL_BLEND);

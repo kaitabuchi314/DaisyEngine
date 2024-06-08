@@ -11,6 +11,7 @@
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 
+#include <Log.h>
 #include <Defines_Renderer.h>
 #include <Model.h>
 #include <ShaderProgram.h>
