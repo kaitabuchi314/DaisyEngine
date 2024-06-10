@@ -22,5 +22,8 @@
 #include <TextureFragmentShader.h>
 #include <DfVertexShader.h>
 #include <GameLayer.h>
-
+#include <Entity.h>
+#include <Transform.h>
+#include <SpriteComponent.h>
+#include <ECS.h>
 #include <Defines.h>

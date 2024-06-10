@@ -15,4 +15,8 @@ namespace Daisy
 	public:
 		unsigned int id;
 	};
+
+	inline ShaderProgram* mainShaderProgram;
+	inline void SetShaderProgram(ShaderProgram* shaderProgram) { mainShaderProgram = shaderProgram; };
+	inline ShaderProgram* GetShaderProgram() { return mainShaderProgram; };
 }

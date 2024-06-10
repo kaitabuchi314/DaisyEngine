@@ -12,10 +12,8 @@ namespace Daisy
 
 	void Debug::LogError(const char* t)
 	{
-		if (loggingEnabled)
-		{
-			std::cout << "Error: " << t << std::endl;
-		}
+		std::cout << "Error: " << t << std::endl;
+		std::exit(-1);
 	}
 
 	void Debug::LogWarning(const char* t)

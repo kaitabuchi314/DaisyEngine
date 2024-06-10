@@ -21,4 +21,8 @@ namespace Daisy
 		glm::vec3 cameraFront;
 		glm::vec3 cameraUp;
 	};
+
+	inline Camera* mainCamera;
+	inline void SetMainCamera(Camera* cam) { mainCamera = cam; };
+	inline Camera* GetMainCamera() { return mainCamera; };
 }

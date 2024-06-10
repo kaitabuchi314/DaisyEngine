@@ -8,8 +8,9 @@ DaisyEditorLayer::DaisyEditorLayer() :
     top("../TestAssets/top.png"),
     skybox("../TestAssets/skybox.png"),
     concrete("../TestAssets/concrete.jpg"),
-    position(0,0,0),
-    scale(1,1,0)
+    componentManager(),
+    componentSystem(),
+    myEntity(Daisy::CreateEntity())
 {
     ws = window.GetSize();
 
@@ -27,12 +28,13 @@ DaisyEditorLayer::DaisyEditorLayer() :
 
     ImGui_ImplOpenGL3_Init("#version 130");
     Daisy::Renderer2D::Init2D();
-    
 }
 
 void DaisyEditorLayer::Run()
 {
     Daisy::Camera camera = Daisy::Camera(ws, true, window);
+    Daisy::SetMainCamera(&camera);
+    Daisy::SetShaderProgram(&shaderProgram);
     float w = 500;
     float vx = 800;
     float vy = 800;
@@ -46,6 +48,11 @@ void DaisyEditorLayer::Run()
 
     Daisy::Debug::Log("Starting Application.");
 
+    componentManager.addComponent<Daisy::TransformComponent>(myEntity, Daisy::TransformComponent {glm::vec3(), glm::vec3(1,1,1), glm::vec3(), myEntity});
+    componentManager.addComponent<Daisy::SpriteComponent>(myEntity, Daisy::SpriteComponent(texture, myEntity));
+    componentSystem.addEntity(myEntity);
+
+
     while (!window.ShouldClose())
     {
         t = window.GetTime();
@@ -58,11 +65,14 @@ void DaisyEditorLayer::Run()
 
         rt = window.GetTime();
 
+        componentSystem.update(componentManager, msf);
+
+        Daisy::TransformComponent transformComponent = componentManager.getComponent<Daisy::TransformComponent>(myEntity);
+
         Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
  
 
-        Daisy::Renderer2D::DrawImage(position, scale, rotation, &texture, &shaderProgram, &camera);
-
+        componentSystem.render(componentManager);
         // Dist builds do not include ImGui
 #ifndef DIST
         ImGui_ImplOpenGL3_NewFrame();
@@ -108,31 +118,32 @@ void DaisyEditorLayer::DrawImGui()
 
         ImGui::PushFont(roboto);
 
+        Daisy::TransformComponent* transformComponent = &componentManager.getComponent<Daisy::TransformComponent>(myEntity);
 
-        float sc[3] = { position.x,position.y,position.z };
+        float sc[3] = { transformComponent->position.x,transformComponent->position.y,transformComponent->position.z };
 
         ImGui::Text("Position: ");
         ImGui::SameLine();
         ImGui::InputFloat3("###positioninput", sc);
 
 
-        position.x = sc[0];
-        position.y = sc[1];
-        position.z = sc[2];
+        transformComponent->position.x = sc[0];
+        transformComponent->position.y = sc[1];
+        transformComponent->position.z = sc[2];
 
-        float sac[3] = { scale.x,scale.y,scale.z };
+        float sac[3] = { transformComponent->scale.x,transformComponent->scale.y,transformComponent->scale.z };
 
         ImGui::Text("Scale: ");
         ImGui::SameLine();
         ImGui::InputFloat3("###scaleinput", sac);
 
-        scale.x = sac[0];
-        scale.y = sac[1];
-        scale.z = sac[2];
+        transformComponent->scale.x = sac[0];
+        transformComponent->scale.y = sac[1];
+        transformComponent->scale.z = sac[2];
 
         ImGui::Text("Rotation: ");
         ImGui::SameLine();
-        ImGui::SliderFloat("###rotationinput", &rotation, -360, 360);
+        ImGui::SliderFloat("###rotationinput", &transformComponent->rotation.z, -360, 360);
 
         ImGui::PopFont();
     }

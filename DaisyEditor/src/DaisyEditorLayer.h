@@ -23,16 +23,18 @@ private:
 
     Daisy::ShaderProgram shaderProgram;
 
+    Daisy::ComponentManager componentManager;
+    Daisy::ComponentSystem componentSystem;
+
     Daisy::Texture texture;
 
     Daisy::Texture skybox;
     Daisy::Texture top;
     Daisy::Texture concrete;
 
-    glm::vec2 ws;
+    Daisy::Entity myEntity;
 
-    glm::vec3 scale;
-    glm::vec3 position;
+    glm::vec2 ws;
 
     ImFont* roboto;
     ImFont* robotoBold;
@@ -40,5 +42,4 @@ private:
     bool objOneEn;
     double msf;
     double rms;
-    float rotation = 0;
 };
