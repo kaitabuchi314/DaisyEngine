@@ -28,7 +28,6 @@ private:
     Daisy::ComponentSystem componentSystem;
 
     std::vector<Daisy::Entity> entities;
-    std::vector<char[128]> paths;
 
     glm::vec2 ws;
 
