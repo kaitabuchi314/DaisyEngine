@@ -4,6 +4,7 @@
 #include <ImGui/imgui_impl_opengl3.h>
 #include <ImGui/imgui_impl_glfw.h>
 #include <vector>
+#include <algorithm>
 #define DAISY_EDITOR_VERSION "Daisy Editor v0.1"
 
 class DaisyEditorLayer : public Daisy::GameLayer
@@ -24,10 +25,11 @@ private:
 
     Daisy::ShaderProgram shaderProgram;
 
+    Daisy::Scene scene1;
+    Daisy::Scene scene2;
+
     Daisy::ComponentManager componentManager;
     Daisy::ComponentSystem componentSystem;
-
-    std::vector<Daisy::Entity> entities;
 
     glm::vec2 ws;
 

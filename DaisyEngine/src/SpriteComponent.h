@@ -12,6 +12,7 @@ namespace Daisy
 	{
 		Texture image;
 		char path[128];
+		
 		Entity self;
 
 		inline SpriteComponent(const Texture& img, Entity& e)

@@ -26,4 +26,5 @@
 #include <Transform.h>
 #include <SpriteComponent.h>
 #include <ECS.h>
+#include <Scene.h>
 #include <Defines.h>

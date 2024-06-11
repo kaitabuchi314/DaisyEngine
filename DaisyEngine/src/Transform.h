@@ -11,7 +11,7 @@ namespace Daisy
         glm::vec3 position;
         glm::vec3 scale;
         glm::vec3 rotation;
-        Entity entity;
+        Entity self;
 
         void OnStart(ComponentManager* componentManager);
         void OnUpdate(ComponentManager* componentManager, float dt);

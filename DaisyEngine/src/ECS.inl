@@ -1,6 +1,8 @@
 #include "ECS.h"
+
 namespace Daisy
 {
+
     template<typename T>
     void ComponentManager::addComponent(Entity entity, T component)
     {
@@ -26,10 +28,14 @@ namespace Daisy
     template<typename T>
     void ComponentManager::updateComponents(float dt)
     {
+
         auto& bucket = getBucket<T>();
         for (auto& [entity, component] : bucket)
         {
-            component->OnUpdate(this, dt); // Call OnUpdate for each component
+            if (GetActiveScene()->HasEntity(entity))
+            {
+                component->OnUpdate(this, dt); // Call OnUpdate for each component
+            }
         }
     }
 
@@ -39,8 +45,12 @@ namespace Daisy
         auto& bucket = getBucket<T>();
         for (auto& [entity, component] : bucket)
         {
-            component->OnRender(this); // Call OnUpdate for each component
+            if (GetActiveScene()->HasEntity(entity))
+            {
+                component->OnRender(this); // Call OnUpdate for each component
+            }
         }
+        
     }
 
     template<typename T>
