@@ -9,6 +9,7 @@ namespace Daisy
 	inline bool windowResized = true;
 	inline int windowWidth = 0;
 	inline int windowHeight = 0;
+
 	class Window
 	{
 	public:

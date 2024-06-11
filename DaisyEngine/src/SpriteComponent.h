@@ -11,10 +11,11 @@ namespace Daisy
 	struct SpriteComponent
 	{
 		Texture image;
+		char path[128];
 		Entity self;
 
 		inline SpriteComponent(const Texture& img, Entity& e)
-			: image(img), self(e) {}
+			: image(img), self(e), path() {}
 
 		void OnStart(ComponentManager* componentManager);
 		void OnUpdate(ComponentManager* componentManager, float dt);

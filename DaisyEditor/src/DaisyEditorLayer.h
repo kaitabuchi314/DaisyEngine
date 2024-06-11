@@ -3,7 +3,7 @@
 #include <ImGui/imgui.h>
 #include <ImGui/imgui_impl_opengl3.h>
 #include <ImGui/imgui_impl_glfw.h>
-
+#include <vector>
 #define DAISY_EDITOR_VERSION "Daisy Editor v0.1"
 
 class DaisyEditorLayer : public Daisy::GameLayer
@@ -18,6 +18,7 @@ public:
 private:
     void SetDarkThemeColors();
     void DrawImGui();
+    void AddEntity();
 private:
     Daisy::Window window;
 
@@ -26,13 +27,8 @@ private:
     Daisy::ComponentManager componentManager;
     Daisy::ComponentSystem componentSystem;
 
-    Daisy::Texture texture;
-
-    Daisy::Texture skybox;
-    Daisy::Texture top;
-    Daisy::Texture concrete;
-
-    Daisy::Entity myEntity;
+    std::vector<Daisy::Entity> entities;
+    std::vector<char[128]> paths;
 
     glm::vec2 ws;
 
@@ -42,4 +38,5 @@ private:
     bool objOneEn;
     double msf;
     double rms;
+    int activeEditingEntity = 0;
 };
