@@ -18,8 +18,10 @@ public:
 	virtual ~DaisyEditorLayer() override;
 private:
     void SetDarkThemeColors();
+    void SetPanelThemeColors();
     void DrawImGui();
     void AddEntity();
+    void SceneChange(int sceneID);
 private:
     Daisy::Window window;
 
@@ -39,5 +41,5 @@ private:
     bool objOneEn;
     double msf;
     double rms;
-    int activeEditingEntity = 0;
+    int activeEditingEntity = -1;
 };

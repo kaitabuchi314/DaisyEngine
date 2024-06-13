@@ -2,6 +2,11 @@
 
 namespace Daisy
 {
+	Scene::Scene()
+	{
+		id = Daisy::Random::IntRandom(0, 4294967295);
+	}
+
 	void Scene::AddEntity(Entity entity)
 	{
 		entities.push_back(entity);
@@ -28,9 +33,21 @@ namespace Daisy
 		}
 		return false;
 	}
+
+	bool HasSceneChanged()
+	{
+		return sceneChanged;
+	}
+
+	void ReceivedSceneChange()
+	{
+		sceneChanged = false;
+	}
+
 	void SetCurrentScene(Scene* scene)
 	{
 		currentScene = scene;
+		sceneChanged = true;
 	}
 
 	Scene* GetActiveScene()

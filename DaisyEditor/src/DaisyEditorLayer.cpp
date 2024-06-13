@@ -48,6 +48,11 @@ void DaisyEditorLayer::Run()
 
     while (!window.ShouldClose())
     {
+        if (Daisy::HasSceneChanged())
+        {
+            SceneChange(Daisy::GetActiveScene()->id);
+        }
+
         t = window.GetTime();
         msf = (t - o_t) * 1000;
 
@@ -247,12 +252,17 @@ void DaisyEditorLayer::DrawImGui()
 
     int currentIDX = Daisy::GetActiveScene()->GetEntities().size();
 
+    SetPanelThemeColors();
+    
     if (ImGui::Button("Add Entity"))
     {
         AddEntity();
         componentManager.addComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[currentIDX], Daisy::TransformComponent {glm::vec3(), glm::vec3(1, 1, 1), glm::vec3(), Daisy::GetActiveScene()->GetEntities()[currentIDX]});
     }
-   
+
+    SetDarkThemeColors();
+    SetDarkThemeColors();
+
     ImGui::End();
 
     ImGui::Begin("Add Component");
@@ -301,6 +311,12 @@ void DaisyEditorLayer::AddEntity()
     componentSystem.addEntity(Daisy::GetActiveScene()->GetEntities()[currentIDX]);
 }
 
+void DaisyEditorLayer::SceneChange(int sceneID)
+{
+    activeEditingEntity = -1;
+    Daisy::ReceivedSceneChange();
+}
+
 void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to StudioCherno and Hazel 2D
 {
     auto& style = ImGui::GetStyle();
@@ -333,13 +349,51 @@ void DaisyEditorLayer::SetDarkThemeColors() // Hazel 2D Theme Colors. Credit to 
     colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
     colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    style.ScrollbarSize = 0.01f;
     style.TabRounding = 3.5f;
     style.FrameRounding = 3.5f;
     style.GrabRounding = 3.5f;
     style.WindowRounding = 3.5f;
     style.PopupRounding = 3.5f;
 }
+void DaisyEditorLayer::SetPanelThemeColors()
+{
+    auto& style = ImGui::GetStyle();
+    auto& colors = style.Colors;
+    colors[ImGuiCol_WindowBg] = ImVec4{ 0.1f * 0.55f, 0.105f * 0.55f, 0.11f * 0.55f, 1.0f };
 
+    // Headers
+    colors[ImGuiCol_Header] = ImVec4{ 0.2f * 0.55f, 0.205f * 0.55f, 0.21f * 0.55f, 1.0f };
+    colors[ImGuiCol_HeaderHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 1.0f };
+    colors[ImGuiCol_HeaderActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+
+    // Buttons
+    colors[ImGuiCol_Button] = ImVec4{ 0.2f, 0.205f, 0.21f, 0.0f };
+    colors[ImGuiCol_ButtonHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 0.1f };
+    colors[ImGuiCol_ButtonActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 0.1f };
+
+    // Frame BG
+    colors[ImGuiCol_FrameBg] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };
+    colors[ImGuiCol_FrameBgHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 1.0f };
+    colors[ImGuiCol_FrameBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+
+    // Tabs
+    colors[ImGuiCol_Tab] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    colors[ImGuiCol_TabHovered] = ImVec4{ 0.38f, 0.3805f, 0.381f, 1.0f };
+    colors[ImGuiCol_TabActive] = ImVec4{ 0.28f, 0.2805f, 0.281f, 1.0f };
+    colors[ImGuiCol_TabUnfocused] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    colors[ImGuiCol_TabUnfocusedActive] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };
+
+    // Title
+    colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };
+    style.TabRounding = 3.5f;
+    style.FrameRounding = 3.5f;
+    style.GrabRounding = 3.5f;
+    style.WindowRounding = 3.5f;
+    style.PopupRounding = 3.5f;
+}
 DaisyEditorLayer::~DaisyEditorLayer()
 {
     for (int i = 0; i < Daisy::GetActiveScene()->GetEntities().size(); i++)
