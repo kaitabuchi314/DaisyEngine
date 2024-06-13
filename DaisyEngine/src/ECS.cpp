@@ -2,6 +2,8 @@
 
 namespace Daisy
 {
+
+
     void ComponentSystem::update(ComponentManager& manager, float dt)
     {
         manager.updateComponents<TransformComponent>(dt);

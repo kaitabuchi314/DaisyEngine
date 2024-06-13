@@ -1,4 +1,5 @@
 #pragma once
+#include "Scene.h"
 #include <unordered_map>
 #include <vector>
 #include <typeindex>
@@ -7,8 +8,12 @@
 #include "Random.h"
 #include "Transform.h"
 #include "SpriteComponent.h"
+#include <algorithm>
+
 namespace Daisy
 {
+
+
     class ComponentManager
     {
     public:
