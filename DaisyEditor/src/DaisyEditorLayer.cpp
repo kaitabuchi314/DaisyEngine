@@ -338,9 +338,6 @@ void DaisyEditorLayer::DrawScriptComponentUI()
 
     bool load = ImGui::Button("Load") || ImGui::IsItemClicked();
 
-    if (load)
-        Daisy::Debug::Log("Hello");
-
     if (load && Petunia::scriptCreators.contains(scriptComponent->sname))
         scriptComponent->script = Petunia::scriptCreators[scriptComponent->sname]();
     else if (load)
