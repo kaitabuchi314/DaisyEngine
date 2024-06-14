@@ -8,6 +8,7 @@
 #include "Random.h"
 #include "Transform.h"
 #include "SpriteComponent.h"
+#include "ScriptComponent.h"
 #include <algorithm>
 
 namespace Daisy
@@ -38,6 +39,10 @@ namespace Daisy
         template<typename T>
         std::unordered_map<Entity, std::shared_ptr<T>>& getBucket();
     };
+
+    inline ComponentManager* activeComponentManager;
+    void SetActiveComponentManager(ComponentManager* componentManager);
+    ComponentManager* GetActiveComponentManager();
 
     class ComponentSystem
     {

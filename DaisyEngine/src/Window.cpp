@@ -85,14 +85,14 @@ namespace Daisy
 
     namespace KeyInput
     {
-        bool GetKeyDown(Daisy::Window window, int key)
+        bool GetKeyDown(int key)
         {
-            return glfwGetKey(window.window, key) == GLFW_PRESS;
+            return glfwGetKey(GetActiveWindow()->window, key) == GLFW_PRESS;
         }
 
-        bool GetKeyUp(Daisy::Window window, int key)
+        bool GetKeyUp(int key)
         {
-            return glfwGetKey(window.window, key) == GLFW_RELEASE;
+            return glfwGetKey(GetActiveWindow()->window, key) == GLFW_RELEASE;
         }
     }
 

@@ -25,6 +25,8 @@
 #include <Entity.h>
 #include <Transform.h>
 #include <SpriteComponent.h>
+#include <ScriptComponent.h>
+
 #include <ECS.h>
 #include <Scene.h>
 #include <Defines.h>

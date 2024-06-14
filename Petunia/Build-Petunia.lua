@@ -1,31 +1,19 @@
-project "DaisyEditor"
-   kind "ConsoleApp"
+project "Petunia"
+   kind "StaticLib"
    language "C++"
    cppdialect "C++20"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "src/**.h", "src/**.cpp", "vendor/ImGui/**.h", "vendor/ImGui/**.cpp" }
+   files { "src/**.h", "src/**.cpp" }
 
    includedirs
    {
 	
 	"src",
-	"../DaisyEngine/GLFW",
-	"../DaisyEngine/glew",
-	"../DaisyEngine/vendor/glm",
-	"../DaisyEngine/vendor/stb_image",
-	"../DaisyEngine/vendor/glm",
-	"../DaisyEngine/src",
-	"vendor",
-	"../Petunia/src"
-
-   }
-
-   links
-   {
-	"DaisyEngine",
-	"Petunia"
+	"../Petunia/src",
+	"../DaisyEngine/src"
+	
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")

@@ -15,7 +15,8 @@ project "DaisyEngine"
 	"glew",
 	"vendor/glm",
 	"vendor/stb_image",
-	"vendor/glm"
+	"vendor/glm",
+	"../Petunia/src"
 
    }
 
@@ -26,7 +27,8 @@ project "DaisyEngine"
 	"GLFW/glfw3.lib",
 	"GLFW/glfw3_mt.lib",
 	"GLFW/glfw3dll.lib",
-	"opengl32.lib"
+	"opengl32.lib",
+	"Petunia"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")

@@ -29,12 +29,16 @@ namespace Daisy
 		glm::vec2 mousePosition;
 	};
 
+	inline Window* activeWindow;
+	inline void SetActiveWindow(Window* a) { activeWindow = a; };
+	inline Window* GetActiveWindow() { return activeWindow; };
+
 	void ResizeCallback(GLFWwindow* window, int width, int height);
 
 	namespace KeyInput
 	{
-		bool GetKeyDown(Daisy::Window window, int key);
+		bool GetKeyDown(int key);
 
-		bool GetKeyUp(Daisy::Window window, int key);
+		bool GetKeyUp(int key);
 	}
 }
