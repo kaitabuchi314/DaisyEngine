@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "ECS.h"
 #include <Petunia.h>
+#include "EditorStates.h"
 
 namespace Daisy
 {

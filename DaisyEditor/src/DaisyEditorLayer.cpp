@@ -25,7 +25,7 @@ DaisyEditorLayer::DaisyEditorLayer() :
     ImGui_ImplOpenGL3_Init("#version 130");
     Daisy::Renderer2D::Init2D();
 
-    Daisy::SetCurrentScene(&scene1);
+    Daisy::SetCurrentScene(&scene);
     Daisy::SetActiveWindow(&window);
     Daisy::SetActiveComponentManager(&componentManager);
 #include <scripts.h>
@@ -34,8 +34,9 @@ DaisyEditorLayer::DaisyEditorLayer() :
 
 void DaisyEditorLayer::Run()
 {
-    Daisy::Camera camera = Daisy::Camera(ws, true, window);
-    Daisy::SetMainCamera(&camera);
+    Daisy::Camera* editorCamera = new Daisy::Camera(ws, true, window);
+    Daisy::Camera* playCamera = new Daisy::Camera(ws, true, window);
+    Daisy::SetMainCamera(editorCamera);
     Daisy::SetShaderProgram(&shaderProgram);
     float w = 500;
     float vx = 800;
@@ -62,21 +63,26 @@ void DaisyEditorLayer::Run()
 
         o_t = t;
 
-        if (!ImGui::GetIO().WantTextInput)
-            Daisy::SampleMoveCamera2D(&camera, window);
+        if (!ImGui::GetIO().WantTextInput && Daisy::EditorStates::IsEditing())
+            Daisy::SampleMoveCamera2D(editorCamera, window);
         
-        camera.CalcView();
+        if (Daisy::EditorStates::IsEditing())
+            Daisy::SetMainCamera(editorCamera);
+        else if (Daisy::EditorStates::IsPlaying())
+            Daisy::SetMainCamera(playCamera);
+
 
         rt = window.GetTime();
 
         componentSystem.update(componentManager, msf);
-      
+
+        editorCamera->CalcView();
+        playCamera->CalcView();
+
         Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
- 
-        for (int i = 0; i < Daisy::GetActiveScene()->GetEntities().size(); i++)
-        {
-            componentSystem.render(componentManager);
-        }
+
+        componentSystem.render(componentManager);
+        
 
         // Dist builds do not include ImGui
 #ifndef DIST
@@ -99,6 +105,10 @@ void DaisyEditorLayer::Run()
         ws = window.GetSize();
         window.EndFrame();
     }
+    
+    delete editorCamera;
+    delete playCamera;
+
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
@@ -211,7 +221,13 @@ void DaisyEditorLayer::DrawImGui()
         componentManager.addComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[currentIDX], Daisy::TransformComponent {glm::vec3(), glm::vec3(1, 1, 1), glm::vec3(), Daisy::GetActiveScene()->GetEntities()[currentIDX]});
     }
 
-    SetDarkThemeColors();
+    ImGui::SameLine();
+
+    if (Daisy::EditorStates::IsEditing() && ImGui::Button("Play"))
+        Daisy::EditorStates::EnterPlaymode();
+    else if (Daisy::EditorStates::IsPlaying() && ImGui::Button("Stop"))
+        Daisy::EditorStates::ExitPlaymode();
+
     SetDarkThemeColors();
 
     ImGui::End();
@@ -228,30 +244,6 @@ void DaisyEditorLayer::DrawImGui()
     }
 
     ImGui::End();
-
-    ImGui::Begin("Scenes");
-
-    ImGui::Text("Scene To Open: ");
-    ImGui::SameLine();
-    static char scene[128];
-    ImGui::InputText("###scenetoopen", scene, IM_ARRAYSIZE(scene));
-
-    bool open = ImGui::Button("Open");
-
-    if (open)
-    {
-        if (std::string(scene).c_str() == std::string("Scene 1"))
-        {
-            Daisy::SetCurrentScene(&scene1);
-        }
-        else if (std::string(scene) == std::string("Scene 2"))
-        {
-            Daisy::SetCurrentScene(&scene2);
-        }
-    }
-
-    ImGui::End();
-
 }
 
 void DaisyEditorLayer::DrawSpriteComponentUI()

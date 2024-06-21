@@ -37,8 +37,7 @@ private:
 
     Daisy::ShaderProgram shaderProgram;
 
-    Daisy::Scene scene1;
-    Daisy::Scene scene2;
+    Daisy::Scene scene;
 
     Daisy::ComponentManager componentManager;
     Daisy::ComponentSystem componentSystem;

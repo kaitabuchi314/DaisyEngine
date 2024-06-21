@@ -9,7 +9,7 @@ namespace Daisy
 
 	void ScriptComponent::OnUpdate(ComponentManager* componentManager, float dt)
 	{
-		if (script != nullptr)
+		if (script != nullptr && EditorStates::IsPlaying())
 		{
 			if (frame == 0)
 			{
@@ -20,6 +20,11 @@ namespace Daisy
 				script->OnUpdate(self);
 			}
 			frame++;
+		}
+
+		if (EditorStates::IsEditing())
+		{
+			frame = 0;
 		}
 	}
 

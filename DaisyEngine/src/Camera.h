@@ -13,7 +13,7 @@ namespace Daisy
 		Camera(glm::vec2 ws, bool perspective, Window window);
 
 		void CalcView();
-
+	public:
 		glm::mat4 projection;
 		glm::mat4 view;
 
