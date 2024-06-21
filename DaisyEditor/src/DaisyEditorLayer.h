@@ -23,6 +23,7 @@ public:
 
 	virtual ~DaisyEditorLayer() override;
 private: // UI
+    void ImGuiFrame();
     void SetDarkThemeColors();
     void SetPanelThemeColors();
     void DrawImGui();

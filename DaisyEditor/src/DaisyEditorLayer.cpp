@@ -2,7 +2,6 @@
 
 DaisyEditorLayer::DaisyEditorLayer() :
     window(DAISY_EDITOR_VERSION, 1260, 900),
-
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
     componentManager(),
     componentSystem()
@@ -71,7 +70,6 @@ void DaisyEditorLayer::Run()
         else if (Daisy::EditorStates::IsPlaying())
             Daisy::SetMainCamera(playCamera);
 
-
         rt = window.GetTime();
 
         componentSystem.update(componentManager, msf);
@@ -83,21 +81,8 @@ void DaisyEditorLayer::Run()
 
         componentSystem.render(componentManager);
         
+        ImGuiFrame();
 
-        // Dist builds do not include ImGui
-#ifndef DIST
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-
-        ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
-        DrawImGui();
-
-        ImGui::Render();
-
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-#endif
         rms = (rt - o_rt) * 1000;
 
         o_rt = rt;
@@ -112,6 +97,21 @@ void DaisyEditorLayer::Run()
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
+}
+
+void DaisyEditorLayer::ImGuiFrame()
+{
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+    DrawImGui();
+
+    ImGui::Render();
+
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
 void DaisyEditorLayer::DrawImGui()
