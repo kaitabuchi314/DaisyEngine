@@ -8,7 +8,7 @@
 #include <Petunia.h>
 #include <memory>
 
-#include "../../ActiveProject/scriptlist.h"
+#include <scriptlist.h>
 
 
 #define DAISY_EDITOR_VERSION "Daisy Editor v0.1"
@@ -22,13 +22,14 @@ public:
 
 
 	virtual ~DaisyEditorLayer() override;
-private:
+private: // UI
     void SetDarkThemeColors();
     void SetPanelThemeColors();
     void DrawImGui();
     void DrawSpriteComponentUI();
     void DrawTransformComponentUI();
     void DrawScriptComponentUI();
+private: // ECS
     void AddEntity();
     void SceneChange(int sceneID);
 private:

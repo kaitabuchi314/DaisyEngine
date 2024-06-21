@@ -6,7 +6,7 @@ project "DaisyEditor"
    staticruntime "off"
 
    files { "src/**.h", "src/**.cpp", "vendor/ImGui/**.h", "vendor/ImGui/**.cpp" }
-
+   defines { 'PROJECTPATH="../Game/"'}
    includedirs
    {
 	
@@ -18,14 +18,14 @@ project "DaisyEditor"
 	"../DaisyEngine/vendor/glm",
 	"../DaisyEngine/src",
 	"vendor",
-	"../Petunia/src"
+	"../Petunia/src",
+    "../Game"
 
    }
 
    links
    {
-	"DaisyEngine",
-	"Petunia"
+	"DaisyEngine"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")

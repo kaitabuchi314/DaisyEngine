@@ -28,7 +28,7 @@ DaisyEditorLayer::DaisyEditorLayer() :
     Daisy::SetCurrentScene(&scene1);
     Daisy::SetActiveWindow(&window);
     Daisy::SetActiveComponentManager(&componentManager);
-#include "../../ActiveProject/scripts.h"
+#include <scripts.h>
 
 }
 
@@ -272,7 +272,7 @@ void DaisyEditorLayer::DrawSpriteComponentUI()
     ImGui::InputText("###texturepathinput", spc->path, 128);
     if (ImGui::Button("Load"))
     {
-        spc->image = Daisy::Texture(spc->path);
+        spc->image = Daisy::Texture(std::string(PROJECTPATH) + std::string(spc->path));
     }
 
     ImGui::PopFont();

@@ -27,8 +27,7 @@ project "DaisyEngine"
 	"GLFW/glfw3.lib",
 	"GLFW/glfw3_mt.lib",
 	"GLFW/glfw3dll.lib",
-	"opengl32.lib",
-	"Petunia"
+	"opengl32.lib"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
