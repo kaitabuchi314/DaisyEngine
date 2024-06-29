@@ -54,6 +54,32 @@ namespace Daisy
     }
 
     template<typename T>
+    inline void ComponentManager::resetComponents()
+    {
+        auto& bucket = getBucket<T>();
+        for (auto& [entity, component] : bucket)
+        {
+            if (GetActiveScene()->HasEntity(entity))
+            {
+                component->OnReset(this); // Call OnUpdate for each component
+            }
+        }
+    }
+
+    template<typename T>
+    inline void ComponentManager::saveComponents()
+    {
+        auto& bucket = getBucket<T>();
+        for (auto& [entity, component] : bucket)
+        {
+            if (GetActiveScene()->HasEntity(entity))
+            {
+                component->OnSave(this); // Call OnUpdate for each component
+            }
+        }
+    }
+
+    template<typename T>
     std::unordered_map<Entity, std::shared_ptr<T>>& ComponentManager::getBucket()
     {
         std::type_index index = std::type_index(typeid(T));

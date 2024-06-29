@@ -11,6 +11,7 @@
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 
+#include <EditorStates.h>
 #include <Log.h>
 #include <Defines_Renderer.h>
 #include <Model.h>
@@ -25,6 +26,8 @@
 #include <Entity.h>
 #include <Transform.h>
 #include <SpriteComponent.h>
+#include <ScriptComponent.h>
+
 #include <ECS.h>
 #include <Scene.h>
 #include <Defines.h>

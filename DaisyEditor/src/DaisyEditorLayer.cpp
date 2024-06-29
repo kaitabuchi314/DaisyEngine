@@ -2,7 +2,6 @@
 
 DaisyEditorLayer::DaisyEditorLayer() :
     window(DAISY_EDITOR_VERSION, 1260, 900),
-
     shaderProgram(Daisy::dfvertexShaderSource, Daisy::textureFragmentShaderSource),
     componentManager(),
     componentSystem()
@@ -25,13 +24,18 @@ DaisyEditorLayer::DaisyEditorLayer() :
     ImGui_ImplOpenGL3_Init("#version 130");
     Daisy::Renderer2D::Init2D();
 
-    Daisy::SetCurrentScene(&scene1);
+    Daisy::SetCurrentScene(&scene);
+    Daisy::SetActiveWindow(&window);
+    Daisy::SetActiveComponentManager(&componentManager);
+#include <scripts.h>
+
 }
 
 void DaisyEditorLayer::Run()
 {
-    Daisy::Camera camera = Daisy::Camera(ws, true, window);
-    Daisy::SetMainCamera(&camera);
+    Daisy::Camera* editorCamera = new Daisy::Camera(ws, true, window);
+    Daisy::Camera* playCamera = new Daisy::Camera(ws, true, window);
+    Daisy::SetMainCamera(editorCamera);
     Daisy::SetShaderProgram(&shaderProgram);
     float w = 500;
     float vx = 800;
@@ -58,38 +62,27 @@ void DaisyEditorLayer::Run()
 
         o_t = t;
 
-        if (!ImGui::GetIO().WantTextInput)
-            Daisy::SampleMoveCamera2D(&camera, window);
+        if (!ImGui::GetIO().WantTextInput && Daisy::EditorStates::IsEditing())
+            Daisy::SampleMoveCamera2D(editorCamera, window);
         
-        camera.CalcView();
+        if (Daisy::EditorStates::IsEditing())
+            Daisy::SetMainCamera(editorCamera);
+        else if (Daisy::EditorStates::IsPlaying())
+            Daisy::SetMainCamera(playCamera);
 
         rt = window.GetTime();
 
         componentSystem.update(componentManager, msf);
-      
+
+        editorCamera->CalcView();
+        playCamera->CalcView();
+
         Daisy::Renderer2D::ClearScreen((0.1f * 0.55f) * 255, (0.105f * 0.55f) * 255, (0.11f * 0.55f)*255);
- 
-        for (int i = 0; i < Daisy::GetActiveScene()->GetEntities().size(); i++)
-        {
-            Daisy::TransformComponent transformComponent = componentManager.getComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[i]);
 
-            componentSystem.render(componentManager);
-        }
+        componentSystem.render(componentManager);
+        
+        ImGuiFrame();
 
-        // Dist builds do not include ImGui
-#ifndef DIST
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-
-        ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
-        DrawImGui();
-
-        ImGui::Render();
-
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-#endif
         rms = (rt - o_rt) * 1000;
 
         o_rt = rt;
@@ -97,9 +90,28 @@ void DaisyEditorLayer::Run()
         ws = window.GetSize();
         window.EndFrame();
     }
+    
+    delete editorCamera;
+    delete playCamera;
+
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
+}
+
+void DaisyEditorLayer::ImGuiFrame()
+{
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+    DrawImGui();
+
+    ImGui::Render();
+
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
 void DaisyEditorLayer::DrawImGui()
@@ -120,69 +132,18 @@ void DaisyEditorLayer::DrawImGui()
     {
         if (componentManager.hasComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]))
         {
-            ImGui::PushFont(robotoBold);
-
-            ImGui::Text("Transform Component: ");
-            ImGui::PopFont();
-
-            ImGui::PushFont(roboto);
-
-            Daisy::TransformComponent* transformComponent = &componentManager.getComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]);
-
-            float sc[3] = { transformComponent->position.x,transformComponent->position.y,transformComponent->position.z };
-
-            ImGui::Text("Position: ");
-            ImGui::SameLine();
-            ImGui::InputFloat3("###positioninput", sc);
-
-
-            transformComponent->position.x = sc[0];
-            transformComponent->position.y = sc[1];
-            transformComponent->position.z = sc[2];
-
-            float sac[3] = { transformComponent->scale.x,transformComponent->scale.y,transformComponent->scale.z };
-
-            ImGui::Text("Scale: ");
-            ImGui::SameLine();
-            ImGui::InputFloat3("###scaleinput", sac);
-
-            transformComponent->scale.x = sac[0];
-            transformComponent->scale.y = sac[1];
-            transformComponent->scale.z = sac[2];
-
-            ImGui::Text("Rotation: ");
-            ImGui::SameLine();
-            ImGui::SliderFloat("###rotationinput", &transformComponent->rotation.z, -360, 360);
-
-            ImGui::PopFont();
-
-            ImGui::Separator();
+            DrawTransformComponentUI();
         }
 
         if (componentManager.hasComponent<Daisy::SpriteComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]))
         {
-            ImGui::PushFont(robotoBold);
-
-            ImGui::Text("Sprite Component: ");
-            ImGui::PopFont();
-
-            ImGui::PushFont(roboto);
-
-            ImGui::Dummy(ImVec2(0, 0.1f));
-            
-            ImGui::Text("Texture Path: ");
-            ImGui::SameLine();
-            Daisy::SpriteComponent* spc = &componentManager.getComponent<Daisy::SpriteComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]);
-
-            ImGui::InputText("###texturepathinput", spc->path, 128);
-            if (ImGui::Button("Load"))
-            {
-                spc->image = Daisy::Texture(spc->path);
-            }
-
-            ImGui::PopFont();
+            DrawSpriteComponentUI();
         }
 
+        if (componentManager.hasComponent<Daisy::ScriptComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]))
+        {
+            DrawScriptComponentUI();
+        }
     }
 
     ImGui::End();
@@ -260,7 +221,19 @@ void DaisyEditorLayer::DrawImGui()
         componentManager.addComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[currentIDX], Daisy::TransformComponent {glm::vec3(), glm::vec3(1, 1, 1), glm::vec3(), Daisy::GetActiveScene()->GetEntities()[currentIDX]});
     }
 
-    SetDarkThemeColors();
+    ImGui::SameLine();
+
+    if (Daisy::EditorStates::IsEditing() && ImGui::Button("Play"))
+    {
+        componentSystem.save(componentManager);
+        Daisy::EditorStates::EnterPlaymode();
+    }
+    else if (Daisy::EditorStates::IsPlaying() && ImGui::Button("Stop"))
+    {
+        Daisy::EditorStates::ExitPlaymode();
+        componentSystem.reset(componentManager);
+    }
+
     SetDarkThemeColors();
 
     ImGui::End();
@@ -271,36 +244,106 @@ void DaisyEditorLayer::DrawImGui()
     {
         componentManager.addComponent<Daisy::SpriteComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity], Daisy::SpriteComponent(Daisy::Texture(""), Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]));
     }
-    else if (ImGui::Button("Placeholder"))
+    if (ImGui::Button("Script Component") && Daisy::GetActiveScene()->GetEntities().size() > 0)
     {
-
+        componentManager.addComponent<Daisy::ScriptComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity], Daisy::ScriptComponent(nullptr, Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]));
     }
 
     ImGui::End();
+}
 
-    ImGui::Begin("Scenes");
+void DaisyEditorLayer::DrawSpriteComponentUI()
+{
+    ImGui::PushFont(robotoBold);
 
-    ImGui::Text("Scene To Open: ");
+    ImGui::Text("Sprite Component: ");
+    ImGui::PopFont();
+
+    ImGui::PushFont(roboto);
+
+    ImGui::Dummy(ImVec2(0, 0.1f));
+
+    ImGui::Text("Texture Path: ");
     ImGui::SameLine();
-    static char scene[128];
-    ImGui::InputText("###scenetoopen", scene, IM_ARRAYSIZE(scene));
+    Daisy::SpriteComponent* spc = &componentManager.getComponent<Daisy::SpriteComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]);
 
-    bool open = ImGui::Button("Open");
-
-    if (open)
+    ImGui::InputText("###texturepathinput", spc->path, 128);
+    if (ImGui::Button("Load"))
     {
-        if (std::string(scene).c_str() == std::string("Scene 1"))
-        {
-            Daisy::SetCurrentScene(&scene1);
-        }
-        else if (std::string(scene) == std::string("Scene 2"))
-        {
-            Daisy::SetCurrentScene(&scene2);
-        }
+        spc->image = Daisy::Texture(std::string(PROJECTPATH) + std::string(spc->path));
     }
 
-    ImGui::End();
+    ImGui::PopFont();
+}
 
+void DaisyEditorLayer::DrawTransformComponentUI()
+{
+    ImGui::PushFont(robotoBold);
+
+    ImGui::Text("Transform Component: ");
+    ImGui::PopFont();
+
+    ImGui::PushFont(roboto);
+
+    Daisy::TransformComponent* transformComponent = &componentManager.getComponent<Daisy::TransformComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]);
+
+    float sc[3] = { transformComponent->position.x,transformComponent->position.y,transformComponent->position.z };
+
+    ImGui::Text("Position: ");
+    ImGui::SameLine();
+    ImGui::InputFloat3("###positioninput", sc);
+
+
+    transformComponent->position.x = sc[0];
+    transformComponent->position.y = sc[1];
+    transformComponent->position.z = sc[2];
+
+    float sac[3] = { transformComponent->scale.x,transformComponent->scale.y,transformComponent->scale.z };
+
+    ImGui::Text("Scale: ");
+    ImGui::SameLine();
+    ImGui::InputFloat3("###scaleinput", sac);
+
+    transformComponent->scale.x = sac[0];
+    transformComponent->scale.y = sac[1];
+    transformComponent->scale.z = sac[2];
+
+    ImGui::Text("Rotation: ");
+    ImGui::SameLine();
+    ImGui::SliderFloat("###rotationinput", &transformComponent->rotation.z, -360, 360);
+
+    ImGui::PopFont();
+
+    ImGui::Separator();
+}
+
+void DaisyEditorLayer::DrawScriptComponentUI()
+{
+
+    Daisy::ScriptComponent* scriptComponent = &componentManager.getComponent<Daisy::ScriptComponent>(Daisy::GetActiveScene()->GetEntities()[activeEditingEntity]);
+
+    ImGui::PushFont(robotoBold);
+
+    ImGui::Text("Script Component: ");
+
+    ImGui::PopFont();
+
+    ImGui::PushFont(roboto);
+
+    ImGui::Text("Script Name: ");
+    ImGui::SameLine();
+    ImGui::InputText("###inputscriptnamelabel", scriptComponent->sname, 64);
+
+    bool load = ImGui::Button("Load") || ImGui::IsItemClicked();
+
+    if (load && Petunia::scriptCreators.contains(scriptComponent->sname))
+        scriptComponent->script = Petunia::scriptCreators[scriptComponent->sname]();
+    else if (load)
+        Daisy::Debug::LogWarning((std::string("Script ") + std::string(scriptComponent->sname) + " not found.").c_str());
+
+    ImGui::PopFont();
+
+    ImGui::Separator();
 }
 
 void DaisyEditorLayer::AddEntity()
@@ -309,6 +352,11 @@ void DaisyEditorLayer::AddEntity()
     Daisy::GetActiveScene()->AddEntity(Daisy::CreateEntity());
 
     componentSystem.addEntity(Daisy::GetActiveScene()->GetEntities()[currentIDX]);
+
+    if (currentIDX == 0)
+    {
+        activeEditingEntity = 0;
+    }
 }
 
 void DaisyEditorLayer::SceneChange(int sceneID)

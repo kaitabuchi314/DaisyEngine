@@ -6,7 +6,7 @@ project "DaisyEditor"
    staticruntime "off"
 
    files { "src/**.h", "src/**.cpp", "vendor/ImGui/**.h", "vendor/ImGui/**.cpp" }
-
+   defines { 'PROJECTPATH="../Game/"'}
    includedirs
    {
 	
@@ -17,7 +17,9 @@ project "DaisyEditor"
 	"../DaisyEngine/vendor/stb_image",
 	"../DaisyEngine/vendor/glm",
 	"../DaisyEngine/src",
-	"vendor"
+	"vendor",
+	"../Petunia/src",
+    "../Game"
 
    }
 

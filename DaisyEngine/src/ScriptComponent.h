@@ -1,36 +1,27 @@
 #pragma once
 #include "Entity.h"
-#include <glm.hpp>
 #include "ECS.h"
+#include <Petunia.h>
+#include "EditorStates.h"
+
 namespace Daisy
 {
     class ComponentManager; // Forward declaration
 
-    struct TransformComponent
+    struct ScriptComponent
     {
-        struct pTransformComponent
-        {
-            glm::vec3 position;
-            glm::vec3 rotation;
-            glm::vec3 scale;
-        };
-
-        glm::vec3 position;
-        glm::vec3 scale;
-        glm::vec3 rotation;
+        Petunia::Script* script;
         Entity self;
+        char sname[64];
+        int frame = 0;
 
-        pTransformComponent pThis;
-
+        inline ScriptComponent(Petunia::Script* s, Entity m) : script(s), self(m) {};
+        inline ~ScriptComponent() { delete script; };
         void OnStart(ComponentManager* componentManager);
         void OnUpdate(ComponentManager* componentManager, float dt);
         void OnRender(ComponentManager* componentManager);
         void OnReset(ComponentManager* componentManager);
         void OnSave(ComponentManager* componentManager);
-
-        void Translate(glm::vec3 translation);
-        void Scale(glm::vec3 scaleChange);
-        void Rotate(glm::vec3 rotationChange);
     };
 }
 
