@@ -13,8 +13,6 @@
 
 namespace Daisy
 {
-
-
     class ComponentManager
     {
     public:
@@ -31,8 +29,13 @@ namespace Daisy
         void renderComponents();
 
         template<typename T>
-        void addComponent(Entity entity, T component);
+        void resetComponents();
 
+        template<typename T>
+        void saveComponents();
+
+        template<typename T>
+        void addComponent(Entity entity, T component);
     private:
         std::unordered_map<std::type_index, std::unordered_map<Entity, std::shared_ptr<void>>> components;
 
@@ -49,6 +52,8 @@ namespace Daisy
     public:
         void update(ComponentManager& manager, float dt);
         void render(ComponentManager& manager);
+        void save(ComponentManager& manager);
+        void reset(ComponentManager& manager);
 
         void addEntity(Entity entity);
 

@@ -33,6 +33,10 @@ namespace Daisy
 	inline void SetActiveWindow(Window* a) { activeWindow = a; };
 	inline Window* GetActiveWindow() { return activeWindow; };
 
+	inline bool GetMouseDown(int button) { return GetActiveWindow()->GetMouseDown(0); };
+	inline bool GetMouseUp(int button) { return GetActiveWindow()->GetMouseUp(0); };
+	inline glm::vec2 GetMousePos() { return GetActiveWindow()->GetMousePosition(); };
+
 	void ResizeCallback(GLFWwindow* window, int width, int height);
 
 	namespace KeyInput

@@ -21,5 +21,7 @@ namespace Daisy
 		void OnStart(ComponentManager* componentManager);
 		void OnUpdate(ComponentManager* componentManager, float dt);
 		void OnRender(ComponentManager* componentManager);
+		void OnReset(ComponentManager* componentManager);
+		void OnSave(ComponentManager* componentManager);
 	};
 }

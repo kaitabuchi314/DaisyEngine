@@ -1,1 +1,1 @@
-Petunia::scriptCreators["ScriptA"] = &CreateScriptA;
+Petunia::scriptCreators["Game.ScriptA"] = &CreateScriptA;

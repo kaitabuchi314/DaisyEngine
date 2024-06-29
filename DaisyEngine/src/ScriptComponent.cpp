@@ -32,4 +32,14 @@ namespace Daisy
 	{
 
 	}
+
+	void ScriptComponent::OnReset(ComponentManager* componentManager)
+	{
+
+	}
+
+	void ScriptComponent::OnSave(ComponentManager* componentManager)
+	{
+
+	}
 }

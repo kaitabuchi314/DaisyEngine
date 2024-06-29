@@ -26,6 +26,20 @@ namespace Daisy
         manager.renderComponents<ScriptComponent>();
     }
 
+    void ComponentSystem::save(ComponentManager& manager)
+    {
+        manager.saveComponents<TransformComponent>();
+        manager.saveComponents<SpriteComponent>();
+        manager.saveComponents<ScriptComponent>();
+    }
+
+    void ComponentSystem::reset(ComponentManager& manager)
+    {
+        manager.resetComponents<TransformComponent>();
+        manager.resetComponents<SpriteComponent>();
+        manager.resetComponents<ScriptComponent>();
+    }
+
     void ComponentSystem::addEntity(Entity entity)
     {
         entities.push_back(entity);

@@ -45,10 +45,15 @@ private:
 
     glm::vec2 ws;
 
+    glm::vec2 initialMousePos;
+    glm::vec3 initialCameraPos;
+
+
     ImFont* roboto;
     ImFont* robotoBold;
 
     bool objOneEn = true;
+    bool isDragging = false;
     double msf;
     double rms;
     int activeEditingEntity = -1;

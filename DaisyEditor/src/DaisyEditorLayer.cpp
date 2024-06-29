@@ -224,9 +224,15 @@ void DaisyEditorLayer::DrawImGui()
     ImGui::SameLine();
 
     if (Daisy::EditorStates::IsEditing() && ImGui::Button("Play"))
+    {
+        componentSystem.save(componentManager);
         Daisy::EditorStates::EnterPlaymode();
+    }
     else if (Daisy::EditorStates::IsPlaying() && ImGui::Button("Stop"))
+    {
         Daisy::EditorStates::ExitPlaymode();
+        componentSystem.reset(componentManager);
+    }
 
     SetDarkThemeColors();
 
